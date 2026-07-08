@@ -24,12 +24,22 @@ const fallbackKeywords = [
   "PAUSE", "CHECK", "ERRMSG", "BREAK", "CONTINUE", "RETURN", "FOUND", "RECORD"
 ];
 
+const contextualKeywords = new Set([
+  "AND", "AS", "BY", "CASE", "CREATE", "DROP", "ELSE", "END", "FROM", "GROUP",
+  "HAVING", "IN", "INNER", "INSERT", "INTO", "JOIN", "LEFT", "LIKE", "NOT", "OR",
+  "ORDER", "OUTER", "RIGHT", "SELECT", "SET", "THEN", "TO", "VALUES", "WHEN",
+  "WHERE"
+]);
+
 let diagnostics;
 let helpIndex = [];
 let helpByName = new Map();
 let blockTreeProvider;
+let extensionContext;
+let helpPanel;
 
 function activate(context) {
+  extensionContext = context;
   helpIndex = loadHelpIndex(context.extensionPath);
   helpByName = new Map(helpIndex.map((item) => [item.name.toUpperCase(), item]));
 
@@ -61,6 +71,8 @@ function activate(context) {
   context.subscriptions.push(vscode.window.registerTreeDataProvider("iafBlockTree", blockTreeProvider));
 
   context.subscriptions.push(vscode.commands.registerCommand("iaf.openHelp", () => openHelpForWord()));
+  context.subscriptions.push(vscode.commands.registerCommand("iaf.searchHelp", () => searchHelp()));
+  context.subscriptions.push(vscode.commands.registerCommand("iaf.openHelpContents", () => openHelpContents()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.showBlockTree", () => showBlockTree()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.addEndComments", () => addEndComments()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.exportHtml", () => exportHtml()));
@@ -104,10 +116,10 @@ class IafCompletionProvider {
 
     for (const entry of source) {
       const item = new vscode.CompletionItem(entry.name, vscode.CompletionItemKind.Keyword);
-      item.detail = "IAF";
-      if (entry.description) {
-        item.documentation = new vscode.MarkdownString(entry.description);
-      }
+      const syntax = firstSyntax(entry);
+      item.detail = syntax || "IAF";
+      item.documentation = buildHelpMarkdown(entry, false);
+      item.insertText = syntax ? new vscode.SnippetString(syntaxToSnippet(syntax)) : entry.name;
       items.push(item);
     }
 
@@ -129,10 +141,8 @@ class IafHoverProvider {
     }
 
     const markdown = new vscode.MarkdownString();
-    markdown.appendMarkdown(`**${entry.name}**`);
-    if (entry.description) {
-      markdown.appendMarkdown(`\n\n${entry.description}`);
-    }
+    markdown.appendMarkdown(buildHelpMarkdown(entry, true).value);
+    markdown.appendMarkdown(`\n\n[Open IAF help](command:iaf.openHelp)`);
     markdown.isTrusted = true;
     return new vscode.Hover(markdown, range);
   }
@@ -269,6 +279,16 @@ function updateDiagnostics(document) {
 
     if (!keyword) {
       continue;
+    }
+
+    if (shouldWarnUnknownKeyword(code, keyword)) {
+      const suggestions = closestHelpNames(keyword, 3);
+      const suffix = suggestions.length ? ` Did you mean ${suggestions.join(", ")}?` : "";
+      problems.push(makeDiagnostic(
+        line,
+        `Unknown IAF keyword '${keyword}'.${suffix}`,
+        vscode.DiagnosticSeverity.Warning
+      ));
     }
 
     if (blockPairs.has(keyword)) {
@@ -828,10 +848,117 @@ function loadHelpIndex(extensionPath) {
   }
 }
 
+function buildHelpMarkdown(entry, includeExamples) {
+  const markdown = new vscode.MarkdownString();
+  markdown.appendMarkdown(`**${entry.name}**`);
+  if (entry.description) {
+    markdown.appendMarkdown(`\n\n${entry.description}`);
+  }
+
+  const syntax = firstSyntax(entry);
+  if (syntax) {
+    markdown.appendMarkdown(`\n\n\`\`\`iaf\n${syntax}\n\`\`\``);
+  }
+
+  if (includeExamples && entry.examples && entry.examples.length) {
+    markdown.appendMarkdown("\n\nExamples:");
+    for (const example of entry.examples.slice(0, 3)) {
+      markdown.appendMarkdown(`\n\n\`\`\`iaf\n${example}\n\`\`\``);
+    }
+  }
+
+  return markdown;
+}
+
+function firstSyntax(entry) {
+  return entry.syntax && entry.syntax.length ? entry.syntax[0] : "";
+}
+
+function syntaxToSnippet(syntax) {
+  let placeholder = 1;
+  const withParameters = syntax.replace(/\(([^)]*)\)/, (match, parameters) => {
+    const parts = parameters.split(",").map((parameter) => parameter.trim()).filter(Boolean);
+    if (!parts.length) {
+      return match;
+    }
+
+    return `(${parts.map((parameter) => `\${${placeholder++}:${parameter}}`).join(", ")})`;
+  });
+
+  return withParameters.replace(/\b([a-z][A-Za-z0-9_$]*)\b/g, (match) => {
+    if (/^(date|time|datetime|numeric|alpha|expression|value|field|record)$/i.test(match)) {
+      return `\${${placeholder++}:${match}}`;
+    }
+    return match;
+  });
+}
+
+function shouldWarnUnknownKeyword(code, keyword) {
+  if (isKnownHelpKeyword(keyword)) {
+    return false;
+  }
+
+  if (!/^[A-Z_][A-Z0-9_]*$/.test(keyword)) {
+    return false;
+  }
+
+  if (/^\$/.test(code) || /^[A-Za-z_][A-Za-z0-9_]*\./.test(code)) {
+    return false;
+  }
+
+  if (/^[A-Za-z_][A-Za-z0-9_]*\s*=/.test(code)) {
+    return false;
+  }
+
+  return true;
+}
+
+function isKnownHelpKeyword(keyword) {
+  return helpByName.has(keyword)
+    || fallbackKeywords.includes(keyword)
+    || contextualKeywords.has(keyword)
+    || blockPairs.has(keyword)
+    || closingToOpening.has(keyword)
+    || middleKeywords.has(keyword);
+}
+
+function closestHelpNames(keyword, count) {
+  const candidates = helpIndex
+    .map((entry) => entry.name)
+    .filter((name) => /^[A-Z_][A-Z0-9_]*$/.test(name));
+
+  return candidates
+    .map((name) => ({ name, score: levenshtein(keyword, name) }))
+    .filter((item) => item.score <= Math.max(2, Math.floor(keyword.length / 3)))
+    .sort((left, right) => left.score - right.score || left.name.localeCompare(right.name))
+    .slice(0, count)
+    .map((item) => item.name);
+}
+
+function levenshtein(left, right) {
+  const rows = Array.from({ length: left.length + 1 }, (_, index) => [index]);
+  for (let index = 1; index <= right.length; index++) {
+    rows[0][index] = index;
+  }
+
+  for (let row = 1; row <= left.length; row++) {
+    for (let column = 1; column <= right.length; column++) {
+      const cost = left[row - 1] === right[column - 1] ? 0 : 1;
+      rows[row][column] = Math.min(
+        rows[row - 1][column] + 1,
+        rows[row][column - 1] + 1,
+        rows[row - 1][column - 1] + cost
+      );
+    }
+  }
+
+  return rows[left.length][right.length];
+}
+
 async function openHelpForWord() {
   const editor = vscode.window.activeTextEditor;
   if (!editor || editor.document.languageId !== LANGUAGE) {
-    vscode.window.showWarningMessage("Open an IAF file first.");
+    await searchHelp();
     return;
   }
 
@@ -840,10 +967,57 @@ async function openHelpForWord() {
   const word = rawWord.replace(/^\$/, "").toUpperCase();
   const entry = helpByName.get(word);
   if (!entry) {
-    vscode.window.showWarningMessage(`No IAF help entry found for '${rawWord}'.`);
+    await searchHelp(rawWord);
     return;
   }
 
+  await openHelpEntry(entry);
+}
+
+async function searchHelp(initialQuery = "") {
+  const source = helpIndex.length ? helpIndex : fallbackKeywords.map((name) => ({ name }));
+  const items = source
+    .map((entry) => ({
+      label: entry.name,
+      description: entry.file || "",
+      detail: entry.description || "",
+      entry
+    }))
+    .sort((left, right) => left.label.localeCompare(right.label));
+
+  const selected = await showHelpQuickPick(items, initialQuery);
+  if (!selected) {
+    return;
+  }
+
+  await openHelpEntry(selected.entry);
+}
+
+function showHelpQuickPick(items, initialQuery) {
+  return new Promise((resolve) => {
+    const quickPick = vscode.window.createQuickPick();
+    quickPick.title = "IAF Help";
+    quickPick.placeholder = "Search IAF statements, functions and topics";
+    quickPick.matchOnDescription = true;
+    quickPick.matchOnDetail = true;
+    quickPick.ignoreFocusOut = true;
+    quickPick.items = items;
+    quickPick.value = initialQuery.replace(/^\$/, "");
+
+    quickPick.onDidAccept(() => {
+      const selected = quickPick.selectedItems[0];
+      quickPick.hide();
+      resolve(selected);
+    });
+    quickPick.onDidHide(() => {
+      quickPick.dispose();
+      resolve(undefined);
+    });
+    quickPick.show();
+  });
+}
+
+async function openHelpEntry(entry) {
   const helpFolder = await resolveHelpFolder();
   if (!helpFolder) {
     vscode.window.showWarningMessage("Set iaf.helpPath or open a workspace containing the IAFHelp folder.");
@@ -856,7 +1030,296 @@ async function openHelpForWord() {
     return;
   }
 
-  vscode.env.openExternal(vscode.Uri.file(helpFile));
+  openHelpWebview(helpFolder, entry);
+}
+
+async function openHelpContents() {
+  const helpFolder = await resolveHelpFolder();
+  if (!helpFolder) {
+    vscode.window.showWarningMessage("Set iaf.helpPath or open a workspace containing the IAFHelp folder.");
+    return;
+  }
+
+  const entry = helpByName.get("INTRODUCTION TO IAF")
+    || helpByName.get("INTRODUCTION")
+    || helpIndex.find((item) => item.file === "introduction.htm")
+    || helpIndex[0];
+
+  if (entry) {
+    openHelpWebview(helpFolder, entry);
+  }
+}
+
+function openHelpWebview(helpFolder, selectedEntry) {
+  if (!extensionContext) {
+    return;
+  }
+
+  if (!helpPanel) {
+    helpPanel = vscode.window.createWebviewPanel(
+      "iafHelp",
+      "IAF Help",
+      vscode.ViewColumn.Beside,
+      {
+        enableScripts: true,
+        localResourceRoots: [vscode.Uri.file(helpFolder)]
+      }
+    );
+    helpPanel.onDidDispose(() => {
+      helpPanel = undefined;
+    }, null, extensionContext.subscriptions);
+  }
+
+  helpPanel.title = `IAF Help: ${selectedEntry.name}`;
+  helpPanel.webview.html = buildHelpWebviewHtml(helpPanel.webview, helpFolder, selectedEntry);
+  helpPanel.reveal(vscode.ViewColumn.Beside);
+}
+
+function buildHelpWebviewHtml(webview, helpFolder, selectedEntry) {
+  const entries = helpIndex
+    .filter((entry) => entry.file)
+    .map((entry) => ({
+      name: entry.name,
+      file: entry.file,
+      description: entry.description || "",
+      text: entry.text || "",
+      html: prepareHelpTopicHtml(webview, helpFolder, entry.file)
+    }));
+  const selected = entries.find((entry) => entry.file === selectedEntry.file) || entries[0];
+  const nonce = String(Date.now());
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IAF Help</title>
+<style>
+:root {
+  --bg: var(--vscode-editor-background);
+  --fg: var(--vscode-editor-foreground);
+  --muted: var(--vscode-descriptionForeground);
+  --border: var(--vscode-panel-border);
+  --input: var(--vscode-input-background);
+  --active: var(--vscode-list-activeSelectionBackground);
+  --active-fg: var(--vscode-list-activeSelectionForeground);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--fg);
+  background: var(--bg);
+  font: 13px/1.4 var(--vscode-font-family);
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 320px) minmax(0, 1fr);
+  height: 100vh;
+}
+aside {
+  border-right: 1px solid var(--border);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.search {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+input {
+  width: 100%;
+  color: var(--fg);
+  background: var(--input);
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  outline: none;
+}
+.topics {
+  overflow: auto;
+  padding: 6px;
+}
+button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--fg);
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: var(--vscode-list-hoverBackground); }
+button.active {
+  background: var(--active);
+  color: var(--active-fg);
+}
+.title {
+  display: block;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.desc {
+  display: block;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bar {
+  min-height: 40px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+.content {
+  min-height: 0;
+  overflow: auto;
+  background: #ffffff;
+  color: #111111;
+  padding: 14px 18px;
+}
+.content :is(body, table, div, p, span, font, td) {
+  color: inherit;
+}
+.content a {
+  color: #0645ad;
+}
+.content table {
+  max-width: 100%;
+}
+.content img {
+  max-width: 100%;
+}
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+  aside { max-height: 42vh; border-right: 0; border-bottom: 1px solid var(--border); }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="search">
+      <input id="search" type="search" placeholder="Search help" autofocus>
+    </div>
+    <div id="topics" class="topics"></div>
+  </aside>
+  <main>
+    <div id="bar" class="bar"></div>
+    <div id="content" class="content"></div>
+  </main>
+</div>
+<script nonce="${nonce}">
+const entries = ${safeScriptJson(entries)};
+let selectedFile = ${JSON.stringify(selected.file)};
+const search = document.getElementById("search");
+const topics = document.getElementById("topics");
+const content = document.getElementById("content");
+const bar = document.getElementById("bar");
+
+function render() {
+  const query = search.value.trim().toLowerCase();
+  const visible = entries.filter((entry) => {
+    const haystack = (entry.name + " " + entry.description + " " + entry.text).toLowerCase();
+    return !query || haystack.includes(query);
+  }).slice(0, 250);
+
+  topics.textContent = "";
+  for (const entry of visible) {
+    const button = document.createElement("button");
+    button.className = entry.file === selectedFile ? "active" : "";
+    button.type = "button";
+    button.dataset.file = entry.file;
+    button.innerHTML = "<span class=\\"title\\"></span><span class=\\"desc\\"></span>";
+    button.querySelector(".title").textContent = entry.name;
+    button.querySelector(".desc").textContent = entry.description;
+    button.addEventListener("click", () => select(entry));
+    topics.appendChild(button);
+  }
+}
+
+function select(entry) {
+  selectedFile = entry.file;
+  content.innerHTML = entry.html;
+  bar.textContent = entry.name;
+  render();
+}
+
+search.addEventListener("input", render);
+content.addEventListener("click", (event) => {
+  const link = event.target.closest("a[data-help-file]");
+  if (!link) {
+    return;
+  }
+
+  event.preventDefault();
+  const entry = entries.find((item) => item.file.toLowerCase() === link.dataset.helpFile.toLowerCase());
+  if (entry) {
+    select(entry);
+  }
+});
+select(entries.find((entry) => entry.file === selectedFile) || entries[0]);
+</script>
+</body>
+</html>`;
+}
+
+function prepareHelpTopicHtml(webview, helpFolder, file) {
+  const fullPath = path.join(helpFolder, file);
+  let html = "";
+  try {
+    html = fs.readFileSync(fullPath, "utf8");
+  } catch {
+    return `<p>Help file not found: ${escapeHtml(file)}</p>`;
+  }
+
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  let body = bodyMatch ? bodyMatch[1] : html;
+  body = body
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/\s(?:background|bgcolor)=("[^"]*"|'[^']*'|[^\s>]+)/gi, "");
+
+  body = body.replace(/\s(src)=("([^"]+)"|'([^']+)'|([^\s>]+))/gi, (match, attr, _all, doubleValue, singleValue, bareValue) => {
+    const value = doubleValue || singleValue || bareValue || "";
+    const rewritten = rewriteHelpResource(webview, helpFolder, file, value);
+    return ` ${attr}="${escapeHtml(rewritten)}"`;
+  });
+
+  body = body.replace(/\s(href)=("([^"]+)"|'([^']+)'|([^\s>]+))/gi, (match, attr, _all, doubleValue, singleValue, bareValue) => {
+    const value = doubleValue || singleValue || bareValue || "";
+    if (/\.html?(?:#.*)?$/i.test(value) && !/^[a-z]+:/i.test(value)) {
+      const localFile = path.basename(value.split("#")[0]);
+      return ` href="#" data-help-file="${escapeHtml(localFile)}"`;
+    }
+    return ` ${attr}="${escapeHtml(value)}"`;
+  });
+
+  return body;
+}
+
+function rewriteHelpResource(webview, helpFolder, currentFile, value) {
+  if (/^(?:[a-z]+:|#|data:)/i.test(value)) {
+    return value;
+  }
+
+  const currentFolder = path.dirname(path.join(helpFolder, currentFile));
+  return webview.asWebviewUri(vscode.Uri.file(path.resolve(currentFolder, value))).toString();
+}
+
+function safeScriptJson(value) {
+  return JSON.stringify(value)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
 }
 
 async function resolveHelpFolder() {
