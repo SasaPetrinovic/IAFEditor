@@ -1,0 +1,136 @@
+<html><head>
+   <title>SORT_ARRAY</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="SORT_ARRAY"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  color="#010101"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#010101">SORT_ARRAY</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">This statement sorts an array.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Format</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SORT_ARRAY array , sort_order , starting_index, ending_index ,collation [, 
+dep_array1, dep_array2, ..., dep_arrayN]</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Where</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;array&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - main array to be sorted, required parameter.</span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;sort_order</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - &quot;A&quot; for ascending, &quot;D&quot; for descending. Default is &quot;A&quot;. If we use an alpha 
+variable and the variable contains invalid value (a character different from &quot;A&quot; or &quot;D&quot;), 
+ascending order will be applied. If the length of the variable is greater than 1, the first 
+character will be used.</span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;starting_index</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - index of the first element to be sorted, integer. Default value is 1 (the 
+first element).</span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#808080">&middot;</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080">&nbsp;&nbsp; &nbsp;&nbsp;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ending_index</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - index of the last element to be sorted, integer. Default is the 
+last 
+element.</span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;collation - </span></font><a href="collationname.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>collation name</u></span></font></a><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080">. Default is binary 
+sort. This parameter is ignored if main 
+array is not an alpha one.</span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">dep_array1, dep_array2, ..., dep_arrayN</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - dependent arrays. These arrays will be 
+rearranged according to main array.</span></font></div><div align="left"  style="margin-left:6mm; margin-right:0mm; text-indent:0mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"><br></span></font></div><div align="left"  style="margin-left:6mm; margin-right:0mm; text-indent:0mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left"  style="margin-left:6mm; margin-right:0mm; text-indent:0mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left"  style="margin-left:6mm; margin-right:0mm; text-indent:0mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Note</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Consider three arrays, each of them have 3 elements:</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  bordercolor="#000000"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$main_array</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$dep_arr1</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$dep_arr2</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">'11'</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">101</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1001</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">'12'</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">102</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1002</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">'13'</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">103</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1003</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">After command</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><b>sort_array</b></span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"> $main_array,'D',1,3,,$dep_arr1,$dep_arr2</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">array elements will be</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  bordercolor="#000000"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$main_array</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$dep_arr1</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$dep_arr2</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">'13'</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">103</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1003</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">'12'</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">102</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1002</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">'11'</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">101</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1001</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Examples</b></span></font></div><div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  bgcolor="#f0f0f0"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!ascending sort, all elements</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr,&quot;d&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!descending sort</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr,&quot;a&quot;,1,10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!sort first 10 elements</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sortdir = &quot;A&quot;</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr, $sortdir, 1, counter_1</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sortdir = &quot;X&quot;</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr, $sortdir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!&quot;A&quot; will be applied at runtime</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sortdir = &quot;DA&quot;</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr, $sortdir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!sort order is &quot;D&quot;</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr,'a',1,10,'English_CI'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!English collation</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr,'a',1,10,,$arr1,$arr2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!dependent arrays</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">sort_array</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> $arr,,,,,$arr1,$arr2</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td></tr></table><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

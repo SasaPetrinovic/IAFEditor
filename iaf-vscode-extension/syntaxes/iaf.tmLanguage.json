@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "IAF",
+  "scopeName": "source.iaf",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#sql"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-exclamation.iaf",
+          "match": "!!.*$"
+        },
+        {
+          "name": "comment.line.exclamation.iaf",
+          "match": "^\\s*!.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.iaf",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.iaf",
+              "match": "\"\""
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.iaf",
+          "begin": "'",
+          "end": "'"
+        }
+      ]
+    },
+    "sql": {
+      "patterns": [
+        {
+          "name": "keyword.other.sql.iaf",
+          "match": "\\b(?i:EXECSQL|SELECT|UPDATE|DELETE|INSERT|CREATE|DROP|ALTER|FROM|WHERE|SET|JOIN|LEFT|RIGHT|INNER|OUTER|GROUP|ORDER|BY|HAVING|VALUES|INTO)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.iaf",
+          "match": "\\b(?i:PROCEDURE|END_PROCEDURE|IF|ELSE|ELSE_IF|END_IF|DO_WHILE|END_DO|SELECT_ALL|END_SELECT|READ_ALL|END_READ|BREAK|CONTINUE|RETURN|CASE|END_CASE)\\b"
+        },
+        {
+          "name": "keyword.other.iaf",
+          "match": "\\b(?i:READ|WRITE|UPDATE|DELETE|APPEND|COMMIT|ROLLBACK|PAUSE|CHECK|ERRMSG|CALL|CALLPROGRAM|CALLWINDOW|PERFORM|DEFINE_LOCAL|INIT|INIT_RECORD|STOP_RUN|FOR|TO|STEP|IN|AND|OR|NOT|RECORD|FOUND|NOT_FOUND)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.local.iaf",
+          "match": "\\$[A-Za-z_][A-Za-z0-9_]*"
+        },
+        {
+          "name": "variable.other.field.iaf",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.iaf",
+          "match": "\\b\\d+(?:\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.iaf",
+          "match": "(<=|>=|<>|=|<|>|\\+|-|\\*|/|;|:)"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+<html><head>
+   <title>STRING_EDIT</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="STRING_EDIT"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#000000">STRING_EDIT</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">This function returns string text, simultaneously replacing placeholders by&nbsp; parameters.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Format</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>STRING_EDIT(alpha_var, 
+par1, par2, ..., parN)</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Return Value Type</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alpha.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Parameters</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#808080">&middot;</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080">&nbsp;&nbsp; &nbsp;&nbsp;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">alpha_var - </span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080">an alpha variable, alpha literal or STRING function. The number of 
+placeholders (%) in input string, and number of declared parameters should be the 
+same.</span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;par1, par2, ... parN - </span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080">the variables whose values will replace placeholders. The first 
+variable (par1) will replace the first placeholder, etc.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Notes</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are two special characters: <b>% (parameter placeholder)</b> and <b>\ (escape 
+character)</b>. The parameter placeholder enables inserting program variables into a text using. 
+The escape character allows including into a text some characters which cannot be typed in 
+directly.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>Parameter placeholder</i></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The percent sign (%) is placeholder. The next string contains two placeholders:</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invalid value, must be in the range % to %</span></font></div><div align="left"><font face="Courier New"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#800000"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>Special characters</i></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Line feed</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">\n</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Carriage return</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">\r</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Tabulator</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">\t</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Backslash</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">\\</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Percent sign</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">\%</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The next string contains one placeholder and the escape character:</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">The percent is 
+% \%</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Examples</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="522"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  bgcolor="#f0f0f0"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;errmsg = </span></font><font face="Courier New"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#ff0000">STRING_EDIT</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">(string(ids_1),acc_1,acc_2)</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">If the string IDS_1 contains text:</span></font></div>
+    <div align="left"><font face="Courier New"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#800000">Invalid value, must be in the range % to %</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">and acc_1, acc_2 contain 100 and 200 respectively, run-time text 
+    will be</span></font></div>
+    <div align="left"><font face="Courier New"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#800000">Invalid value, must be in the range 100,00 to 200,00</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">If you want to display a percent sign, the escape character have 
+    to be used in the string.</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"><span style=" font-size:12pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>See Also&nbsp;&nbsp; </b></span></font><a href="stringsdefinition.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><b><u>Strings definition</u></b></span></font></a><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">, </span></font><a href="modifystring.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>Modify string</u></span></font></a><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">,&nbsp; </span></font><a href="string.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>STRING</u></span></font></a></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

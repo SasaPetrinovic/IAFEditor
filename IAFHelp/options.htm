@@ -1,0 +1,178 @@
+<html><head>
+   <title>Options</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content=""></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  color="#010101"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#010101">Options</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Save current work</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Defines autosave time interval: how often we want the painter to save the program. The form 
+painter writes all the information about the program in recovery file named </span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">program_name.JOU</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">. If the painter crashes, this file will be used for recovery when we try to 
+modify this program later. If the painter successfully exits, this file is deleted.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Store text labels as</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If we select </span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">ANSI</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">, 
+labels will be stored as ANSI text: one byte represents one character. Only 
+characters from selected code page can be stored to the label.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If we select </span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">Unicode</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">, 
+labels will be stored in UTF-8 character set: one character is 
+represented by multiple bytes. In this case, we can use any character in a label.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Code-page for literals, program title, etc</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Program generator is not an Unicode application itself. All the literals in program code are 
+stored as ANSI text, according to the current code-page for the system.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Number of tooltext lines</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If 'View/Show tooltip' option is checked, number of tooltip text lines is 10, by default. To see 
+larger piece of the code, increase this value.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Show field name / code</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">By default, tooltip text shows field name only in objects like 'Destinationfield', 'Sourcefield', 
+etc. If you want too see the code behind the object, choose 'Show code' option.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Use decimal arithmetic</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If you want to use decimal arithmetic in formulas and aggregate functions,&nbsp; set this option. 
+This kind of arithmetic will be used always when result field is an unpacked or BCD packed 
+numeric. We recommend to use unpacked numbers. </span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Rounding method</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If a value has more decimals than result field, rounding is necessary.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Rounding algorithm:</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- retain the desired number of decimals,</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- take the digit to the right of the place we wish to round to,</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- if the digit is 0, 1, 2, 3 or 4, drop remain decimals,</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- if the digit is 6, 7, 8 or 9 the last significant digit will be rounded up,</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- if the digit is 5, round previous digit according to the chosen rounding method:</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Half up</b>&nbsp;<b>(round half away from zero):</b> last significant digit will be rounded up.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Half even</b> <b>(round half to even):</b> last significant digit will be rounded to the nearest 
+even digit (Banker's rounding).</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Example: rounding to two decimal places.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Value</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Half up</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Half even</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,123</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,12</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,12</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,126</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,13</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,13</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,125</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>0,13</b></span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>0,12</b></span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,133</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,13</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,13</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,136</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,14</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,14</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,135</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>0,14</b></span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>0,14</b></span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,123</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,12</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,12</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,126</span></font></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,13</span></font></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,13</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-0,125</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>-0,13</b></span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>-0,12</b></span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Generate interoperable SQL code</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">During program generation phase, each READ command, including default read, will be 
+transformed into appropriate SQL SELECT statement. This is a standard SELECT statement, 
+but according to the chosen database, see </span></font><a href="changesetupparameters.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>Change setup parameters</u></span></font></a><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> 
+dialog, some 
+extensions can be added to the statement. Those extensions prevent the program to access 
+different databases without re-generation.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If this check box is selected, programs will be generated without particular SQL extensions, 
+enabling maximum interoperability: by simply changing value of DSN_APPLNAME symbol at 
+run-time, the same program can access another database management system.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">This parameter has no impact to SELECT, SELECT_ALL, SELECT_START, EXECSQL.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Example</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Default read for a table, access mode=UPDATE, database=MS SQL Server, generates</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">SELECT TOP 1 * FROM mytable WITH(UPDLOCK) WHERE ...</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Interoperable command will be</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">SELECT * FROM mytable WHERE ...</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Write the list of unused local fields/local procedures to GER file</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If this check box is selected, names of unused local fields and local procedures will be written 
+to GER file during program generation phase.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Write the list of USED local fields to GER file</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If this check box is selected, names of all used local fields will be written to GER file during 
+program generation phase. Using simply copy / paste method we can remove all unused local 
+fields from a program.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080"><b>Store language info into Data Dictionary</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If you plan to create a multilingual application, this option should be checked. In this case, 
+language info will be stored into the Data Dictionary on exit from the painter. To enable this 
+check box, two conditions must be satisfied: 'Store text labels as Unicode' on this dialog, and 
+'International support enabled' on </span></font><a href="internationalsupport.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>International support</u></span></font></a><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> dialog. 
+This information will be used, 
+later on, by Translation Software to translate text from your default language to any other 
+language.</span></font></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

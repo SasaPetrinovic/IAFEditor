@@ -1,0 +1,2852 @@
+[
+  {
+    "name": "3D Panel",
+    "file": "3dpanel.htm",
+    "description": "3D Panel To insert new panel on the form, click button 3D panel in toolbox or choose menu command Objects/3D panel."
+  },
+  {
+    "name": "3D Panel properties",
+    "file": "3dpanelproperties.htm",
+    "description": "3D Panel properties Object name When the new panel is created, generator automatically assigns the name Panel_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "ABS",
+    "file": "abs.htm",
+    "description": "ABS This function returns absolute value."
+  },
+  {
+    "name": "Absolute positions",
+    "file": "absolutepositions.htm",
+    "description": "Absolute positions Normally, a lineset is printed after the preceding lineset."
+  },
+  {
+    "name": "ADD",
+    "file": "add.htm",
+    "description": "ADD This statement adds a numeric value to numeric field."
+  },
+  {
+    "name": "Add local field",
+    "file": "addlocalfield.htm",
+    "description": "Add local field In this dialog we can create one local field."
+  },
+  {
+    "name": "ADD_DAYS",
+    "file": "adddays.htm",
+    "description": "ADD_DAYS This function adds number of days to a date."
+  },
+  {
+    "name": "ADD_HOURS",
+    "file": "addhours.htm",
+    "description": "ADD_HOURS This function adds number of hours to a time or datetime field."
+  },
+  {
+    "name": "ADD_MINUTES",
+    "file": "addminutes.htm",
+    "description": "ADD_MINUTES This function adds number of minutes to a time or datetime field."
+  },
+  {
+    "name": "ADD_MONTHS",
+    "file": "addmonths.htm",
+    "description": "ADD_MONTHS This function adds number of months to a date."
+  },
+  {
+    "name": "ADD_SECONDS",
+    "file": "addseconds.htm",
+    "description": "ADD_SECONDS This function adds number of seconds to a time or datetime field."
+  },
+  {
+    "name": "ADD_WEEKS",
+    "file": "addweeks.htm",
+    "description": "ADD_WEEKS This function adds number of weeks to a date."
+  },
+  {
+    "name": "ADD_YEARS",
+    "file": "addyears.htm",
+    "description": "ADD_YEARS This function adds number of years to a date."
+  },
+  {
+    "name": "Additional view actions",
+    "file": "additionalviewactions.htm",
+    "description": "Additional view actions As we already seen, the view determines selection criteria, joins, sort order etc."
+  },
+  {
+    "name": "Addline",
+    "file": "addline.htm",
+    "description": "Addline This method adds one line to a grid."
+  },
+  {
+    "name": "Aggregate Functions",
+    "file": "aggregatefunctions.htm",
+    "description": "Aggregate Functions AVG returns the average value of the input values for all processed records between two break fields."
+  },
+  {
+    "name": "Align/Size",
+    "file": "alignsizesp.htm",
+    "description": "Align/Size Left Aligns the left edges of the selected objects with the dominant object ."
+  },
+  {
+    "name": "ALLOCSTRING",
+    "file": "allocstring.htm",
+    "description": "ALLOCSTRING This function creates new memo field and allocates continuous memory block to it."
+  },
+  {
+    "name": "ALLTRIM",
+    "file": "alltrim.htm",
+    "description": "ALLTRIM This functions removes white space from both ends of alpha expression."
+  },
+  {
+    "name": "ALPHA",
+    "file": "alpha.htm",
+    "description": "ALPHA This function converts any field to alphanumeric one."
+  },
+  {
+    "name": "ANNUITY",
+    "file": "annuity.htm",
+    "description": "ANNUITY Format ANNUITY(principal,interest_rate,interval,number_of_periods_in_year,flag) Return Value Type Numeric."
+  },
+  {
+    "name": "Append",
+    "file": "append.htm",
+    "description": "Append Appends a Word file or Excel worksheet (or a part of the worksheet) to the current Word document."
+  },
+  {
+    "name": "Applications",
+    "file": "applications.htm",
+    "description": "Applications Rebuild programs Generates one or more executable programs."
+  },
+  {
+    "name": "ASC",
+    "file": "asc.htm",
+    "description": "ASC This function returns the code value of the leftmost character of alpha_exp."
+  },
+  {
+    "name": "Assignment operator",
+    "file": "assignmentoperator.htm",
+    "description": "Assignment operator (=) Assigns value(s) to a variable, array or record."
+  },
+  {
+    "name": "Autocomplete",
+    "file": "autocomplete.htm",
+    "description": "Autocomplete In this dialog parameters for autocomplete operation can be entered ."
+  },
+  {
+    "name": "Autofit",
+    "file": "autofit.htm",
+    "description": "Autofit This method fills-up whole grid if there exists a gap between the last column and right edge of the grid."
+  },
+  {
+    "name": "AVG",
+    "file": "avg.htm",
+    "description": "AVG This function returns the average value of the input values for all processed records between two break fields."
+  },
+  {
+    "name": "Barcode printing",
+    "file": "barcodeprinting.htm",
+    "description": "Barcode printing Barcode can be printed on laser or inkjet printers in the two ways: using a barcode font or via internal routines."
+  },
+  {
+    "name": "BASE64_DECODE",
+    "file": "base64_decode.htm",
+    "description": "BASE64_DECODE This function transforms data back from base64 format to the original data."
+  },
+  {
+    "name": "BASE64_ENCODE",
+    "file": "base64_encode.htm",
+    "description": "BASE64_ENCODE This function transforms input data to a base64 format."
+  },
+  {
+    "name": "BEGINM",
+    "file": "beginm.htm",
+    "description": "BEGINM This function returns a date representing beginning of the month of date_exp."
+  },
+  {
+    "name": "BEGINQ",
+    "file": "beginq.htm",
+    "description": "BEGINQ This function returns a date representing beginning of the quarter of date_exp."
+  },
+  {
+    "name": "BEGINW",
+    "file": "beginw.htm",
+    "description": "BEGINW This function returns a date representing beginning of the week of date_exp."
+  },
+  {
+    "name": "BEGINY",
+    "file": "beginy.htm",
+    "description": "BEGINY This function returns a date representing beginning of the year of date_exp."
+  },
+  {
+    "name": "Bitmap Button",
+    "file": "bitmapbutton.htm",
+    "description": "Bitmap Button The bitmap button has the same function as push button ."
+  },
+  {
+    "name": "Bitmapbutton properties",
+    "file": "bitmapbuttonproperties.htm",
+    "description": "Bitmapbutton properties Object name When the new button is created, generator automatically assigns the name Bitmapbutton_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Bookmarks",
+    "file": "bookmarks.htm",
+    "description": "Bookmarks The bookmarks will be written into the print file."
+  },
+  {
+    "name": "BREAK",
+    "file": "break.htm",
+    "description": "BREAK This statement exits immediately innermost loop (DO_WHILE , READ_ALL or SELECT_ALL)."
+  },
+  {
+    "name": "Break fields definition",
+    "file": "breakfieldsdefinition.htm",
+    "description": "Break fields definition A break is an event which causes printing of a lineset in a report, or activation subtotal calculations in a batch program."
+  },
+  {
+    "name": "BREAK_FIELD",
+    "file": "breakfield.htm",
+    "description": "BREAK_FIELD This statement defines break fields in batch programs."
+  },
+  {
+    "name": "Button",
+    "file": "button.htm",
+    "description": "Button The push button is an object enabling the user to execute some actions by clicking it."
+  },
+  {
+    "name": "Button properties",
+    "file": "buttonproperties.htm",
+    "description": "Button properties Object name When the new button is created, generator automatically assigns the name Button_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "CALL_PROGRAM",
+    "file": "callprogram.htm",
+    "description": "CALL_PROGRAM This statement calls an external executable program (EXE)."
+  },
+  {
+    "name": "CALL_STOREDPROCEDURE",
+    "file": "callstoredprocedure.htm",
+    "description": "CALL_STOREDPROCEDURE This statement calls a stored database procedure via ODBC."
+  },
+  {
+    "name": "CALL_WINDOW",
+    "file": "callwindow.htm",
+    "description": "CALL_WINDOW This statement calls a window (subform)."
+  },
+  {
+    "name": "CEIL",
+    "file": "ceil.htm",
+    "description": "CEIL This function rounds a numeric value."
+  },
+  {
+    "name": "CELL",
+    "file": "cell.htm",
+    "description": "CELL This function returns a cell contents from a grid."
+  },
+  {
+    "name": "CHAIN",
+    "file": "chain.htm",
+    "description": "CHAIN This statement calls another executable program."
+  },
+  {
+    "name": "Change Password",
+    "file": "changepassword.htm",
+    "description": ""
+  },
+  {
+    "name": "Change Setup Parameters",
+    "file": "changesetupparameters.htm",
+    "description": "Change Setup Parameters Application description Short description of the application."
+  },
+  {
+    "name": "CHAR_OF",
+    "file": "charof.htm",
+    "description": "CHAR_OF This function extracts one character from an alpha_exp."
+  },
+  {
+    "name": "CHECK",
+    "file": "check.htm",
+    "description": "CHECK This statement controls entered value."
+  },
+  {
+    "name": "Check Box",
+    "file": "checkbox.htm",
+    "description": "Check Box We can consider check box as a destination field which stores one of two values: 0 or 1, \"Y\" or \"N\", etc."
+  },
+  {
+    "name": "CHECK_DIGIT",
+    "file": "checkdigit.htm",
+    "description": "CHECK_DIGIT This function calculates check digit."
+  },
+  {
+    "name": "CHECK_RECORD",
+    "file": "checkrecordchecknorecord.htm",
+    "description": "CHECK_RECORD This statement controls (non)existing record with given key."
+  },
+  {
+    "name": "Checkbox properties",
+    "file": "checkboxproperties.htm",
+    "description": "Checkbox properties Object name When the new checkbox is created, generator automatically assigns the name Checkbox_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "CHR",
+    "file": "chr.htm",
+    "description": "CHR This function returns the character that has the ASCII code value specified by numeric_exp."
+  },
+  {
+    "name": "CHRW",
+    "file": "chrw.htm",
+    "description": "CHRW This function returns the wide character (Unicode) that has the code value specified by numeric_exp."
+  },
+  {
+    "name": "Click actions",
+    "file": "clickactions.htm",
+    "description": "Click actions The diagram bellow shows how run-time engine processes click when a data-entry grid has the focus."
+  },
+  {
+    "name": "Close",
+    "file": "excelclose.htm",
+    "description": "Close This method discards any changes and stops Excel."
+  },
+  {
+    "name": "Close",
+    "file": "lp_close.htm",
+    "description": "Close This method closes printer port opened by Open method."
+  },
+  {
+    "name": "Close",
+    "file": "closexml.htm",
+    "description": "Close This method closes XML file opened by Open method."
+  },
+  {
+    "name": "Close",
+    "file": "wordclose.htm",
+    "description": "Close This method discards any changes, closes document and stops Word."
+  },
+  {
+    "name": "Close",
+    "file": "closeftp.htm",
+    "description": "Close This method closes the connection to the FTP server."
+  },
+  {
+    "name": "Close",
+    "file": "closefile.htm",
+    "description": "Close This method closes a file opened by Open method."
+  },
+  {
+    "name": "CLOSE",
+    "file": "close.htm",
+    "description": "CLOSE This statement closes a file or database."
+  },
+  {
+    "name": "Closetable",
+    "file": "closetable.htm",
+    "description": "Closetable This method closes previously opened table."
+  },
+  {
+    "name": "Code pages",
+    "file": "codepages.htm",
+    "description": ""
+  },
+  {
+    "name": "Column heading properties",
+    "file": "columnheadingproperties.htm",
+    "description": "Column heading properties In this dialog we can set some attributes for column heading text."
+  },
+  {
+    "name": "Combo Box",
+    "file": "combobox.htm",
+    "description": "Combo Box We can consider combo box as a destination field which stores one of many values: 0 or 1 or 2 or 3, \"A\" or \"B\" or \"C\" or ."
+  },
+  {
+    "name": "Combobox properties",
+    "file": "comboboxproperties.htm",
+    "description": "Combobox properties Object name When the new combobox is created, generator automatically assigns the name Combobox_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Command line parameters",
+    "file": "commandlineparameters.htm",
+    "description": "Command line parameters Programs generated by Iaf can use command line parameters."
+  },
+  {
+    "name": "COMMIT",
+    "file": "commit.htm",
+    "description": "COMMIT This statement confirms transaction."
+  },
+  {
+    "name": "COMPARE_COLLATE",
+    "file": "compare_collate.htm",
+    "description": "COMPARE_COLLATE This function compares two alpha fields according to a collation."
+  },
+  {
+    "name": "COMPARE_RECORDS",
+    "file": "compare_records.htm",
+    "description": "COMPARE_RECORDS This function compares two record buffers, field by field."
+  },
+  {
+    "name": "Comparison operators",
+    "file": "comparisonoperators.htm",
+    "description": "Comparison operators Comparison operators are: = equal to <> not equal to > greater than >= greater than or equal to < less than <= less than or equal to is [not] containing Result is TRUE if an alpha field contains a text, case-sensitive."
+  },
+  {
+    "name": "COMPRESS",
+    "file": "compress.htm",
+    "description": "COMPRESS This function creates a concatenation of many values adding one blank at the end of each input value."
+  },
+  {
+    "name": "COMPRESS_CSV",
+    "file": "compress_csv.htm",
+    "description": "COMPRESS_CSV This function creates a concatenation of many trimmed (left and right) values adding a separator at the end of each input value."
+  },
+  {
+    "name": "COMPRESS_SEP",
+    "file": "compresssep.htm",
+    "description": "COMPRESS_SEP This function creates a concatenation of many trimmed (left and right) values adding a separator at the end of each input value."
+  },
+  {
+    "name": "COMPRESS_TRIM",
+    "file": "compresstrim.htm",
+    "description": "COMPRESS_TRIM This function creates a concatenation of many trimmed (left and right) input variables."
+  },
+  {
+    "name": "CONCAT",
+    "file": "concat.htm",
+    "description": "CONCAT This function concatenates many alpha fields into one string."
+  },
+  {
+    "name": "Conditional Expression",
+    "file": "conditionalexpression.htm",
+    "description": "Conditional Expression A conditional expression ( cond_exp ) is a symbol or string of symbols used to calculate one of two values: true or false."
+  },
+  {
+    "name": "Constants",
+    "file": "constants.htm",
+    "description": "Constants Constants are predefined fields whose values cannot be changed, i."
+  },
+  {
+    "name": "Context menu definition",
+    "file": "contextmenudefinition.htm",
+    "description": "Context menu definition Context menu is a popup menu displayed as the result of a right-click within the form."
+  },
+  {
+    "name": "Context menu item handlers",
+    "file": "contextmenuitemhandlers.htm",
+    "description": "Context menu item handlers Each event handler has the form ON_EVENT_PROCEDURE OnClickMenuItem ( menu_item_identifier ) ."
+  },
+  {
+    "name": "CONVERT",
+    "file": "convert.htm",
+    "description": "CONVERT This function converts an alpha_exp from one character set to another."
+  },
+  {
+    "name": "CONVERT_DMY_YMD",
+    "file": "convertdmyymd.htm",
+    "description": "CONVERT_DMY_YMD This function converts a numeric or alphanumeric field to the date value."
+  },
+  {
+    "name": "CONVERT_LIT_YMD",
+    "file": "convertlitymd.htm",
+    "description": "CONVERT_LIT_YMD This function converts a date literal to the date value."
+  },
+  {
+    "name": "CONVERT_MDY_YDM",
+    "file": "convertmdyydm.htm",
+    "description": "CONVERT_MDY_YMD This function converts a numeric or alphanumeric field to the date value."
+  },
+  {
+    "name": "CONVERT_YMD_MDY",
+    "file": "convertymdmdy.htm",
+    "description": "CONVERT_YMD_MDY This function converts a date value to an alphanumeric one."
+  },
+  {
+    "name": "Copy data definitions",
+    "file": "copydatadefinitions.htm",
+    "description": "Copy data definitions List List on the left-side of the dialog shows all tables, synonyms and views belonging to the selected ODBC datasource."
+  },
+  {
+    "name": "Copy program",
+    "file": "copyprogram.htm",
+    "description": "Copy program Create a copy of a program with, possible, renaming."
+  },
+  {
+    "name": "CORR",
+    "file": "corr.htm",
+    "description": "CORR This function moves corresponding fields from one table (record) to another table (record)."
+  },
+  {
+    "name": "COUNT",
+    "file": "count.htm",
+    "description": "COUNT This aggregate function returns number of records between two break fields."
+  },
+  {
+    "name": "Create New Application",
+    "file": "createnewapplication.htm",
+    "description": "Create New Application Up to 10 applications can be stored into one Data Dictionary."
+  },
+  {
+    "name": "Create New Data Dictionary",
+    "file": "createnewdatadictionary.htm",
+    "description": "Create New Data Dictionary A Data Dictionary is place (warehouse) which contains all the necessary information about the application(s)."
+  },
+  {
+    "name": "Create record definition from datasource",
+    "file": "createrecorddefinitionfromdatasource.htm",
+    "description": ""
+  },
+  {
+    "name": "Create SQL script from datasource",
+    "file": "createsqlscriptfromdatasource.htm",
+    "description": "Create SQL script from datasource This dialog enables creating SQL script directly from an ODBC datasource."
+  },
+  {
+    "name": "Create SQL script from record definition",
+    "file": "createsqlscriptfromrecorddefinition.htm",
+    "description": "Create SQL script from record definition Available records List on the left-side of the dialog shows all the records defined in Data Dictionary."
+  },
+  {
+    "name": "CreateDirectory",
+    "file": "createdirectory.htm",
+    "description": "CreateDirectory This method creates new directory on the connected FTP server."
+  },
+  {
+    "name": "CURRENT",
+    "file": "current.htm",
+    "description": "CURRENT This function returns a field from current record (table) buffer."
+  },
+  {
+    "name": "Data Dictionary",
+    "file": "datadictionary.htm",
+    "description": "Data Dictionary Show This dialog shows list of the applications defined in the Data Dictionary."
+  },
+  {
+    "name": "Data Selector",
+    "file": "dataselector.htm",
+    "description": "Data Selector We can consider data selector as a complex object which enables multiple selection."
+  },
+  {
+    "name": "Dataselector properties",
+    "file": "dataselectorproperties.htm",
+    "description": "Dataselector properties Object name When the new data saelector is created, generator automatically assigns the name Dataselector_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Datasource dialog",
+    "file": "datasourcedialog.htm",
+    "description": "Datasource dialog In this dialog we need to specify all the tables and files which will be used in the program."
+  },
+  {
+    "name": "DATE",
+    "file": "date.htm",
+    "description": "DATE This function converts a value expression to a date."
+  },
+  {
+    "name": "Date Functions",
+    "file": "datefunctions.htm",
+    "description": "Date Functions ADD_DAYS adds number of days to a date."
+  },
+  {
+    "name": "DATETIME",
+    "file": "datetime.htm",
+    "description": "DATETIME This function returns a datetime field."
+  },
+  {
+    "name": "DAY",
+    "file": "day.htm",
+    "description": "DAY This function returns day of a date."
+  },
+  {
+    "name": "DAY_OF_WEEK",
+    "file": "dayofweek.htm",
+    "description": "DAY_OF_WEEK This function returns day of the week."
+  },
+  {
+    "name": "DAY_OF_YEAR",
+    "file": "dayofyear.htm",
+    "description": "DAY_OF_YEAR This function returns day of the year."
+  },
+  {
+    "name": "DAYS_IN_MONTH",
+    "file": "daysinmonth.htm",
+    "description": "DAYS_IN_MONTH This function returns number of days in a month."
+  },
+  {
+    "name": "DB_DATASOURCES",
+    "file": "db_datasources.htm",
+    "description": "DB_DATASOURCES This function stores list of ODBC datasource names into text file."
+  },
+  {
+    "name": "DB_EXPORT",
+    "file": "db_export.htm",
+    "description": "DB_EXPORT This function copies data from an RDB table to output file."
+  },
+  {
+    "name": "DB_IMPORT",
+    "file": "db_import.htm",
+    "description": "DB_IMPORT This function copies data from an external file into RDB table."
+  },
+  {
+    "name": "DB_TABLES",
+    "file": "db_tables.htm",
+    "description": "DB_TABLES This function s tores list of tables, views and synonyms into text file."
+  },
+  {
+    "name": "Default",
+    "file": "defaultsp.htm",
+    "description": "Default Default form Defines default data entry form for the first table from datasource dialog."
+  },
+  {
+    "name": "DEFAULT_VALUE",
+    "file": "default_value.htm",
+    "description": "DEFAULT_VALUE This function returns default value used in CREATE TABLE statement."
+  },
+  {
+    "name": "Define",
+    "file": "defineglobalfield.htm",
+    "description": "Define global fields As we already said, a global field is a template field defining some attributes."
+  },
+  {
+    "name": "Define",
+    "file": "defineinter.htm",
+    "description": "Define Datasource This command activates Datasource definition dialog."
+  },
+  {
+    "name": "Define global procedures / functions",
+    "file": "defineglobalprocedures.htm",
+    "description": "Define global procedures / functions This dialog enables us to view all global procedures/functions and to select a procedure/function for modification or deleting."
+  },
+  {
+    "name": "Define lookup dialog",
+    "file": "definelookupdialog.htm",
+    "description": "Define lookup dialog Lookup dialog displays rows from a query or elements of arrays."
+  },
+  {
+    "name": "DEFINE_LOCAL",
+    "file": "definelocal.htm",
+    "description": "DEFINE_LOCAL This statement defines local field in a procedure or function."
+  },
+  {
+    "name": "DEFINE_RECAP_RECORD",
+    "file": "definerecaprecord.htm",
+    "description": "DEFINE_RECAP_RECORD This statement writes one record into the recapitulation file."
+  },
+  {
+    "name": "Delete",
+    "file": "delete.htm",
+    "description": "Delete This method deletes a file from the connected FTP server."
+  },
+  {
+    "name": "Delete",
+    "file": "deleteglobalfield.htm",
+    "description": ""
+  },
+  {
+    "name": "DELETE_RECORD",
+    "file": "deleterecord.htm",
+    "description": "DELETE_RECORD This statement removes an existing record from an indexed file or RDB table."
+  },
+  {
+    "name": "Deleteallitems",
+    "file": "deleteallitems.htm",
+    "description": "Deleteallitems This method removes all items from an object."
+  },
+  {
+    "name": "DeleteDirectory",
+    "file": "deletedirectory.htm",
+    "description": "DeleteDirectory This method deletes directory from the connected FTP server."
+  },
+  {
+    "name": "Deleteitem",
+    "file": "deleteitem.htm",
+    "description": "Deleteitem This method removes an item from a tree."
+  },
+  {
+    "name": "DESTINATION",
+    "file": "destination.htm",
+    "description": "DESTINATION This statement defines data entry field."
+  },
+  {
+    "name": "Destination field",
+    "file": "destinationfield.htm",
+    "description": "Destination field A destination field accepts a value from the keyboard."
+  },
+  {
+    "name": "Destination field properties",
+    "file": "destinationfieldproperties.htm",
+    "description": "Destination_field properties Object name When the new destination_field is created, generator automatically assigns the name Destinationfield_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "DETAIL_CALC",
+    "file": "detailcalc.htm",
+    "description": "DETAIL_CALC This statement specifies part of batch calculations which are executed for each input record of the main input file (table)."
+  },
+  {
+    "name": "DIFF_DATE",
+    "file": "diffdate.htm",
+    "description": "DIFF_DATE This function returns the difference between two date values."
+  },
+  {
+    "name": "DIFF_DAYS",
+    "file": "diffdays.htm",
+    "description": "DIFF_DAYS This function returns number of days between two date values."
+  },
+  {
+    "name": "DIFF_DT",
+    "file": "diffdt.htm",
+    "description": "DIFF_DT This function returns the difference between two datetime expressions in the form: number_of_days/time."
+  },
+  {
+    "name": "DIFF_MONTHS",
+    "file": "diffmonths.htm",
+    "description": "DIFF_MONTHS This function returns number of months between two date values."
+  },
+  {
+    "name": "DIFF_TIME",
+    "file": "difftime.htm",
+    "description": "DIFF_TIME This function returns time difference between two time values."
+  },
+  {
+    "name": "DIFF_WEEKS",
+    "file": "diffweeks.htm",
+    "description": "DIFF_WEEKS This function returns number of weeks between two date values."
+  },
+  {
+    "name": "DIGIT_OF",
+    "file": "digitof.htm",
+    "description": "DIGIT_OF This function returns one digit from a numeric value."
+  },
+  {
+    "name": "Dir",
+    "file": "dirftp.htm",
+    "description": "Dir This method stores list of the files on the server into a text file on local machine."
+  },
+  {
+    "name": "Directives (pseudo-commands)",
+    "file": "directives.htm",
+    "description": "Directives (pseudo-commands) Directives are used to change default program behavior."
+  },
+  {
+    "name": "Disable Password Protection",
+    "file": "disablepasswordprotection.htm",
+    "description": ""
+  },
+  {
+    "name": "Display",
+    "file": "display.htm",
+    "description": "Display This method displays value expression."
+  },
+  {
+    "name": "DISPLAY_WINDOW_FIELDS",
+    "file": "displaywindowfields.htm",
+    "description": "DISPLAY_WINDOW_FIELDS This statement displays fields in the subform (fields have to be filled, usually with SELECT or READ statement)."
+  },
+  {
+    "name": "Displaycomplex",
+    "file": "displaycomplex.htm",
+    "description": "Displaycomplex This method displays a text."
+  },
+  {
+    "name": "Displayimage",
+    "file": "displayimage.htm",
+    "description": "Displayimage This method displays an image."
+  },
+  {
+    "name": "Displaylabel",
+    "file": "displaylabel.htm",
+    "description": "Displaylabel This method changes label text of a checkbox or radiobutton."
+  },
+  {
+    "name": "DO_WHILE",
+    "file": "dowhile.htm",
+    "description": "DO_WHILE This statement marks beginning of a cycle."
+  },
+  {
+    "name": "Download",
+    "file": "download.htm",
+    "description": "Download This function downloads a file (page) from the Internet using HTTP protocol (GET method) and saves it on the local machine."
+  },
+  {
+    "name": "Downloadfile",
+    "file": "downloadfile.htm",
+    "description": "Downloadfile This method downloads file from the connected FTP server and saves it on the local machine."
+  },
+  {
+    "name": "Edit",
+    "file": "editsp.htm",
+    "description": "Edit Undo Undo last operation."
+  },
+  {
+    "name": "EDIT",
+    "file": "edit.htm",
+    "description": "EDIT This function returns formatted representation of alpha, numeric, date, datetime or time variable."
+  },
+  {
+    "name": "Edit mask",
+    "file": "editmask.htm",
+    "description": "Edit mask Edit mask is a string of characters that determines visual representation of a field on an external device (screen, printer, print file)."
+  },
+  {
+    "name": "EDIT_CURRENCY",
+    "file": "edit_currency.htm",
+    "description": "EDIT_CURRENCY This function returns formatted currency representation of numeric variable."
+  },
+  {
+    "name": "Editor rules",
+    "file": "editorrules.htm",
+    "description": "Editor rules The maximal number of characters in a line is 128."
+  },
+  {
+    "name": "Ellipse",
+    "file": "ellipse.htm",
+    "description": "Ellipse To insert new ellipse on the form, click button Ellipse in toolbox or choose menu command Objects/Ellipse."
+  },
+  {
+    "name": "Ellipse properties",
+    "file": "ellipseproperties.htm",
+    "description": "Ellipse properties Object name When the new ellipse is created, generator automatically assigns the name Ellipse_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Enablelinedeleting",
+    "file": "enablelinedeleting.htm",
+    "description": "Enablelinedeleting This method enables or disables line deleting."
+  },
+  {
+    "name": "Enablelinedragging",
+    "file": "enablelinedragging.htm",
+    "description": "Enablelinedragging This method enables or disables line dragging."
+  },
+  {
+    "name": "Enablenewlines",
+    "file": "enablenewlines.htm",
+    "description": "Enablenewlines This method enables or disables new line entering into a grid."
+  },
+  {
+    "name": "END_",
+    "file": "end.htm",
+    "description": "END_ This statement ends block of instructions beginning with: IF, DO_WHILE, READ_ALL, DEFINE_RECAP_RECORD and PROCEDURE."
+  },
+  {
+    "name": "Ending actions",
+    "file": "endingactions.htm",
+    "description": "Ending actions This piece of code executes when user clicks Close button, presses ESC key or when program executes STOP_RUN statement."
+  },
+  {
+    "name": "ENDM",
+    "file": "endm.htm",
+    "description": "ENDM This function returns a date representing end of the month of date_exp."
+  },
+  {
+    "name": "ENDQ",
+    "file": "endq.htm",
+    "description": "ENDQ This function returns a date representing end of the quarter of date_exp."
+  },
+  {
+    "name": "ENDW",
+    "file": "endw.htm",
+    "description": "ENDW This function returns a date representing the end of the week of date_exp."
+  },
+  {
+    "name": "ENDY",
+    "file": "endy.htm",
+    "description": "ENDY This function returns a date representing end of the year of date_exp."
+  },
+  {
+    "name": "ENVVAR",
+    "file": "envvar.htm",
+    "description": "ENVVAR This function returns value of specified environment variable."
+  },
+  {
+    "name": "ERRMSG",
+    "file": "errmsg.htm",
+    "description": "ERRMSG This statement displays error message if the CHECK expression value is FALSE, and returns control to the last object having input focus (destination field or push button)."
+  },
+  {
+    "name": "ERRWARMSG",
+    "file": "errwarmsg.htm",
+    "description": "ERRWARMSG This statement is a combination of ERRMSG and WARMSG statements."
+  },
+  {
+    "name": "Example 1",
+    "file": "example1multi.htm",
+    "description": "Example 1 - Copy TBL1 (DSN1) to TBL2 (DSN2) Data Dictionary actions : Load TBL1 definitions into your Data Dictionary."
+  },
+  {
+    "name": "Example 1",
+    "file": "wordexample1.htm",
+    "description": "Using Word - Example 1 Open existing Word file enabling review, editing and all other options."
+  },
+  {
+    "name": "Example 1",
+    "file": "excelexample1.htm",
+    "description": "Using Excel - Example 1 This piece of code transfers data from file \"c:\\dat\\Test."
+  },
+  {
+    "name": "Example 2",
+    "file": "wordexample2.htm",
+    "description": "Using Word - Example 2 Open existing Word file (template), store data into three bookmarks \"name\", \"date\" and \"amount\", and save document under new name."
+  },
+  {
+    "name": "Example 2",
+    "file": "example2multi.htm",
+    "description": "Example 2 - Copy TBL1 (DSN1) to TBL1 (DSN2) Data Dictionary actions : Load TBL1 (DSN1) definitions into your Data Dictionary."
+  },
+  {
+    "name": "Example 2",
+    "file": "excelexample2.htm",
+    "description": "Using Excel - Example 2 This piece of code transfers data from database to the file \"c:\\dat\\Test."
+  },
+  {
+    "name": "Example 3",
+    "file": "wordexample3.htm",
+    "description": "Example 3 Prepare data file for mailmerge, activate mailmerge method and save document under new name."
+  },
+  {
+    "name": "Example 3",
+    "file": "excelexample3.htm",
+    "description": "Using Excel - Example 3 This piece of code opens the existing file \"c:\\dat\\Template."
+  },
+  {
+    "name": "Example1",
+    "file": "example1ftp.htm",
+    "description": "Example1 This piece of code downloads a file from FTP server."
+  },
+  {
+    "name": "EXECSQL",
+    "file": "execsql.htm",
+    "description": "EXECSQL This statement executes a SQL statement."
+  },
+  {
+    "name": "EXECUTE",
+    "file": "execute.htm",
+    "description": "EXECUTE This statement executes operating system commands or opens a file or an URL."
+  },
+  {
+    "name": "EXIT",
+    "file": "exit.htm",
+    "description": "EXIT This statement exits immediately a procedure or function."
+  },
+  {
+    "name": "Expand",
+    "file": "expand.htm",
+    "description": "Expand This method e xpands a tree node."
+  },
+  {
+    "name": "Export Data From File",
+    "file": "exportdatafromfile.htm",
+    "description": ""
+  },
+  {
+    "name": "Export Data From RDB Table",
+    "file": "exportdatafromrdbtable.htm",
+    "description": ""
+  },
+  {
+    "name": "Export Programs",
+    "file": "exportprograms.htm",
+    "description": ""
+  },
+  {
+    "name": "ExportPDF",
+    "file": "exportpdf.htm",
+    "description": "ExportPDF This method exports a Winword document to a PDF file."
+  },
+  {
+    "name": "ExportXML",
+    "file": "exportxml.htm",
+    "description": "ExportXML This method exports Excel workbook to XML file."
+  },
+  {
+    "name": "Fields Menu",
+    "file": "fieldsmenu.htm",
+    "description": "Fields Menu Define Defines new global fields."
+  },
+  {
+    "name": "File",
+    "file": "filesp.htm",
+    "description": "File Menu Save to recovery file Saves current work to journal file program_name."
+  },
+  {
+    "name": "File definition",
+    "file": "filedefinition.htm",
+    "description": "File definition Generally, a file is collection of information."
+  },
+  {
+    "name": "File Manipulation",
+    "file": "filemanipulation.htm",
+    "description": "File Manipulation The list shows already defined files with their characteristics."
+  },
+  {
+    "name": "FILE_IO",
+    "file": "fileio.htm",
+    "description": "FILE_IO This function handles files."
+  },
+  {
+    "name": "FILE_STATUS",
+    "file": "file_status.htm",
+    "description": "FILE_STATUS This function returns file status."
+  },
+  {
+    "name": "Find Program",
+    "file": "findprogram.htm",
+    "description": "Find Program Find a program in Data Dictionary."
+  },
+  {
+    "name": "FINISH_WINDOW",
+    "file": "finishwindow.htm",
+    "description": "FINISH_WINDOW This statement finishes data entry process and moves program control to subform calculations."
+  },
+  {
+    "name": "Frame properties",
+    "file": "frameproperties.htm",
+    "description": "Frame properties Object name When the new frame is created, generator automatically assigns the name Frame_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Freezecolumns",
+    "file": "freezecolumns.htm",
+    "description": "Freezecolumns This method enables columns on the left side to be visible when scrolling through the grid."
+  },
+  {
+    "name": "Freezelines",
+    "file": "freezelines.htm",
+    "description": "Freezelines This method enables top lines to be visible when scrolling through the grid."
+  },
+  {
+    "name": "FUNCTION",
+    "file": "function.htm",
+    "description": "FUNCTION This statement specifies a beginning of a function."
+  },
+  {
+    "name": "Function key handlers",
+    "file": "functionkeyhandlers.htm",
+    "description": "Function key handlers A function key event handler is a procedure activated as the result of pressing a function key."
+  },
+  {
+    "name": "General",
+    "file": "fpgeneral.htm",
+    "description": "Form painter - General information Form painter enables you to design (paint) forms or reports."
+  },
+  {
+    "name": "Getbackcolor",
+    "file": "getbackcolor.htm",
+    "description": "Getbackcolor This method returns background color of a cell in current sheet."
+  },
+  {
+    "name": "Getcell",
+    "file": "getcell.htm",
+    "description": "Getcell This method reads a cell contents from a grid."
+  },
+  {
+    "name": "Getcell",
+    "file": "excelgetcell.htm",
+    "description": "Getcell This method reads a value from MS Excel cell."
+  },
+  {
+    "name": "Getcolor",
+    "file": "getcolor.htm",
+    "description": "Getcolor This method returns color of the object."
+  },
+  {
+    "name": "Getcurrentdirectory",
+    "file": "getcurrentdirectory.htm",
+    "description": "Getcurrentdirectory This method returns current directory from the server."
+  },
+  {
+    "name": "Getidentity",
+    "file": "getidentity.htm",
+    "description": "Getidentity This method returns next identity value of a grid column."
+  },
+  {
+    "name": "Getline",
+    "file": "getline.htm",
+    "description": "Getline This method reads one line from a grid."
+  },
+  {
+    "name": "Getnextselected",
+    "file": "getnextselected.htm",
+    "description": "Getnextselected This method returns index of the next selected line in a grid (table)."
+  },
+  {
+    "name": "Getnumbercols",
+    "file": "getnumbercols_grid.htm",
+    "description": "Getnumbercols This method returns number of columns in the grid."
+  },
+  {
+    "name": "Getnumbercols",
+    "file": "getnumbercols.htm",
+    "description": "Getnumbercols This method returns number of columns in the current sheet."
+  },
+  {
+    "name": "Getnumberrows",
+    "file": "getnumbergridrows.htm",
+    "description": "Getnumberrows This method returns number of the filled rows in the grid (table)."
+  },
+  {
+    "name": "Getnumberrows",
+    "file": "getnumberrows.htm",
+    "description": "Getnumberrows This method returns number of rows in the current sheet."
+  },
+  {
+    "name": "Getnumbersheets",
+    "file": "getnumbersheets.htm",
+    "description": "Getnumbersheets This method returns number of sheets in the current workbook."
+  },
+  {
+    "name": "Getposition",
+    "file": "getposition.htm",
+    "description": "Getposition This method returns position and size of the object."
+  },
+  {
+    "name": "GETPRINTERNAME",
+    "file": "getprintername.htm",
+    "description": "GETPRINTERNAME This function returns printer name from list of available printers."
+  },
+  {
+    "name": "GETSCRIPT",
+    "file": "getscript.htm",
+    "description": "GETSCRIPT This function tries to determine script used in an Unicode text."
+  },
+  {
+    "name": "Getselectedcount",
+    "file": "getselectedcount.htm",
+    "description": "Getselectedcount This method returns number of selected lines in a grid (table)."
+  },
+  {
+    "name": "Getsheetname",
+    "file": "excelgetsheetname.htm",
+    "description": "Getsheetname This method returns the name of the current sheet."
+  },
+  {
+    "name": "Gettopline",
+    "file": "gettopline.htm",
+    "description": "Gettopline This method returns first visible line in a grid (table)."
+  },
+  {
+    "name": "Gettreedata",
+    "file": "gettreedata.htm",
+    "description": "Gettreedata This method returns data stored in the selected tree node."
+  },
+  {
+    "name": "Global procedures",
+    "file": "globalprocedures.htm",
+    "description": "Global procedures / functions definition Global procedure(s)/function(s) are subroutines defined at Data Dictionary level."
+  },
+  {
+    "name": "Graph",
+    "file": "graph.htm",
+    "description": "Graph We use a graph to display data graphically."
+  },
+  {
+    "name": "Graph properties",
+    "file": "graphproperties.htm",
+    "description": ""
+  },
+  {
+    "name": "Group box",
+    "file": "groupbox.htm",
+    "description": "Group box The group box is a rectangle with some text located on the top edge."
+  },
+  {
+    "name": "Group of objects",
+    "file": "groups.htm",
+    "description": "Group of objects A group is not object itself."
+  },
+  {
+    "name": "GZIP_COMPRESS",
+    "file": "gzip_compress.htm",
+    "description": "GZIP_COMPRESS This function creates a gzip (."
+  },
+  {
+    "name": "GZIP_DECOMPRESS",
+    "file": "gzip_decompress.htm",
+    "description": "GZIP_DECOMPRESS This function decompresses gzip (."
+  },
+  {
+    "name": "HASH",
+    "file": "hash.htm",
+    "description": "HASH This function calculates hash value of a data ."
+  },
+  {
+    "name": "Hidecolumn",
+    "file": "hidecolumn.htm",
+    "description": "Hidecolumn This method hides columns of a grid."
+  },
+  {
+    "name": "HOUR",
+    "file": "hour.htm",
+    "description": "HOUR This function returns hours of a time."
+  },
+  {
+    "name": "Hyperlink",
+    "file": "hyperlink.htm",
+    "description": "Hyperlink Hyperlink in reports performs the same function as a hyperlink in a html page."
+  },
+  {
+    "name": "IAF Help",
+    "file": "zorder.htm",
+    "description": "The Z-Order defines the position (depth, layer) of the object when many passive objects overlaps each other."
+  },
+  {
+    "name": "IAF Help",
+    "file": "dominantobject.htm",
+    "description": "When multiple objects are selected, one of the objects is dominant."
+  },
+  {
+    "name": "IAF Help",
+    "file": "codepagetip.htm",
+    "description": ""
+  },
+  {
+    "name": "IAF Help",
+    "file": "collationname.htm",
+    "description": "Collation names Collation name has the format Language[_CI] where _CI means case-insensitive."
+  },
+  {
+    "name": "IDIVIDE",
+    "file": "idivide.htm",
+    "description": "IDIVIDE This function returns result from the integer division."
+  },
+  {
+    "name": "IF",
+    "file": "if.htm",
+    "description": "IF Conditional execution of block of the statements."
+  },
+  {
+    "name": "Image",
+    "file": "image.htm",
+    "description": "Image To insert new image on the form, click button Image in toolbox or choose menu command Objects/Image."
+  },
+  {
+    "name": "Image properties",
+    "file": "imageproperties.htm",
+    "description": "Image properties Object name When the new image is created, generator automatically assigns the name Image_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Import Data into File",
+    "file": "importdataintofile.htm",
+    "description": ""
+  },
+  {
+    "name": "Import Data Into RDB Table",
+    "file": "importdataintordbtable.htm",
+    "description": ""
+  },
+  {
+    "name": "Import Programs",
+    "file": "importprograms.htm",
+    "description": ""
+  },
+  {
+    "name": "INDEX",
+    "file": "index.htm",
+    "description": "INDEX This function compares a field to array elements, beginning from the first element."
+  },
+  {
+    "name": "INDEXGE",
+    "file": "indexge.htm",
+    "description": "INDEXGE This function compares a field to array elements, beginning from the first element."
+  },
+  {
+    "name": "INDEXLE",
+    "file": "indexle.htm",
+    "description": "INDEXLE This function compares a field to array elements, beginning from the first element."
+  },
+  {
+    "name": "Init",
+    "file": "init.htm",
+    "description": "Init This method initializes object on the screen."
+  },
+  {
+    "name": "INIT",
+    "file": "statementinit.htm",
+    "description": "INIT This statement initializes field values (ZERO, SPACE, ZERO_DATE, ZERO_TIME)."
+  },
+  {
+    "name": "INIT_RECORD",
+    "file": "initrecord.htm",
+    "description": "INIT_RECORD This statement fills all fields in record with initial values (ZERO, SPACE, ZERO_DATE, ZERO_TIME)."
+  },
+  {
+    "name": "INIT_WINDOW_FIELDS",
+    "file": "init_window_fields.htm",
+    "description": "INIT_WINDOW_FIELDS This statement visually initializes fields in the subform from the current field up to the end of subform."
+  },
+  {
+    "name": "INITCAP",
+    "file": "initcap.htm",
+    "description": "INITCAP This function converts the first letter of each word in uppercase, and all other letters converts in lowercase."
+  },
+  {
+    "name": "INITCAP_NLS",
+    "file": "initcapnls.htm",
+    "description": "INITCAP_NLS This function converts the first letter of each word in uppercase, and all other letters converts in lowercase."
+  },
+  {
+    "name": "INPUTBOX",
+    "file": "inputbox.htm",
+    "description": "INPUTBOX This function displays prompt in a dialog box, waits for the user to input text or click a button, and returns string containing the contents of the text box."
+  },
+  {
+    "name": "Insertitem",
+    "file": "insertitem.htm",
+    "description": "Insertitem This method inserts an item into an object."
+  },
+  {
+    "name": "Insertitembykey",
+    "file": "insertitembykey.htm",
+    "description": "Insertitembykey This method randomly inserts an item into a tree."
+  },
+  {
+    "name": "InsertItemEx",
+    "file": "insertitemex.htm",
+    "description": "InsertItemEx This method inserts an item into a combobox, listbox or dataselector, enabling multi-column listbox portion of the combobox."
+  },
+  {
+    "name": "Insertiteminlinecombo",
+    "file": "insertiteminlinecombo.htm",
+    "description": "Insertiteminlinecombo This method inserts an item into a grid combobox if comboboxes in every line have different content."
+  },
+  {
+    "name": "Insertrow",
+    "file": "insertrow.htm",
+    "description": "Insertrow This method inserts an empty row into opened MS Word table."
+  },
+  {
+    "name": "INTEREST",
+    "file": "interest.htm",
+    "description": "INTEREST This function calculates the interest payment for a given period."
+  },
+  {
+    "name": "Internal Fields",
+    "file": "internalfields.htm",
+    "description": "Internal Fields Internal fields are predefined fields that can be used in each program."
+  },
+  {
+    "name": "International support",
+    "file": "internationalsupport.htm",
+    "description": "International Support International support (multilinguality) enabled If you plan to create a multilingual application, this option should be checked."
+  },
+  {
+    "name": "Introduction",
+    "file": "introductioniap.htm",
+    "description": ""
+  },
+  {
+    "name": "Introduction",
+    "file": "introductionxml.htm",
+    "description": "Introduction XML file is a text file combining data and tags like HTML."
+  },
+  {
+    "name": "Introduction",
+    "file": "introductiongettingstarted.htm",
+    "description": ""
+  },
+  {
+    "name": "Introduction",
+    "file": "introductionftp.htm",
+    "description": "Introduction Object FTP allows client access to a FTP server."
+  },
+  {
+    "name": "Introduction",
+    "file": "introductiondd.htm",
+    "description": "Introduction Data Dictionary utility enables you to define DD entities: global fields, records, files, strings and applications."
+  },
+  {
+    "name": "Introduction",
+    "file": "lp_introduction.htm",
+    "description": "Introduction To avoid windows spooler and directly print plain text to a printer on a PC, LINEPRINTER object can be used."
+  },
+  {
+    "name": "Introduction",
+    "file": "introductionmp.htm",
+    "description": ""
+  },
+  {
+    "name": "Introduction",
+    "file": "introductionrbg.htm",
+    "description": ""
+  },
+  {
+    "name": "Introduction",
+    "file": "excelintro.htm",
+    "description": "Using Excel - Introduction Programs can transfer data to and from a MS Excel document."
+  },
+  {
+    "name": "Introduction",
+    "file": "wordintroduction.htm",
+    "description": "Using Word - Introduction Programs can transfer data to a MS Word document."
+  },
+  {
+    "name": "Introduction",
+    "file": "files_introduction.htm",
+    "description": "Introduction To manipulate with operating system files, we use an object named FILE ."
+  },
+  {
+    "name": "Introduction",
+    "file": "introductionmulti.htm",
+    "description": "Using multiple datasources - Introduction Suppose we have defined two datasources on our PC: DSN1 points to a MS SQL Server database."
+  },
+  {
+    "name": "Introduction to IAF",
+    "file": "introduction.htm",
+    "description": "Introduction to IAF Activation To activate generator, just enter IAF in Run dialog and click OK."
+  },
+  {
+    "name": "ISAM files",
+    "file": "isamfiles.htm",
+    "description": "ISAM files Record Manipulation Operations on records: create new definition, modify existing definition, delete a record definition, copy one definition to another, export/import record definition."
+  },
+  {
+    "name": "Isenabled",
+    "file": "isenabled.htm",
+    "description": "Isenabled This method returns the value of enable state of an object."
+  },
+  {
+    "name": "IsLineModified",
+    "file": "islinemodified.htm",
+    "description": "IsLineModified This method determines whether the grid current line has been modified."
+  },
+  {
+    "name": "IsLineModifiedExclude",
+    "file": "islinemodifiedexclude.htm",
+    "description": "IsLineModifiedExclude This method determines whether the grid current line has been modified."
+  },
+  {
+    "name": "Isvisible",
+    "file": "isvisible.htm",
+    "description": "Isvisible This method returns the state of visibility of an object."
+  },
+  {
+    "name": "Joincells",
+    "file": "exceljoincells.htm",
+    "description": "Joincells This method combines a range of cells into one large cell (Excel)."
+  },
+  {
+    "name": "Joincells",
+    "file": "joincells.htm",
+    "description": "Joincells This method combines many adjacent cells into one large cell."
+  },
+  {
+    "name": "JSON_ARRAY",
+    "file": "json_array.htm",
+    "description": "JSON_ARRAY This function reads one element from a JSON array."
+  },
+  {
+    "name": "JSON_GET_FIELD",
+    "file": "json_get_field.htm",
+    "description": "JSON_GET_FIELD This function reads one field from a JSON structure."
+  },
+  {
+    "name": "LEFT",
+    "file": "left.htm",
+    "description": "LEFT This function extracts a substring beginning with the first character in alpha_exp."
+  },
+  {
+    "name": "LETTERS",
+    "file": "letters.htm",
+    "description": "LETTERS This function returns textual representation of a number."
+  },
+  {
+    "name": "Limittext",
+    "file": "limittext.htm",
+    "description": "Limittext This method limits amount of the text, in characters, that can be entered into an alphanumeric destination field."
+  },
+  {
+    "name": "Line",
+    "file": "line.htm",
+    "description": "Line To insert new line on the form, click button Line in toolbox or choose Objects/Line."
+  },
+  {
+    "name": "Line properties",
+    "file": "lineproperties.htm",
+    "description": "Line properties Object name When the new line is created, generator automatically assigns the name Line_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Lineset properties",
+    "file": "linesetproperties.htm",
+    "description": "Lineset properties Print page header on the first page only?"
+  },
+  {
+    "name": "LIST",
+    "file": "list.htm",
+    "description": "LIST This function returns value from list of values."
+  },
+  {
+    "name": "List methods by object",
+    "file": "listmethodsbyobject.htm",
+    "description": "List methods by object FORM Display Displays text in the caption."
+  },
+  {
+    "name": "Load table definitions from ODBC datasource into the DD",
+    "file": "loadtabledefinitions.htm",
+    "description": "Load table definitions from ODBC datasource into the DD To use database tables in your programs, you must load their definitions into the Data Dictionary."
+  },
+  {
+    "name": "LOAD_FILE",
+    "file": "loadfile.htm",
+    "description": "LOAD_FILE This function loads a file into an alpha field or a long field (LONGVARCHAR or LONGVARBINARY) of an RDB table."
+  },
+  {
+    "name": "Loadexternal",
+    "file": "loadexternal.htm",
+    "description": "Loadexternal This method loads external datasource into Excel worksheet."
+  },
+  {
+    "name": "Local fields definition",
+    "file": "localfieldsdefinition.htm",
+    "description": "Local fields definition Local fields are variables defined in a program and can be used in that program only."
+  },
+  {
+    "name": "Local procedures",
+    "file": "localprocedures.htm",
+    "description": "Local procedures / functions definition Local procedure(s)/function(s) are subroutines defined in a program and can be used in this program only, see Global procedure(s)/ function(s) ."
+  },
+  {
+    "name": "Logical Name Table Maintenance",
+    "file": "logicalnametablemaintenance.htm",
+    "description": "Logical Name Table Maintenance Logical names table establishes connection between logical name and physical path of a file."
+  },
+  {
+    "name": "Logical operators",
+    "file": "logicaloperators.htm",
+    "description": "Logical operators Logical operators let us join two or more conditional expressions ."
+  },
+  {
+    "name": "Lookup dialog",
+    "file": "lookupdialog.htm",
+    "description": "Lookup dialog /LOOKUP qualifier displays lookup dialog at run-time."
+  },
+  {
+    "name": "LOWER",
+    "file": "lower.htm",
+    "description": "LOWER This function converts an alpha field to lower case."
+  },
+  {
+    "name": "LOWER_NLS",
+    "file": "lowernls.htm",
+    "description": "LOWER_NLS This function converts all characters in alpha_exp to lower case."
+  },
+  {
+    "name": "LPAD",
+    "file": "lpad.htm",
+    "description": "LPAD This function returns an alpha field, left-padded with another string."
+  },
+  {
+    "name": "LTRIM",
+    "file": "ltrim.htm",
+    "description": "LTRIM This function removes white space from the start of alpha_exp."
+  },
+  {
+    "name": "MAIL",
+    "file": "mail.htm",
+    "description": "MAIL This statement sends a mail."
+  },
+  {
+    "name": "Mailing label format",
+    "file": "mailinglabelformat.htm",
+    "description": "Mailing label format Top margin (mm) The distance from the top edge of the paper to the first label in millimeters."
+  },
+  {
+    "name": "MAKEDATE",
+    "file": "makedate.htm",
+    "description": "MAKEDATE This function returns date value calculated from the year, month and day."
+  },
+  {
+    "name": "MAKETIME",
+    "file": "maketime.htm",
+    "description": "MAKETIME This function returns time value calculated from the hour, minute and second."
+  },
+  {
+    "name": "Mathematical operators",
+    "file": "mathematicaloperators.htm",
+    "description": "Mathematical operators Mathematical operators are + addition - subtraction, unary minus * multiplication / division ^ exponent For integer division see IDIVIDE , MOD ."
+  },
+  {
+    "name": "MAX",
+    "file": "max.htm",
+    "description": "MAX This function returns the highest of the input values for all processed records between two break fields."
+  },
+  {
+    "name": "Mergeclose",
+    "file": "mergeclose.htm",
+    "description": "Mergeclose This method closes mailmerge data file."
+  },
+  {
+    "name": "Mergedata",
+    "file": "mergedata.htm",
+    "description": "Mergedata This method stores one field into the mailmerge record buffer."
+  },
+  {
+    "name": "Mergeopen",
+    "file": "mergeopen.htm",
+    "description": "Mergeopen This method creates new mailmerge data file."
+  },
+  {
+    "name": "Mergewrite",
+    "file": "mergewrite.htm",
+    "description": "Mergewrite This method writes one record into mailmerge data file."
+  },
+  {
+    "name": "MESSAGEBOX",
+    "file": "messagebox.htm",
+    "description": "MESSAGEBOX This function displays a message in a dialog box, waits for the user to click a button, and returns an integer indicating which button the user clicked."
+  },
+  {
+    "name": "Methods",
+    "file": "methods.htm",
+    "description": "Methods Methods are functions that operate on objects."
+  },
+  {
+    "name": "MID",
+    "file": "mid.htm",
+    "description": "MID This function extracts specified number of characters from an alpha field."
+  },
+  {
+    "name": "MIN",
+    "file": "min.htm",
+    "description": "MIN This function returns the smallest of the input values for all processed records between two break fields."
+  },
+  {
+    "name": "MINUTE",
+    "file": "minute.htm",
+    "description": "MINUTE This function extracts minutes of a time."
+  },
+  {
+    "name": "MOD",
+    "file": "mod.htm",
+    "description": "MOD This function returns remainder from the integer division."
+  },
+  {
+    "name": "Modify",
+    "file": "modifyglobalfield.htm",
+    "description": ""
+  },
+  {
+    "name": "Modifyitem",
+    "file": "modifyitem.htm",
+    "description": "Modifyitem This methods modifies text label of a tree item."
+  },
+  {
+    "name": "Modifystring",
+    "file": "modifystring.htm",
+    "description": "Modify string An identifier is a sequence of English letters, digits, underscore character(_) and dollar sign ($)."
+  },
+  {
+    "name": "MONTH",
+    "file": "month.htm",
+    "description": "MONTH This function returns month of a date."
+  },
+  {
+    "name": "Multiple columns",
+    "file": "multiplecolumns.htm",
+    "description": "Multiple columns This option applies to 'Detail' lineset only."
+  },
+  {
+    "name": "New program name dialog",
+    "file": "programnamedialog.htm",
+    "description": "New program name dialog This dialog appears on the screen if we create new program."
+  },
+  {
+    "name": "NEWGUID",
+    "file": "newguid.htm",
+    "description": "NEWGUID This function generates universally unique identifier."
+  },
+  {
+    "name": "NEXT",
+    "file": "next.htm",
+    "description": "NEXT This statement starts next iteration of immediately innermost loop (DO_WHILE , READ_ALL or SELECT_ALL)."
+  },
+  {
+    "name": "NEXT_WORKING_DAY",
+    "file": "nextworkingday.htm",
+    "description": "NEXT_WORKING_DAY This function returns next working day."
+  },
+  {
+    "name": "NUM",
+    "file": "num.htm",
+    "description": "NUM This function converts alpha field to numeric field."
+  },
+  {
+    "name": "NUMBER_OF_ELEMENTS",
+    "file": "number_of_elements.htm",
+    "description": "NUMBER_OF_ELEMENTS This function returns number of elements of the array."
+  },
+  {
+    "name": "Numeric Functions",
+    "file": "numericfunctions.htm",
+    "description": "Numeric Functions ABS returns absolute value."
+  },
+  {
+    "name": "NUMRECORDS",
+    "file": "numrecords.htm",
+    "description": "NUMRECORDS This function returns number of records in a file or in an RDB table."
+  },
+  {
+    "name": "Objects with sequence number equal zero",
+    "file": "objectswithsequencenumberequalzero.htm",
+    "description": "Objects with sequence number equal zero Destination field, check box, radio button and combo box with sequence = 0 Processing of these objects is little bit specific regarding to those objects having sequence <> 0."
+  },
+  {
+    "name": "Objvalue",
+    "file": "objvalue.htm",
+    "description": "Objvalue This method gets value of an object."
+  },
+  {
+    "name": "ON_EVENT_PROCEDURE",
+    "file": "on_event_procedure.htm",
+    "description": "ON_EVENT_PROCEDURE This statement declares beginning of the event handler."
+  },
+  {
+    "name": "Open",
+    "file": "openftp.htm",
+    "description": "Open This method establishes connection to a FTP server."
+  },
+  {
+    "name": "Open",
+    "file": "openfile.htm",
+    "description": "Open This method opens/creates a text file."
+  },
+  {
+    "name": "OPEN",
+    "file": "open.htm",
+    "description": "OPEN This statement opens a file or establishes connection to a database."
+  },
+  {
+    "name": "Open",
+    "file": "lp_open.htm",
+    "description": "Open This method opens printer port."
+  },
+  {
+    "name": "Open",
+    "file": "wordopen.htm",
+    "description": "Open This method starts MS Word and opens existing document."
+  },
+  {
+    "name": "Open",
+    "file": "excelopen.htm",
+    "description": "Open This method starts MS Excel and opens (creates) document."
+  },
+  {
+    "name": "Open",
+    "file": "openxml.htm",
+    "description": "Open This method creates an empty XML file and opens it."
+  },
+  {
+    "name": "Open Application",
+    "file": "openapplication.htm",
+    "description": ""
+  },
+  {
+    "name": "Open Data Dictionary",
+    "file": "opendatadictionary.htm",
+    "description": ""
+  },
+  {
+    "name": "Opentable",
+    "file": "opentable.htm",
+    "description": "Opentable This method opens existing table or creates new one."
+  },
+  {
+    "name": "Options",
+    "file": "options.htm",
+    "description": "Options Save current work Defines autosave time interval: how often we want the painter to save the program."
+  },
+  {
+    "name": "Pagesetup",
+    "file": "pagesetup.htm",
+    "description": "Pagesetup This method changes some page layout parameters."
+  },
+  {
+    "name": "PAUSE",
+    "file": "pause.htm",
+    "description": "PAUSE This statement pauses a program displaying a message box."
+  },
+  {
+    "name": "PDF417 barcode",
+    "file": "pdf417-barcode.htm",
+    "description": "PDF417 barcode PDF417 is a two-dimensional bar code consisted of multiple rows."
+  },
+  {
+    "name": "PERFORM",
+    "file": "perform.htm",
+    "description": "PERFORM This statement executes local or global procedure."
+  },
+  {
+    "name": "Predefined colors",
+    "file": "predefinedcolors.htm",
+    "description": ""
+  },
+  {
+    "name": "PREVIOUS",
+    "file": "previous.htm",
+    "description": "PREVIOUS This function returns a field from previous record (table) buffer."
+  },
+  {
+    "name": "PROCEDURE",
+    "file": "procedure.htm",
+    "description": "PROCEDURE This statement declares a beginning of a procedure."
+  },
+  {
+    "name": "Program name",
+    "file": "reportprogramname.htm",
+    "description": "Program name This is the first dialog of program generator."
+  },
+  {
+    "name": "Program name",
+    "file": "intprogramname.htm",
+    "description": "Program name This is the first dialog of program generator."
+  },
+  {
+    "name": "Program properties",
+    "file": "programproperties.htm",
+    "description": "Program properties Program, Version, Date created / modified: information only."
+  },
+  {
+    "name": "Program protection",
+    "file": "programprotection.htm",
+    "description": "Program protection Each Iaf program can be protected from unauthorized access."
+  },
+  {
+    "name": "Program type",
+    "file": "programtype.htm",
+    "description": "Program type In this dialog we define program type: report or batch ."
+  },
+  {
+    "name": "Progress bar",
+    "file": "progressbar.htm",
+    "description": "Progress bar To insert new progress bar on the form, click button Progress in toolbox or choose menu command Objects/Progress."
+  },
+  {
+    "name": "Progressbar properties",
+    "file": "progressbarproperties.htm",
+    "description": "Progressbar properties Object name When the new progress bar is created, generator automatically assigns the name Progress_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "QR-barcode",
+    "file": "qr-barcode.htm",
+    "description": "QR barcode QR (Quick Response) is a two-dimensional bar code."
+  },
+  {
+    "name": "QUARTER",
+    "file": "quarter.htm",
+    "description": "QUARTER This function returns a quarter of a year."
+  },
+  {
+    "name": "Radio button",
+    "file": "radiobutton.htm",
+    "description": "Radio button We can consider radio button as a destination field which stores one of many values: 0 or 1 or 2 or 3, \"A\" or \"B\" or \"C\" or ."
+  },
+  {
+    "name": "Radiobutton properties",
+    "file": "radiobuttonproperties.htm",
+    "description": "Radiobutton properties Object name When the new radiobutton is created, generator automatically assigns the name Radiobutton_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "RDB tables",
+    "file": "rdbtables.htm",
+    "description": "RDB tables Load table definitions from an ODBC datasource into the DD To use database tables in our programs, we have to load their definitions into the DD."
+  },
+  {
+    "name": "READ",
+    "file": "read.htm",
+    "description": "READ This statement reads one record from a file or RDB table by a key."
+  },
+  {
+    "name": "Read",
+    "file": "readfile.htm",
+    "description": "Read This method reads next record from a text file."
+  },
+  {
+    "name": "READ_ALL",
+    "file": "readall.htm",
+    "description": "READ_ALL This statement reads group of records from a file or RDB table in a cycle."
+  },
+  {
+    "name": "READ_EXTERNAL",
+    "file": "readexternal.htm",
+    "description": "READ_EXTERNAL This statement reads symbol."
+  },
+  {
+    "name": "READ_LE",
+    "file": "readle.htm",
+    "description": "READ_LE This statement reads a record from an indexed file which key is less than or equal to given key."
+  },
+  {
+    "name": "READ_NEXT",
+    "file": "readnext.htm",
+    "description": "READ_NEXT This statement reads next record from a sequential file."
+  },
+  {
+    "name": "Recapitulation record definition",
+    "file": "recapitulationrecorddefinition.htm",
+    "description": "Recapitulation record definition Using recapitulation file, we have possibility to print two reports in one program."
+  },
+  {
+    "name": "Record definition",
+    "file": "recorddefinition.htm",
+    "description": "Record definition A record consists of fields."
+  },
+  {
+    "name": "Records manipulation",
+    "file": "recordsmanipulation.htm",
+    "description": "Records manipulation The list shows already defined records."
+  },
+  {
+    "name": "Rectangle",
+    "file": "rectangle.htm",
+    "description": "Rectangle To insert new rectangle on the form, click button Rectangle in toolbox or choose menu command Objects/Rectangle."
+  },
+  {
+    "name": "Rectangle properties",
+    "file": "rectangleproperties.htm",
+    "description": "Rectangle properties Object name When the new rectangle is created, generator automatically assigns the name Rectangle_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Remove Application",
+    "file": "removeapplication.htm",
+    "description": ""
+  },
+  {
+    "name": "Removeline",
+    "file": "removeline.htm",
+    "description": "Removeline This method removes one line from a grid."
+  },
+  {
+    "name": "Rename",
+    "file": "renameftp.htm",
+    "description": "Rename This method renames a file on the connected FTP server."
+  },
+  {
+    "name": "Repeatheader",
+    "file": "repeatheader.htm",
+    "description": "Repeatheader This method repeats table heading on all pages."
+  },
+  {
+    "name": "REPLACE",
+    "file": "replace.htm",
+    "description": "REPLACE This function replaces all occurrences of one string by another string."
+  },
+  {
+    "name": "Report parameters",
+    "file": "reportparameters.htm",
+    "description": "Report parameters Paper dimensions Page width Page height Page overflow is the position where the skip to new page occurs."
+  },
+  {
+    "name": "RESET",
+    "file": "reset.htm",
+    "description": "RESET This statement closes, deletes, re-creates and opens empty file."
+  },
+  {
+    "name": "Reset",
+    "file": "resetfile.htm",
+    "description": "Reset This method truncates the file, i."
+  },
+  {
+    "name": "Rewind",
+    "file": "rewindfile.htm",
+    "description": "Rewind This method repositions file pointer."
+  },
+  {
+    "name": "REWIND",
+    "file": "rewind.htm",
+    "description": "REWIND This statement positions on a beginning of a file."
+  },
+  {
+    "name": "RGB",
+    "file": "rgb.htm",
+    "description": "RGB This function returns an integer representing RGB color value."
+  },
+  {
+    "name": "RGB color values",
+    "file": "rgbcolorvalues.htm",
+    "description": "65536 * Blue_component + 256 * Green_component + Red_component ------------------------------------------------------------------ where Red, Green, Blue components lays in the range 0 to 255."
+  },
+  {
+    "name": "RIGHT",
+    "file": "right.htm",
+    "description": "RIGHT This function extracts a substring beginning with the rightmost character in alpha_exp."
+  },
+  {
+    "name": "ROLLBACK",
+    "file": "rollback.htm",
+    "description": "ROLLBACK This statement cancels transaction."
+  },
+  {
+    "name": "ROUND",
+    "file": "round.htm",
+    "description": "ROUND This function rounds a numeric value."
+  },
+  {
+    "name": "RPAD",
+    "file": "rpad.htm",
+    "description": "RPAD This function returns the alpha_exp, right-padded with another alpha_exp."
+  },
+  {
+    "name": "RT_REPLACE",
+    "file": "rt_replace.htm",
+    "description": "RT_REPLACE This function is used to compose a SQL statement at run-time."
+  },
+  {
+    "name": "RTRIM",
+    "file": "rtrim.htm",
+    "description": "RTRIM This function removes white space from the end of alpha_exp."
+  },
+  {
+    "name": "Run",
+    "file": "excelrun.htm",
+    "description": "Run This method saves the document, breaks connection between program and MS Excel, and gives control to the user."
+  },
+  {
+    "name": "Run",
+    "file": "wordrun.htm",
+    "description": "Run This method saves the document, breaks connection between program and MS Word, and gives control to the user."
+  },
+  {
+    "name": "Run-time symbols",
+    "file": "runtimesymbols.htm",
+    "description": "Run-time symbols Using symbols, the behavior of Iaf programs can be changed at run-time."
+  },
+  {
+    "name": "Runmacro",
+    "file": "runmacro.htm",
+    "description": "Runmacro This method runs a MS Word macro and, optionally, stores VBA (Visual Basic for Applications) code to Word document."
+  },
+  {
+    "name": "Runmacro",
+    "file": "runmacroexcel.htm",
+    "description": "Runmacro This method runs an Excel macro, procedure or function and, optionally, stores VBA (Visual Basic for Applications) code to Excel workbook."
+  },
+  {
+    "name": "SAVE_FILE",
+    "file": "savefile.htm",
+    "description": "SAVE_FILE This function stores a long field, string, (LONGVARCHAR or LONGVARBINARY, CLOB, BLOB) into a file."
+  },
+  {
+    "name": "Search Data Dictionary",
+    "file": "searchdatadictionary.htm",
+    "description": "Search Data Dictionary We use this dialog to search for string(s) in programs, global procedures/functions and menus."
+  },
+  {
+    "name": "Search global procedures / functions",
+    "file": "searchglobalproceduresfunctions.htm",
+    "description": "Search global procedures / functions In this dialog you can enter search criteria."
+  },
+  {
+    "name": "SECOND",
+    "file": "second.htm",
+    "description": "SECOND This function returns seconds of a time."
+  },
+  {
+    "name": "SELECT",
+    "file": "select.htm",
+    "description": "SELECT This statement retrieves one record (row) from a RDB table."
+  },
+  {
+    "name": "Select datasource",
+    "file": "selectdatasource.htm",
+    "description": "Select datasource List List on the left-side of the dialog shows all ODBC datasources defined on your PC, including User DSN and System DSN."
+  },
+  {
+    "name": "Select statement",
+    "file": "selectstatement.htm",
+    "description": "Select statement This is a classic SQL statement used to retrieve rows from a RDB table: [DISTINCT] select_list FROM table(s) [WHERE search_condition] [GROUP BY group_list] [HAVING search_condition] [ORDER BY orderby_list] [UNION SELECT ."
+  },
+  {
+    "name": "SELECT_ALL",
+    "file": "selectall.htm",
+    "description": "SELECT_ALL This statement retrieves many records (rows) from a RDB table(s) in a cycle."
+  },
+  {
+    "name": "SELECT_START",
+    "file": "selectstart.htm",
+    "description": "SELECT_START This statement retrieves many records (rows) from a RDB table(s) in a cycle."
+  },
+  {
+    "name": "Selectitem",
+    "file": "selectitem.htm",
+    "description": "Selectitem This method selects one line in a display-only grid."
+  },
+  {
+    "name": "Set Password Protection",
+    "file": "setpasswordprotection.htm",
+    "description": ""
+  },
+  {
+    "name": "Setalignment",
+    "file": "excelsetalignment.htm",
+    "description": "Setalignment This method sets cell alignment (Excel)."
+  },
+  {
+    "name": "Setalignment",
+    "file": "setalignment.htm",
+    "description": "Setalignment This method sets text alignment."
+  },
+  {
+    "name": "Setbackcolor",
+    "file": "excelsetbackcolor.htm",
+    "description": "Setbackcolor This method sets the background color of a range of Excel cells."
+  },
+  {
+    "name": "Setbackcolor",
+    "file": "setbackcolor.htm",
+    "description": "Setbackcolor This method sets the background color of an object or grid cell."
+  },
+  {
+    "name": "Setblinking",
+    "file": "setblinking.htm",
+    "description": "Setblinking This method starts / stops blinking."
+  },
+  {
+    "name": "Setbookmark",
+    "file": "setbookmark.htm",
+    "description": "Setbookmark This method transfers a value from program to an empty bookmark in Word document."
+  },
+  {
+    "name": "Setbookmarktext",
+    "file": "setbookmarktext.htm",
+    "description": "Setbookmarktext This method sets bookmark text (reports only)."
+  },
+  {
+    "name": "Setbordercolor",
+    "file": "setbordercolor.htm",
+    "description": "Setbordercolor This method sets the border color of an object."
+  },
+  {
+    "name": "Setbordercolor",
+    "file": "excelsetbordercolor.htm",
+    "description": "Setbordercolor This method sets the border color of a range of Excel cells."
+  },
+  {
+    "name": "Setcell",
+    "file": "excelsetcell.htm",
+    "description": "Setcell This method stores value to an Excel cell."
+  },
+  {
+    "name": "Setcell",
+    "file": "wordsetcell.htm",
+    "description": "Setcell This method stores value into cell of previously opened table."
+  },
+  {
+    "name": "Setcellfocus",
+    "file": "setcellfocus.htm",
+    "description": "Setcellfocus This method sets the focus to a grid cell."
+  },
+  {
+    "name": "Setcellfont",
+    "file": "setcellfont.htm",
+    "description": "Setcellfont This method changes font attributes of an Excel cell."
+  },
+  {
+    "name": "Setcodepage",
+    "file": "setcodepage.htm",
+    "description": "Setcodepage This method sets code page of an object."
+  },
+  {
+    "name": "Setcodepage",
+    "file": "wordsetcodepage.htm",
+    "description": "Setcodepage This method sets the code page for subsequent \"set\" methods."
+  },
+  {
+    "name": "Setcolumnwidth",
+    "file": "excelsetcolumnwidth.htm",
+    "description": "Setcolumnwidth This method sets column width (Excel)."
+  },
+  {
+    "name": "Setcolumnwidth",
+    "file": "setcolumnwidth.htm",
+    "description": "Setcolumnwidth This method sets column width in a grid."
+  },
+  {
+    "name": "Setcurrentdirectory",
+    "file": "setcurrentdirectory.htm",
+    "description": "Setcurrentdirectory This method c hanges the directory on the server ."
+  },
+  {
+    "name": "Setcurrentline",
+    "file": "setcurrentline.htm",
+    "description": "Setcurrentline This method sets current line to line ."
+  },
+  {
+    "name": "Setcurrentpage",
+    "file": "setcurrentpage.htm",
+    "description": "Setcurrentpage This method sets current page in tab control."
+  },
+  {
+    "name": "Setenable",
+    "file": "setenable.htm",
+    "description": "Setenable This method enables or disables mouse and keyboard input."
+  },
+  {
+    "name": "Setfocus",
+    "file": "setfocus.htm",
+    "description": "Setfocus This method sets the focus to the specified object."
+  },
+  {
+    "name": "Setfont",
+    "file": "setfont.htm",
+    "description": "Setfont This method changes font attributes of an object."
+  },
+  {
+    "name": "Setindent",
+    "file": "setindent.htm",
+    "description": "Setindent This method sets new indentation, i."
+  },
+  {
+    "name": "Setlineheight",
+    "file": "setlineheight.htm",
+    "description": "Setlineheight This method sets grid line height."
+  },
+  {
+    "name": "Setnumbercolumns",
+    "file": "setnumbercolumns.htm",
+    "description": "Setnumbercolumns This method sets number of columns in a read-only grid."
+  },
+  {
+    "name": "Setnumberlines",
+    "file": "setnumberlines.htm",
+    "description": "Setnumberlines This method sets number of lines in the grid to be displayed in display phase."
+  },
+  {
+    "name": "Setparttextcolor",
+    "file": "setparttextcolor.htm",
+    "description": "Setparttextcolor This method sets the color of the part of text that matches the given pattern."
+  },
+  {
+    "name": "Setpos",
+    "file": "setpos.htm",
+    "description": "Setpos This method sets the current position of the progress bar."
+  },
+  {
+    "name": "Setposition",
+    "file": "setposition.htm",
+    "description": "Setposition This method sets the new position and/or new size of an object."
+  },
+  {
+    "name": "Setprefix",
+    "file": "setprefix.htm",
+    "description": "Setprefix Defines qualifier of nodes or elements if they need to be qualified."
+  },
+  {
+    "name": "Setrange",
+    "file": "setrange.htm",
+    "description": "Setrange This method sets the lower and upper limits of the progress bar."
+  },
+  {
+    "name": "Setreadonly",
+    "file": "setreadonly.htm",
+    "description": "Setreadonly This method disables/enables keyboard and mouse input for an object."
+  },
+  {
+    "name": "Setreadonlyline",
+    "file": "setreadonlyline.htm",
+    "description": "Setreadonlyline This method disables fields editing in one line of a data-entry grid."
+  },
+  {
+    "name": "Setsection",
+    "file": "setsection.htm",
+    "description": "Setsection This method creates a section of a grid."
+  },
+  {
+    "name": "Setsheet",
+    "file": "excelsetsheet.htm",
+    "description": "Setsheet This method changes current sheet."
+  },
+  {
+    "name": "Setsheetname",
+    "file": "setsheetname.htm",
+    "description": "Setsheetname This method changes the name of current sheet or inserts a new sheet."
+  },
+  {
+    "name": "Settextcolor",
+    "file": "excelsettextcolor.htm",
+    "description": "Settextcolor This method sets the text color of a range of Excel cells."
+  },
+  {
+    "name": "Settextcolor",
+    "file": "settextcolor.htm",
+    "description": "Settextcolor This method sets the text (foreground) color of an object or grid cell."
+  },
+  {
+    "name": "Settimerinterval",
+    "file": "settimerinterval.htm",
+    "description": "Settimerinterval This method sets new timer interval value, in milliseconds."
+  },
+  {
+    "name": "Settopline",
+    "file": "settopline.htm",
+    "description": "Settopline This method sets the first visible line to line ."
+  },
+  {
+    "name": "Setvisible",
+    "file": "setvisible.htm",
+    "description": "Setvisible This method displays or hides an object."
+  },
+  {
+    "name": "Setxmldecpoint",
+    "file": "setxmldecpoint.htm",
+    "description": "Setxmldecpoint Defines decimal point for numeric elements if the application decimal point does not correspond to the xml output."
+  },
+  {
+    "name": "SHIFT_ARRAY",
+    "file": "shift_array.htm",
+    "description": "SHIFT_ARRAY This function shifts array elements left or right, simultaneously placing the element to be removed into the result variable."
+  },
+  {
+    "name": "Show",
+    "file": "showinter.htm",
+    "description": "Show Datasource Shows list of tables and files used in the program."
+  },
+  {
+    "name": "Show",
+    "file": "showglobalfield.htm",
+    "description": "Show global fields This dialog shows all the global fields defined in the DD."
+  },
+  {
+    "name": "Show Files",
+    "file": "ddshowfiles.htm",
+    "description": "Show Files File name This is file name filter."
+  },
+  {
+    "name": "Show object list",
+    "file": "showobjectlist.htm",
+    "description": "Show object list This dialog lists all the objects in the subform or report."
+  },
+  {
+    "name": "Show Records",
+    "file": "ddshowrecords.htm",
+    "description": "Show Records Record name This is record name filter."
+  },
+  {
+    "name": "SKIP",
+    "file": "skip.htm",
+    "description": "SKIP This statement skips n lines in a report."
+  },
+  {
+    "name": "SORT_ARRAY",
+    "file": "sort_array.htm",
+    "description": "SORT_ARRAY This statement sorts an array."
+  },
+  {
+    "name": "SORT_FILE",
+    "file": "sort_file.htm",
+    "description": "SORT_FILE This statement sorts a sequential file."
+  },
+  {
+    "name": "Sorttable",
+    "file": "sorttable.htm",
+    "description": "Sorttable This method sorts a display-only table (grid) by a column."
+  },
+  {
+    "name": "SOURCE",
+    "file": "source.htm",
+    "description": "SOURCE This statement defines fields for display on the screen or on report."
+  },
+  {
+    "name": "Source Field",
+    "file": "sourcefield.htm",
+    "description": "Source Field A source field displays value expression (a variable, formula, function, ."
+  },
+  {
+    "name": "Source_field properties",
+    "file": "sourcefieldproperties.htm",
+    "description": "Source_field properties Object name When the new source_field is created, generator automatically assigns the name Sourcefield_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Spin",
+    "file": "spin.htm",
+    "description": "Spin Not implemented yet !"
+  },
+  {
+    "name": "Spin properties",
+    "file": "spinproperties.htm",
+    "description": ""
+  },
+  {
+    "name": "SPLIT",
+    "file": "split.htm",
+    "description": "SPLIT This function splits an alpha field by separator into alpha array."
+  },
+  {
+    "name": "SPLIT_CSV",
+    "file": "split_csv.htm",
+    "description": "SPLIT_CSV This function splits an alpha field containing csv string into alpha array."
+  },
+  {
+    "name": "SQRT",
+    "file": "sqrt.htm",
+    "description": "SQRT This function returns square root of a numeric value."
+  },
+  {
+    "name": "Start",
+    "file": "startmethod.htm",
+    "description": "Start This method starts the timer or GIF animation."
+  },
+  {
+    "name": "START",
+    "file": "start.htm",
+    "description": "START This statement positions on a record which is determined by a key."
+  },
+  {
+    "name": "Starting actions",
+    "file": "startingactions.htm",
+    "description": "Starting actions This piece of code executes after program initialization and before the first subform is displayed."
+  },
+  {
+    "name": "Statements",
+    "file": "statements.htm",
+    "description": "Statements ADD adds numeric_exp to a numeric field."
+  },
+  {
+    "name": "Stop",
+    "file": "stopmethod.htm",
+    "description": "Stop This method stops the timer or GIF animation ."
+  },
+  {
+    "name": "STOP_RUN",
+    "file": "stoprun.htm",
+    "description": "STOP_RUN This statement stops program."
+  },
+  {
+    "name": "STORED_FUNCTION",
+    "file": "storedfunction.htm",
+    "description": "STORED_FUNCTION This function calls a stored function via ODBC."
+  },
+  {
+    "name": "STR_FILL",
+    "file": "str_fill.htm",
+    "description": "STR_FILL This function fills alpha variable by 'fill string'."
+  },
+  {
+    "name": "STR_INDEX",
+    "file": "strindex.htm",
+    "description": "STR_INDEX This function returns the position of the first occurrence of a character in an alphanumeric string."
+  },
+  {
+    "name": "STR_LENGTH",
+    "file": "strlength.htm",
+    "description": "STR_LENGTH This function returns the position of the last non-blank character in an alphanumeric value."
+  },
+  {
+    "name": "STRING",
+    "file": "string.htm",
+    "description": "STRING This function returns string text."
+  },
+  {
+    "name": "String Functions",
+    "file": "stringfunctions.htm",
+    "description": "String Functions ALLTRIM removes white space from both ends of alpha_exp."
+  },
+  {
+    "name": "String operators",
+    "file": "stringoperators.htm",
+    "description": "String operators The only string operator is concatenation ."
+  },
+  {
+    "name": "STRING_EDIT",
+    "file": "string_edit.htm",
+    "description": "STRING_EDIT This function returns string text, simultaneously replacing placeholders by parameters."
+  },
+  {
+    "name": "Strings",
+    "file": "strings.htm",
+    "description": "Strings Manipulation Enables creating, modifying and deleting the strings."
+  },
+  {
+    "name": "Strings definition",
+    "file": "stringsdefinition.htm",
+    "description": "Strings definition In this dialog (menu command Define/Strings) we can define strings which will be used in our applications."
+  },
+  {
+    "name": "SUB_DAYS",
+    "file": "subdays.htm",
+    "description": "SUB_DAYS This function subtracts a number of days from a date."
+  },
+  {
+    "name": "SUB_HOURS",
+    "file": "subhours.htm",
+    "description": "SUB_HOURS This function subtracts a number of hours from a time or datetime field."
+  },
+  {
+    "name": "SUB_MINUTES",
+    "file": "subminutes.htm",
+    "description": "SUB_MINUTES This function subtracts a number of minutes from a time or datetime field."
+  },
+  {
+    "name": "SUB_MONTHS",
+    "file": "submonths.htm",
+    "description": "SUB_MONTHS This function subtracts a number of months from a date."
+  },
+  {
+    "name": "SUB_SECONDS",
+    "file": "subseconds.htm",
+    "description": "SUB_SECONDS This function subtracts a number of seconds from a time or datetime field."
+  },
+  {
+    "name": "SUB_WEEKS",
+    "file": "subweeks.htm",
+    "description": "SUB_WEEKS This function subtracts a number of weeks from a date."
+  },
+  {
+    "name": "SUB_YEARS",
+    "file": "subyears.htm",
+    "description": "SUB_YEARS This function subtracts a number of years from a date."
+  },
+  {
+    "name": "Subform",
+    "file": "subform.htm",
+    "description": "Subform A subform is complex object containing many related objects."
+  },
+  {
+    "name": "Subform processing",
+    "file": "subformprocessing.htm",
+    "description": "Subform processing The diagram bellow shows how run-time engine processes a subform."
+  },
+  {
+    "name": "Subform properties",
+    "file": "subformproperties.htm",
+    "description": "Subform properties Object name When the new subform is created, generator automatically assigns the name Subform_n , where n = 1, 2, …20."
+  },
+  {
+    "name": "Subforms",
+    "file": "subformssp.htm",
+    "description": "Subforms Add Adds new subform."
+  },
+  {
+    "name": "SUBSTR_INDEX",
+    "file": "substr_index.htm",
+    "description": "SUBSTR_INDEX This function returns the position of the first occurrence of a substring."
+  },
+  {
+    "name": "SUM",
+    "file": "sum.htm",
+    "description": "SUM This function returns sum of elements of a numeric array."
+  },
+  {
+    "name": "Sumcol",
+    "file": "sumcol.htm",
+    "description": "Sumcol This method returns sum of values in a column of a grid."
+  },
+  {
+    "name": "Sumcolif",
+    "file": "sumcolif.htm",
+    "description": "Sumcolif This method returns conditional sum of values in a column of a grid."
+  },
+  {
+    "name": "SUMOBJ",
+    "file": "sumobj.htm",
+    "description": "SUMOBJ This function summarizes values of numeric objects (source field, destination field)."
+  },
+  {
+    "name": "Suppress horizontal region",
+    "file": "suppresshorizontalregion.htm",
+    "description": "Suppress horizontal region Horizontal region is a region within one lineset."
+  },
+  {
+    "name": "Suppress lineset",
+    "file": "suppresslineset.htm",
+    "description": "Suppress lineset A lineset is a part of a report: page header, subheader, detail line, subtotal."
+  },
+  {
+    "name": "SYMBOL",
+    "file": "symbol.htm",
+    "description": "SYMBOL This function returns value of a symbol."
+  },
+  {
+    "name": "Symbol Table Maintenance",
+    "file": "symboltablemaintenance.htm",
+    "description": ""
+  },
+  {
+    "name": "Symbols",
+    "file": "symbols.htm",
+    "description": "Symbols Symbols represent one of mechanisms of inter-program communication."
+  },
+  {
+    "name": "Synchronize table definitions",
+    "file": "synchronizetabledefinitions.htm",
+    "description": "Synchronize table definitions This dialog enables you to compare table structures in your Data Dictionary to table structures in the database."
+  },
+  {
+    "name": "Tab control",
+    "file": "tabcontrol.htm",
+    "description": "Tab control The tab control is an object consisting of a number of pages that occupy the same space."
+  },
+  {
+    "name": "TABLE",
+    "file": "table.htm",
+    "description": "TABLE This statement defines the table with which the program is currently working."
+  },
+  {
+    "name": "Table (grid)",
+    "file": "tablegrid.htm",
+    "description": "Table (grid) A table (grid) is most complex object in the painter because the table contains another objects: source field, destination field, check box, combo box or button."
+  },
+  {
+    "name": "Table gradient colors",
+    "file": "tablegradientcolors.htm",
+    "description": "Table gradient colors In this dialog we define gradient style and gradient colors for grid headings."
+  },
+  {
+    "name": "Table modification",
+    "file": "tablemodification.htm",
+    "description": "Table modification This dialog enables you to change table structure just in your Data Dictionary."
+  },
+  {
+    "name": "Table properties",
+    "file": "tableproperties.htm",
+    "description": "Table properties Object name When the new table (grid) is created, generator automatically assigns the name Table_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Tables Manipulation",
+    "file": "tablesmanipulation.htm",
+    "description": "Tables Manipulation The list shows already loaded tables."
+  },
+  {
+    "name": "Text (label)",
+    "file": "textlabel.htm",
+    "description": "Text (label) To insert new text on the form, click button Text in toolbox or choose menu command Objects/Text."
+  },
+  {
+    "name": "Text properties",
+    "file": "textproperties.htm",
+    "description": "Text properties Object name When the new static text is created, generator automatically assigns the name Label_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "TIME",
+    "file": "time.htm",
+    "description": "TIME This function converts a value expression to a time field."
+  },
+  {
+    "name": "Time Functions",
+    "file": "timefunctions.htm",
+    "description": "Time Functions ADD_HOURS adds number of hours to a time."
+  },
+  {
+    "name": "Timer",
+    "file": "timerobject.htm",
+    "description": "Timer The timer is an object enabling a code (procedure) activation when a time period elapses."
+  },
+  {
+    "name": "Timer properties",
+    "file": "timerproperties.htm",
+    "description": "Timer properties Object name When the new timer is created, generator automatically assigns the name Timer_nnn, where nnn = 1, 2, … Object name can be maximum 30 characters long."
+  },
+  {
+    "name": "Toolbar",
+    "file": "toolbarsp.htm",
+    "description": "Toolbar The toolbar contains button palette for most frequent commands."
+  },
+  {
+    "name": "Toolbox",
+    "file": "toolboxsp.htm",
+    "description": "Toolbox The toolbox contains button palette for object creating ."
+  },
+  {
+    "name": "Tooltip text definition",
+    "file": "tooltiptextdefinition.htm",
+    "description": "Text label · Source field · Destination field · Combo box · Check box · Radio button · Push button · Bitmap button Define tooltip Choose tooltip type (static, dynamic, classic, balloon, super, subform)."
+  },
+  {
+    "name": "TOTAL",
+    "file": "total.htm",
+    "description": "TOTAL This aggregate function returns sum of numeric_exp for all processed records between two breaks ."
+  },
+  {
+    "name": "TOTAL_CALC",
+    "file": "totalcalc.htm",
+    "description": "TOTAL_CALC Part of batch calculations which are executed at break, i."
+  },
+  {
+    "name": "TRANSLITER",
+    "file": "transliter.htm",
+    "description": "TRANSLITER This function converts a text from Latin script to Cyrillic script and vice versa (Serbian language only)."
+  },
+  {
+    "name": "Tree",
+    "file": "tree.htm",
+    "description": "Tree We use a tree to display hierarchical structure of data."
+  },
+  {
+    "name": "Tree properties",
+    "file": "treeproperties.htm",
+    "description": ""
+  },
+  {
+    "name": "TRNLOG",
+    "file": "trnlog.htm",
+    "description": "TRNLOG This function translates a logical name."
+  },
+  {
+    "name": "TRUNC",
+    "file": "trunc.htm",
+    "description": "TRUNC This function truncates a numeric value."
+  },
+  {
+    "name": "Unhidecolumn",
+    "file": "unhidecolumn.htm",
+    "description": "Unhidecolumn This method displays (shows) hidden columns."
+  },
+  {
+    "name": "UPDATE",
+    "file": "update.htm",
+    "description": "UPDATE This statement updates existing record of a file (rdb table)."
+  },
+  {
+    "name": "UPLOAD",
+    "file": "upload.htm",
+    "description": "UPLOAD This function sends HTTP POST request to an Internet site."
+  },
+  {
+    "name": "Uploadfile",
+    "file": "uploadfile.htm",
+    "description": "Uploadfile This method uploads file to the connected FTP server."
+  },
+  {
+    "name": "UPPER",
+    "file": "upper.htm",
+    "description": "UPPER This function converts an alpha field to upper case."
+  },
+  {
+    "name": "UPPER_NLS",
+    "file": "uppernls.htm",
+    "description": "UPPER_NLS This function converts all characters in alpha_exp to upper case."
+  },
+  {
+    "name": "Using XML - example",
+    "file": "usingxmlexample.htm",
+    "description": "Using XML - example Read a database table and store it into the XML file."
+  },
+  {
+    "name": "VALUE",
+    "file": "value.htm",
+    "description": "VALUE This function converts numeric literal, date, date-time or time field to the numeric value."
+  },
+  {
+    "name": "Value Expression",
+    "file": "valueexpression.htm",
+    "description": "Value Expression Definition 1 A value expression ( value_exp ) is a symbol or string of symbols used to calculate a value."
+  },
+  {
+    "name": "Value_date",
+    "file": "value_date.htm",
+    "description": "VALUE_DATE This function converts a date literal to date or datetime value."
+  },
+  {
+    "name": "View",
+    "file": "viewsp.htm",
+    "description": "View Toolbar Toolbox Alignment Status bar These options define visibility status of some parts of the generator."
+  },
+  {
+    "name": "View definition",
+    "file": "viewdefinition.htm",
+    "description": "View definition The view determines the way of the records reading in the program cycle (reports and batch programs)."
+  },
+  {
+    "name": "WAIT",
+    "file": "wait.htm",
+    "description": "WAIT This statement suspends the program execution for a specified interval (seconds or milliseconds)."
+  },
+  {
+    "name": "WARMSG",
+    "file": "warmsg.htm",
+    "description": "WARMSG This statement displays warning message and continues program execution (moves input focus to the next field according to the sequence number)."
+  },
+  {
+    "name": "Watermarks",
+    "file": "watermarks.htm",
+    "description": "Watermarks printing A watermark is text placed behind report objects."
+  },
+  {
+    "name": "WEEK_OF_YEAR",
+    "file": "weekofyear.htm",
+    "description": "WEEK_OF_YEAR This function returns week of a year."
+  },
+  {
+    "name": "WHENEVER",
+    "file": "whenever.htm",
+    "description": "WHENEVER This statement specifies action to be performed when fatal error occurs during the execution of a SQL statement."
+  },
+  {
+    "name": "WINDOW",
+    "file": "window.htm",
+    "description": "WINDOW This statement transfers control to n-th subform."
+  },
+  {
+    "name": "Write",
+    "file": "lp_write.htm",
+    "description": "Write This method writes text to the printer port."
+  },
+  {
+    "name": "WRITE",
+    "file": "write.htm",
+    "description": "WRITE This statement writes record into a file (table)."
+  },
+  {
+    "name": "Write",
+    "file": "writefile.htm",
+    "description": "Write This method writes one record to a text file."
+  },
+  {
+    "name": "WRITE_AUDIT",
+    "file": "writeaudit.htm",
+    "description": "WRITE_AUDIT This statement writes record in journal file."
+  },
+  {
+    "name": "WRITE_EXTERNAL",
+    "file": "writeexternal.htm",
+    "description": "WRITE_EXTERNAL This statement writes or deletes a symbol."
+  },
+  {
+    "name": "Writeelement",
+    "file": "writeelement.htm",
+    "description": "Writeelement This method writes starting tag, ending tag and data in the XML file."
+  },
+  {
+    "name": "Writeendnode",
+    "file": "writeendnode.htm",
+    "description": "Writeendnode This method writes ending tag of the node."
+  },
+  {
+    "name": "Writenode",
+    "file": "writenode.htm",
+    "description": "Writenode This method writes starting tag of the node and possible attributes."
+  },
+  {
+    "name": "Writetext",
+    "file": "writetext.htm",
+    "description": "Writetext This method writes one line of text into the XML file."
+  },
+  {
+    "name": "XML",
+    "file": "xml.htm",
+    "description": "XML This function opens and reads an XML file ( obsolete )."
+  },
+  {
+    "name": "XML_ADD_FIELD",
+    "file": "xml_add_field.htm",
+    "description": "XML_ADD_FIELD This function adds one field to a XML stream."
+  },
+  {
+    "name": "XML_ADD_TEXT",
+    "file": "xml_add_text.htm",
+    "description": "XML_ADD_TEXT This function adds text to a XML stream."
+  },
+  {
+    "name": "XML_DATASET_FIELD",
+    "file": "xml_dataset_field.htm",
+    "description": "XML_DATASET_FIELD This function reads one field from a XML dataset."
+  },
+  {
+    "name": "XML_GET_FIELD",
+    "file": "xml_get_field.htm",
+    "description": "XML_GET_FIELD This function reads one field from a XML stream."
+  },
+  {
+    "name": "YEAR",
+    "file": "year.htm",
+    "description": "YEAR This function returns 2- or 4-digit year of a date."
+  },
+  {
+    "name": "YEAR_MONTH",
+    "file": "yearmonth.htm",
+    "description": "YEAR_MONTH This function returns 6-digit year and month of a date."
+  },
+  {
+    "name": "YEAR2",
+    "file": "year2.htm",
+    "description": "YEAR2 This function returns 2-digit year of a date."
+  }
+]

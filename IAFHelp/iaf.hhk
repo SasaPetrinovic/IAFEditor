@@ -1,0 +1,2374 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY><OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="International support">
+	<param name="Local" value="internationalsupport.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Synchronize">
+	<param name="Local" value="synchronizetabledefinitions.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Table modification">
+	<param name="Local" value="tablemodification.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Local fields definition">
+	<param name="Local" value="localfieldsdefinition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Define_lookup_dialog">
+	<param name="Local" value="definelookupdialog.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Autocomplete">
+	<param name="Local" value="autocomplete.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="destination field">
+	<param name="Local" value="destinationfieldproperties.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="PDF417">
+	<param name="Local" value="pdf417-barcode.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="QR barcode">
+	<param name="Local" value="qr-barcode.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="toolbar">
+	<param name="Local" value="toolbarsp.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="toolbox">
+	<param name="Local" value="toolboxsp.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Line">
+	<param name="Local" value="line.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Rectangle">
+	<param name="Local" value="rectangle.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Ellipse">
+	<param name="Local" value="ellipse.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Button">
+	<param name="Local" value="button.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Bitmap button">
+	<param name="Local" value="bitmapbutton.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Image">
+	<param name="Local" value="image.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Combo box">
+	<param name="Local" value="combobox.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Group box">
+	<param name="Local" value="groupbox.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Radio button">
+	<param name="Local" value="radiobutton.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Check box">
+	<param name="Local" value="checkbox.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Subform">
+	<param name="Local" value="subform.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Grid (table)">
+	<param name="Local" value="tablegrid.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Progress bar">
+	<param name="Local" value="progressbar.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Tree">
+	<param name="Local" value="tree.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Graph">
+	<param name="Local" value="graph.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Data selector">
+	<param name="Local" value="dataselector.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Timer">
+	<param name="Local" value="timerobject.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Tab control">
+	<param name="Local" value="tabcontrol.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Function key handler">
+	<param name="Local" value="functionkeyhandlers.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Context menu">
+	<param name="Local" value="contextmenudefinition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Context menu item handlers">
+	<param name="Local" value="contextmenuitemhandlers.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Recapitulation_record">
+	<param name="Local" value="recapitulationrecorddefinition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Suppress lineset">
+	<param name="Local" value="suppresslineset.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Suppress horizontal region">
+	<param name="Local" value="suppresshorizontalregion.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Mailing label">
+	<param name="Local" value="mailinglabelformat.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Report parameters">
+	<param name="Local" value="reportparameters.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Bookmarks">
+	<param name="Local" value="bookmarks.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Watermarks">
+	<param name="Local" value="watermarks.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="View definion">
+	<param name="Local" value="viewdefinition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Additional view actions">
+	<param name="Local" value="additionalviewactions.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Directives (pseudo-commands)">
+	<param name="Local" value="directives.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="value expression">
+	<param name="Local" value="valueexpression.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="conditional expression">
+	<param name="Local" value="conditionalexpression.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Internal fields">
+	<param name="Local" value="internalfields.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONSTANTS">
+	<param name="Local" value="constants.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Assignment">
+	<param name="Local" value="assignmentoperator.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Comparison operators">
+	<param name="Local" value="comparisonoperators.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Logical operators">
+	<param name="Local" value="logicaloperators.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Statements">
+	<param name="Local" value="statements.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD">
+	<param name="Local" value="add.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="BREAK">
+	<param name="Local" value="break.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="BREAK_FIELD">
+	<param name="Local" value="breakfield.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CALL_PROGRAM">
+	<param name="Local" value="callprogram.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CALL_STOREDPROCEDURE">
+	<param name="Local" value="callstoredprocedure.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CALL_WINDOW">
+	<param name="Local" value="callwindow.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHAIN">
+	<param name="Local" value="chain.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHECK">
+	<param name="Local" value="check.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHECK_RECORD/CHECK_NORECORD">
+	<param name="Local" value="checkrecordchecknorecord.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CLOSE">
+	<param name="Local" value="close.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COMMIT">
+	<param name="Local" value="commit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DEFINE_LOCAL">
+	<param name="Local" value="definelocal.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DEFINE_RECAP_RECORD">
+	<param name="Local" value="definerecaprecord.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DELETE_RECORD">
+	<param name="Local" value="deleterecord.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DESTINATION">
+	<param name="Local" value="destination.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Lookup dialog">
+	<param name="Local" value="lookupdialog.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DETAIL_CALC">
+	<param name="Local" value="detailcalc.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DISPLAY_WINDOW_FIELDS">
+	<param name="Local" value="displaywindowfields.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DO_WHILE">
+	<param name="Local" value="dowhile.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="END_">
+	<param name="Local" value="end.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ERRMSG">
+	<param name="Local" value="errmsg.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ERRWARMSG">
+	<param name="Local" value="errwarmsg.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="EXECSQL">
+	<param name="Local" value="execsql.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="EXECUTE">
+	<param name="Local" value="execute.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="EXIT">
+	<param name="Local" value="exit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="FINISH_WINDOW">
+	<param name="Local" value="finishwindow.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="FUNCTION">
+	<param name="Local" value="function.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="IF">
+	<param name="Local" value="if.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INIT">
+	<param name="Local" value="statementinit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INIT_RECORD">
+	<param name="Local" value="initrecord.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INIT_WINDOW_FIELDS">
+	<param name="Local" value="init_window_fields.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MAIL">
+	<param name="Local" value="mail.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="NEXT">
+	<param name="Local" value="next.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ON_EVENT_PROCEDURE">
+	<param name="Local" value="on_event_procedure.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="OPEN">
+	<param name="Local" value="open.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="PAUSE">
+	<param name="Local" value="pause.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="PERFORM">
+	<param name="Local" value="perform.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="PROCEDURE">
+	<param name="Local" value="procedure.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="READ">
+	<param name="Local" value="read.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="READ_ALL">
+	<param name="Local" value="readall.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="READ_EXTERNAL">
+	<param name="Local" value="readexternal.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="READ_LE">
+	<param name="Local" value="readle.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="READ_NEXT">
+	<param name="Local" value="readnext.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RESET">
+	<param name="Local" value="reset.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="REWIND">
+	<param name="Local" value="rewind.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ROLLBACK">
+	<param name="Local" value="rollback.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SELECT">
+	<param name="Local" value="select.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SELECT_ALL">
+	<param name="Local" value="selectall.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SELECT_START">
+	<param name="Local" value="selectstart.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SKIP">
+	<param name="Local" value="skip.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SORT_ARRAY">
+	<param name="Local" value="sort_array.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SORT_FILE">
+	<param name="Local" value="sort_file.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SOURCE">
+	<param name="Local" value="source.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="START">
+	<param name="Local" value="start.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STOP_RUN">
+	<param name="Local" value="stoprun.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="TABLE">
+	<param name="Local" value="table.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="TOTAL_CALC">
+	<param name="Local" value="totalcalc.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="UPDATE">
+	<param name="Local" value="update.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WAIT">
+	<param name="Local" value="wait.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WARMSG">
+	<param name="Local" value="warmsg.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Whenever">
+	<param name="Local" value="whenever.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WINDOW">
+	<param name="Local" value="window.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WRITE">
+	<param name="Local" value="write.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WRITE_AUDIT">
+	<param name="Local" value="writeaudit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WRITE_EXTERNAL">
+	<param name="Local" value="writeexternal.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ABS">
+	<param name="Local" value="abs.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_DAYS">
+	<param name="Local" value="adddays.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_HOURS">
+	<param name="Local" value="addhours.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_MINUTES">
+	<param name="Local" value="addminutes.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_MONTHS">
+	<param name="Local" value="addmonths.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_SECONDS">
+	<param name="Local" value="addseconds.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_WEEKS">
+	<param name="Local" value="addweeks.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ADD_YEARS">
+	<param name="Local" value="addyears.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Allocstring">
+	<param name="Local" value="allocstring.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ALLTRIM">
+	<param name="Local" value="alltrim.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ALPHA">
+	<param name="Local" value="alpha.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ANNUITY">
+	<param name="Local" value="annuity.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ASC">
+	<param name="Local" value="asc.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="AVG">
+	<param name="Local" value="avg.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Base64_decode">
+	<param name="Local" value="base64_decode.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Base64_encode">
+	<param name="Local" value="base64_encode.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="BEGINM">
+	<param name="Local" value="beginm.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="BEGINQ">
+	<param name="Local" value="beginq.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="BEGINW">
+	<param name="Local" value="beginw.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="BEGINY">
+	<param name="Local" value="beginy.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CEIL">
+	<param name="Local" value="ceil.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CELL">
+	<param name="Local" value="cell.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHAR_OF">
+	<param name="Local" value="charof.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHECK_DIGIT">
+	<param name="Local" value="checkdigit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHR">
+	<param name="Local" value="chr.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CHRW">
+	<param name="Local" value="chrw.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Compare_collate">
+	<param name="Local" value="compare_collate.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COMPARE_RECORDS">
+	<param name="Local" value="compare_records.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COMPRESS">
+	<param name="Local" value="compress.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COMPRESS_CSV">
+	<param name="Local" value="compress_csv.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COMPRESS_SEP">
+	<param name="Local" value="compresssep.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COMPRESS_TRIM">
+	<param name="Local" value="compresstrim.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONCAT">
+	<param name="Local" value="concat.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONVERT">
+	<param name="Local" value="convert.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONVERT_DMY_YMD">
+	<param name="Local" value="convertdmyymd.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONVERT_MDY_YMD">
+	<param name="Local" value="convertmdyydm.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONVERT_LIT_YMD">
+	<param name="Local" value="convertlitymd.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CONVERT_YMD_MDY">
+	<param name="Local" value="convertymdmdy.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CORR">
+	<param name="Local" value="corr.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="COUNT">
+	<param name="Local" value="count.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="CURRENT">
+	<param name="Local" value="current.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DATE">
+	<param name="Local" value="date.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DATETIME">
+	<param name="Local" value="datetime.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DAY">
+	<param name="Local" value="day.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DAY_OF_WEEK">
+	<param name="Local" value="dayofweek.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DAY_OF_YEAR">
+	<param name="Local" value="dayofyear.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DAYS_IN_MONTH">
+	<param name="Local" value="daysinmonth.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DB_DATASOURCES">
+	<param name="Local" value="db_datasources.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DB_EXPORT">
+	<param name="Local" value="db_export.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DB_IMPORT">
+	<param name="Local" value="db_import.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DB_TABLES">
+	<param name="Local" value="db_tables.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DEFAULT_VALUE">
+	<param name="Local" value="default_value.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIFF_DATE">
+	<param name="Local" value="diffdate.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIFF_DAYS">
+	<param name="Local" value="diffdays.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIFF_DT">
+	<param name="Local" value="diffdt.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIFF_MONTHS">
+	<param name="Local" value="diffmonths.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIFF_TIME">
+	<param name="Local" value="difftime.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIFF_WEEKS">
+	<param name="Local" value="diffweeks.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DIGIT_OF">
+	<param name="Local" value="digitof.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Download">
+	<param name="Local" value="download.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="EDIT">
+	<param name="Local" value="edit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="EDIT_CURRENCY">
+	<param name="Local" value="edit_currency.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ENDM">
+	<param name="Local" value="endm.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ENDQ">
+	<param name="Local" value="endq.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ENDW">
+	<param name="Local" value="endw.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ENDY">
+	<param name="Local" value="endy.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Envvar">
+	<param name="Local" value="envvar.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="FILE_IO">
+	<param name="Local" value="fileio.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="File_status">
+	<param name="Local" value="file_status.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="GETPRINTERNAME">
+	<param name="Local" value="getprintername.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getscript">
+	<param name="Local" value="getscript.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="GZIP_COMPRESS">
+	<param name="Local" value="gzip_compress.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="GZIP_DECOMPRESS">
+	<param name="Local" value="gzip_decompress.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="HASH">
+	<param name="Local" value="hash.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="HOUR">
+	<param name="Local" value="hour.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="IDIVIDE">
+	<param name="Local" value="idivide.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INDEX">
+	<param name="Local" value="index.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INDEXGE">
+	<param name="Local" value="indexge.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INDEXLE">
+	<param name="Local" value="indexle.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INITCAP">
+	<param name="Local" value="initcap.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INITCAP_NLS">
+	<param name="Local" value="initcapnls.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INPUTBOX">
+	<param name="Local" value="inputbox.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="INTEREST">
+	<param name="Local" value="interest.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="JSON_ARRAY">
+	<param name="Local" value="json_array.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="JSON_GET_FIELD">
+	<param name="Local" value="json_get_field.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LEFT">
+	<param name="Local" value="left.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LETTERS">
+	<param name="Local" value="letters.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LIST">
+	<param name="Local" value="list.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LOAD_FILE">
+	<param name="Local" value="loadfile.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LOWER">
+	<param name="Local" value="lower.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LOWER_NLS">
+	<param name="Local" value="lowernls.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LPAD">
+	<param name="Local" value="lpad.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="LTRIM">
+	<param name="Local" value="ltrim.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MAKEDATE">
+	<param name="Local" value="makedate.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MAKETIME">
+	<param name="Local" value="maketime.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MAX">
+	<param name="Local" value="max.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MESSAGEBOX">
+	<param name="Local" value="messagebox.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Mid">
+	<param name="Local" value="mid.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Min">
+	<param name="Local" value="min.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MINUTE">
+	<param name="Local" value="minute.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MOD">
+	<param name="Local" value="mod.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MONTH">
+	<param name="Local" value="month.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Newguid">
+	<param name="Local" value="newguid.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="NEXT_WORKING_DAY">
+	<param name="Local" value="nextworkingday.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="NUM">
+	<param name="Local" value="num.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Number_of_elements">
+	<param name="Local" value="number_of_elements.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="NUMRECORDS">
+	<param name="Local" value="numrecords.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="PREVIOUS">
+	<param name="Local" value="previous.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="QUARTER">
+	<param name="Local" value="quarter.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="REPLACE">
+	<param name="Local" value="replace.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RGB">
+	<param name="Local" value="rgb.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RIGHT">
+	<param name="Local" value="right.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Round">
+	<param name="Local" value="round.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RPAD">
+	<param name="Local" value="rpad.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RTRIM">
+	<param name="Local" value="rtrim.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RT_REPLACE">
+	<param name="Local" value="rt_replace.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SAVE_FILE">
+	<param name="Local" value="savefile.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SECOND">
+	<param name="Local" value="second.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SHIFT_ARRAY">
+	<param name="Local" value="shift_array.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SQRT">
+	<param name="Local" value="sqrt.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SPLIT">
+	<param name="Local" value="split.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SPLIT_CSV">
+	<param name="Local" value="split_csv.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STORED_FUNCTION">
+	<param name="Local" value="storedfunction.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STRING">
+	<param name="Local" value="string.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STRING_EDIT">
+	<param name="Local" value="string_edit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STR_FILL">
+	<param name="Local" value="str_fill.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STR_INDEX">
+	<param name="Local" value="strindex.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="STR_LENGTH">
+	<param name="Local" value="strlength.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_DAYS">
+	<param name="Local" value="subdays.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_HOURS">
+	<param name="Local" value="subhours.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_MINUTES">
+	<param name="Local" value="subminutes.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_MONTHS">
+	<param name="Local" value="submonths.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_SECONDS">
+	<param name="Local" value="subseconds.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_WEEKS">
+	<param name="Local" value="subweeks.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUB_YEARS">
+	<param name="Local" value="subyears.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUBSTR_INDEX">
+	<param name="Local" value="substr_index.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUM">
+	<param name="Local" value="sum.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SUMOBJ">
+	<param name="Local" value="sumobj.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SYMBOL">
+	<param name="Local" value="symbol.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="TIME">
+	<param name="Local" value="time.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="TOTAL">
+	<param name="Local" value="total.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Transliter">
+	<param name="Local" value="transliter.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="TRNLOG">
+	<param name="Local" value="trnlog.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="TRUNC">
+	<param name="Local" value="trunc.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="UPLOAD">
+	<param name="Local" value="upload.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="UPPER">
+	<param name="Local" value="upper.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="UPPER_NLS">
+	<param name="Local" value="uppernls.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="VALUE">
+	<param name="Local" value="value.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="VALUE_DATE">
+	<param name="Local" value="value_date.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="WEEK_OF_YEAR">
+	<param name="Local" value="weekofyear.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="XML">
+	<param name="Local" value="xml.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="XML_ADD_FIELD">
+	<param name="Local" value="xml_add_field.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="XML_ADD_TEXT">
+	<param name="Local" value="xml_add_text.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="XML_DATASET_FIELD">
+	<param name="Local" value="xml_dataset_field.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="XML_GET_FIELD">
+	<param name="Local" value="xml_get_field.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="YEAR">
+	<param name="Local" value="year.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="YEAR2">
+	<param name="Local" value="year2.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="YEAR_MONTH">
+	<param name="Local" value="yearmonth.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Methods">
+	<param name="Local" value="methods.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Addline">
+	<param name="Local" value="addline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Autofit">
+	<param name="Local" value="autofit.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Deleteallitems">
+	<param name="Local" value="deleteallitems.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Deleteitem">
+	<param name="Local" value="deleteitem.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Display">
+	<param name="Local" value="display.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Displaycomplex">
+	<param name="Local" value="displaycomplex.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Displayimage">
+	<param name="Local" value="displayimage.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Displaylabel">
+	<param name="Local" value="displaylabel.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Enablelinedeleting">
+	<param name="Local" value="enablelinedeleting.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Enablenewlines">
+	<param name="Local" value="enablenewlines.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Enablelinedragging">
+	<param name="Local" value="enablelinedragging.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Expand">
+	<param name="Local" value="expand.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Freezecolumns">
+	<param name="Local" value="freezecolumns.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Freezelines">
+	<param name="Local" value="freezelines.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getcell grid">
+	<param name="Local" value="getcell.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getcolor">
+	<param name="Local" value="getcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getidentity">
+	<param name="Local" value="getidentity.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getline">
+	<param name="Local" value="getline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getnextselected">
+	<param name="Local" value="getnextselected.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getnumbercols">
+	<param name="Local" value="getnumbercols_grid.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getnumberrows">
+	<param name="Local" value="getnumbergridrows.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getposition">
+	<param name="Local" value="getposition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getselectedcount">
+	<param name="Local" value="getselectedcount.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Gettopline">
+	<param name="Local" value="gettopline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Gettreedata">
+	<param name="Local" value="gettreedata.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Hidecolumn">
+	<param name="Local" value="hidecolumn.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Init">
+	<param name="Local" value="init.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Insertitem">
+	<param name="Local" value="insertitem.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Insertitembykey">
+	<param name="Local" value="insertitembykey.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="InsertItemEx">
+	<param name="Local" value="insertitemex.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Insertiteminlinecombo">
+	<param name="Local" value="insertiteminlinecombo.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Isenabled">
+	<param name="Local" value="isenabled.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="IsLineModified">
+	<param name="Local" value="islinemodified.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="IsLineModifiedExclude">
+	<param name="Local" value="islinemodifiedexclude.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Isvisible">
+	<param name="Local" value="isvisible.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Joincells">
+	<param name="Local" value="joincells.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Limittext">
+	<param name="Local" value="limittext.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Modifyitem">
+	<param name="Local" value="modifyitem.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Objvalue">
+	<param name="Local" value="objvalue.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Removeline">
+	<param name="Local" value="removeline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Selectitem">
+	<param name="Local" value="selectitem.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setalignment">
+	<param name="Local" value="setalignment.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setbackcolor">
+	<param name="Local" value="setbackcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setblinking">
+	<param name="Local" value="setblinking.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setbookmarktext">
+	<param name="Local" value="setbookmarktext.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setbordercolor">
+	<param name="Local" value="setbordercolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcellfocus">
+	<param name="Local" value="setcellfocus.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcodepage">
+	<param name="Local" value="setcodepage.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcurrentline">
+	<param name="Local" value="setcurrentline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcolumnwidth">
+	<param name="Local" value="setcolumnwidth.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcurrentpage">
+	<param name="Local" value="setcurrentpage.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setenable">
+	<param name="Local" value="setenable.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setfocus">
+	<param name="Local" value="setfocus.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setfont">
+	<param name="Local" value="setfont.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setindent">
+	<param name="Local" value="setindent.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setlineheight">
+	<param name="Local" value="setlineheight.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setnumbercolumns">
+	<param name="Local" value="setnumbercolumns.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setnumberlines">
+	<param name="Local" value="setnumberlines.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setparttextcolor">
+	<param name="Local" value="setparttextcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setposition">
+	<param name="Local" value="setposition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setreadonly">
+	<param name="Local" value="setreadonly.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setreadonlyline">
+	<param name="Local" value="setreadonlyline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Settextcolor">
+	<param name="Local" value="settextcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setsection">
+	<param name="Local" value="setsection.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setvisible">
+	<param name="Local" value="setvisible.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setrange">
+	<param name="Local" value="setrange.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setpos">
+	<param name="Local" value="setpos.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Settimeinterval">
+	<param name="Local" value="settimerinterval.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Settopline">
+	<param name="Local" value="settopline.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Sorttable">
+	<param name="Local" value="sorttable.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Start">
+	<param name="Local" value="startmethod.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Stop">
+	<param name="Local" value="stopmethod.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Sumcol">
+	<param name="Local" value="sumcol.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Sumcolif">
+	<param name="Local" value="sumcolif.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Unhidecolumn">
+	<param name="Local" value="unhidecolumn.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Excel">
+	<param name="Local" value="excelintro.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ExportXML">
+	<param name="Local" value="exportxml.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getbackcolor">
+	<param name="Local" value="getbackcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getcell Excel">
+	<param name="Local" value="excelgetcell.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Joincells (Excel)">
+	<param name="Local" value="exceljoincells.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Loadexternal">
+	<param name="Local" value="loadexternal.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Open">
+	<param name="Local" value="excelopen.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Pagesetup">
+	<param name="Local" value="pagesetup.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Runmacro Excel">
+	<param name="Local" value="runmacroexcel.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setalignment (Excel)">
+	<param name="Local" value="excelsetalignment.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setbackcolor (Excel)">
+	<param name="Local" value="excelsetbackcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setbordercolor (Excel)">
+	<param name="Local" value="excelsetbordercolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcell (Excel)">
+	<param name="Local" value="excelsetcell.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcellfont">
+	<param name="Local" value="setcellfont.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcolumnwidth (Excel)">
+	<param name="Local" value="excelsetcolumnwidth.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setsheet">
+	<param name="Local" value="excelsetsheet.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setsheetname">
+	<param name="Local" value="setsheetname.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Settextcolor (Excel)">
+	<param name="Local" value="excelsettextcolor.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="FTP">
+	<param name="Local" value="introductionftp.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Createdirectory">
+	<param name="Local" value="createdirectory.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Delete">
+	<param name="Local" value="delete.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="DeleteDirectory">
+	<param name="Local" value="deletedirectory.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Dir">
+	<param name="Local" value="dirftp.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Downloadfile">
+	<param name="Local" value="downloadfile.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Getcurrentdirectory">
+	<param name="Local" value="getcurrentdirectory.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Rename">
+	<param name="Local" value="renameftp.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setcurrentdirectory">
+	<param name="Local" value="setcurrentdirectory.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Uploadfile">
+	<param name="Local" value="uploadfile.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Word">
+	<param name="Local" value="wordintroduction.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Append">
+	<param name="Local" value="append.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="ExportPDF">
+	<param name="Local" value="exportpdf.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Insertrow">
+	<param name="Local" value="insertrow.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Open">
+	<param name="Local" value="wordopen.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Repeatheader">
+	<param name="Local" value="repeatheader.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Run">
+	<param name="Local" value="wordrun.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Runmacro Word">
+	<param name="Local" value="runmacro.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Setbookmark (Word)">
+	<param name="Local" value="setbookmark.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Open">
+	<param name="Local" value="openxml.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Linepriner">
+	<param name="Local" value="lp_introduction.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="code pages">
+	<param name="Local" value="codepages.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="predefined colors">
+	<param name="Local" value="predefinedcolors.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RGB">
+	<param name="Local" value="rgbcolorvalues.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Tooltip text">
+	<param name="Local" value="tooltiptextdefinition.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Subform processing">
+	<param name="Local" value="subformprocessing.htm">
+	</OBJECT>
+</UL>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Collation name">
+	<param name="Local" value="collationname.htm">
+	</OBJECT>
+</UL>
+
+	
+</BODY></HTML>

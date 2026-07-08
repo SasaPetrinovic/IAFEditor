@@ -1,0 +1,2502 @@
+Procedure BROTRA
+!---------------
+!  	+----------------------------------------------------+
+!  	!    Broj transakcije iz IPS001 zavisno od paketa    !
+!  	+----------------------------------------------------+
+!   	Table = IPS001
+	if Year($DATNAL) > Year($gradat)
+		$ozngod = '1'
+	else
+		$ozngod = '0'
+	end_if
+
+   	Read IPS001 Key = $sifra1|$sifra2|$paket|"QQ"|"QQQQ"|"QQ"|$ozngod
+   	ps1_datnal = DateTime (Today,Systime)
+   	if Record IPS001 not_Found
+   	    ps1_sifra1 = $sifra1
+   	    ps1_sifra2 = $sifra2
+   	    ps1_paket  = $paket
+   	    ps1_sifra4 = "QQ"
+   	    ps1_sifra5 = "QQQQ"
+   	    ps1_vrsnal = "QQ"
+   	    ps1_ozngod = $ozngod
+   	    ps1_bronal = 1
+   	    Write IPS001
+   	else
+   	    add 1 to ps1_bronal
+   	    Update IPS001
+   	end_if
+	$brotra = ps1_bronal
+	Commit
+end_Procedure
+
+procedure progres
+	select count(*) into :counter_10 from ipskom where  kom_brohod= :$Brohod \
+			and 	(IPSKOM.KOM_status in \
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))
+			progres.setrange(1,counter_10)
+end_procedure
+procedure progres1
+!PAUSE $ZONREJ|'-'|$TIPHOD
+	select count(*) into :counter_10 from ipskom where \
+		(kom_brohod IN (Select IPSKOH.KOH_BROHOD From 			\
+			IPSKOH Where IPSKOH.KOH_ZONREJ =  :$ZONREJ										\
+			) OR kom_brohod IN (Select KOH_BROHOD From 								\
+			IPSKOH Where IPSKOH.KOH_TIPHOD =  :$TIPHOD)) 									\
+! ipskom.kom_brohod in (Select IPSKOH.KOH_BROHOD From \
+!			IPSKOH Where IPSKOH.KOH_ZONREJ =  :$ZONREJ) \
+			and 	(IPSKOM.KOM_status in \
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))
+			progres.setrange(1,counter_10)
+end_procedure
+
+PROCEDURE DUPLI
+	init $dupli
+	select count(kom_brmems)into :$dupli from ipskom where KOm_sifpot= :$sifpot
+END_PROCEDURE
+Procedure BrisiDirektorijum
+Read_External/Name: $PutSlike $putanjaf
+$putanja =Alltrim($PUTANJAF)|'\Irfan\'|'*.*'
+$status = FILE_IO("Delete",$putanja)
+
+End_procedure
+
+PROCEDURE CITCEN1
+define_local $$datcen d 8
+!Pause kom_sifdel
+Select Max(koc_datcen) INTO :$$datcen From IPSKOC Where \
+					  koc_sifra1 = :$sifra1 and koc_sifra2 = :$sifra2 and \
+					  koc_sifdel = :kom_sifdel and IPSKOC.KOC_INDJOU = 'O'
+
+!pause $$datcen
+
+read ipskoc where IPSKOC.KOC_SIFRA1 = :$sifra1     and \
+				  IPSKOC.KOC_SIFRA2 = :$sifra2     and \
+				  IPSKOC.KOC_SIFDEL = :kom_sifdel  and \
+				  IPSKOC.KOC_DATCEN = :$$datcen    and \
+				  IPSKOC.KOC_INDJOU = 'O'
+
+	$konto0 = ipskoc.koc_konto0
+	$konkam = ipskoc.koc_konkam
+	$kontuz = "BBBBB"
+END_PROCEDURE
+
+PROCEDURE CITCENA2
+Define_local $$datum	d	8
+Init $$datum
+Init $konto0,$konkam,$kontuz,$kontak
+	Select Max(koc_datcen) INTO :$$DATUM From IPSKOC Where 					\
+					  koc_sifra1 = :$sifra1 and koc_sifra2 = :$sifra2 and 	\
+					  koc_sifdel = :ipskom.kom_sifdel and IPSKOC.KOC_INDJOU = 'O'
+
+
+read ipskoc where IPSKOC.KOC_SIFRA1 = :$sifra1     and \
+				  IPSKOC.KOC_SIFRA2 = :$sifra2     and \
+				  IPSKOC.KOC_SIFDEL = :ipskom.kom_sifdel   and \
+				  IPSKOC.KOC_DATCEN = :$$datum      and \
+				  IPSKOC.KOC_INDJOU = 'O'
+If Record ipskoc Found
+	$konto0 =   IPSKOC.KOC_KONTO0
+	$konkam =   IPSKOC.KOC_KONKAM
+	$kontuz =   IPSKOC.KOC_KONTUZ
+	$kontak =   IPSKOC.KOC_KONTAK
+	If	IPSKO0.KO0_KAMIND = '1'
+		If $konkam = ' '
+			Pause "Neuspelo preuzimanje konta kamate iz cenovnika za delatnost "|\
+					ipskom.kom_sifdel|" .Potrosac sa sifrom "|ipskom.kom_sifpot
+			Stop_run
+		End_if
+	Else
+		$konkam = 'QQQQQQ'
+	End_if
+	If	IPSKO0.KO0_TUZIND = '1'
+		If $kontuz = ' '
+			Pause "Neuspelo preuzimanje konta utuženja iz cenovnika za delatnost "|\
+					ipskom.kom_sifdel|" .Potrosac sa sifrom "|ipskom.kom_sifpot
+			Stop_run
+		End_if
+		If $kontak = ' '
+			Pause "Neuspelo preuzimanje konta sudskih taksi iz cenovnika za delatnost "|\
+					ipskom.kom_sifdel|" .Potrosac sa sifrom "|ipskom.kom_sifpot
+			Stop_run
+		End_if
+		!!Konto taksi i tuzbi je isti....
+		If $Kontuz = $Kontak
+			$kontak = 'QQQQQQ'
+		End_if	
+	Else
+		$kontuz = 'QQQQQQ'
+		$kontak = 'QQQQQQ'
+	End_if	
+				
+Else
+	Pause "Greska u citanju CENOVNIKA...za delatnost"|ipskom.kom_sifdel|" na potrosacu "|ipskom.kom_sifpot
+	Stop_run
+End_if
+end_procedure
+
+PROCEDURE IZDVAJANJE1
+	init counter_10,COUNTER_1
+	select_all * from ipskom where kom_brohod= :$Brohod 					\
+			and (IPSKOM.KOM_status in 										\
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),  \
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))  \
+			And (IPSKOM.KOM_PRIDUG = '1' or :IPSKO0.KO0_ABC012 <> 1)			\
+		 order by kom_sifpot
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ
+			Select_All ak5_akonto,ak5_datnal,ak5_konto,			 							\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and					    \
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to  $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if  ak5_datnal <= $DATdug
+								if ak5_konto = $konkam
+									add ak5_izndin to acc_7
+								end_if
+								add ak5_izndin to acc_2
+								if ak5_datdpo <= $datdug
+									add ak5_izndin to acc_3
+								end_if
+							end_if
+						else
+						 if  ak5_datnal <= $DATpot
+							if ak5_konto = $konkam
+								add -ak5_izndin to acc_7
+							end_if
+							add ak5_izndin to acc_4
+						end_if
+						end_if
+					
+						if ak5_oznaka = 'D' & ak5_vrsnal = $vrsnalq & \
+							counter_8 < $BR_RAC & ak5_izndin  > 0 & ak5_datdpo <= $datdug
+							add 1 to counter_8
+							add ak5_izndin to acc_8
+						end_if	
+					End_if		
+			end_select
+			
+			$iznos = acc_3 - acc_4
+			acc_6 = acc_2 - acc_4
+	  if ($iznos => acc_8 & acc_8 => 0) or  $BR_RAC = 0
+	  IF $IZNOS >= ACC_10 & $IZNOS <= ACC_11
+		   INIT_RECORD IPSKOU
+		    add 1 to $stavka
+			select max(kou_datdok) into :$datop from ipskour where kou_sifpot=:$sifvla
+			read ipskour where kou_sifpot=:$sifvla and kou_datdok=:$datop
+		
+		!*****************************************
+			ipskou.kou_sifra1 = $sifra1 	!!  A 2
+			ipskou.kou_sifra2 = $sifra2 	!!  A 2
+			ipskou.kou_vrsnal = $vrsnal 	!!  A 2
+			ipskou.kou_brotra = $BROTRA	!!  N 5
+			ipskou.kou_godina = $GODINAB	!!  N 4
+			ipskou.kou_stavka = $stavka 	!!  N 5
+			ipskou.kou_brodok = IPSKOQ.KOQ_BRODOK	!!  A 9
+			ipskou.kou_datdok = IPSKOQ.KOQ_DATDOK 	!!  Datetime
+			ipskou.kou_sifpot = IPSKOM.KOM_SIFPOT 	!!  A 8
+			ipskou.kou_brojiv = ' '	!!  A 12
+			If $TUCKO = '1'
+				ipskou.kou_iznos1 = $iznos + $STATUZ	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	+ $STATUZ !!  N 18,2
+			Else
+				ipskou.kou_iznos1 = $iznos	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			End_if
+		!	ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			if record ipskour found
+				IPSKOU.KOU_DATPRE =IPSKOUR.KOU_DATDOK
+				ipskou.kou_prenal = IPSKOUR.KOU_VRSNAL	!!  A 2
+				if IPSKOUR.KOU_ZALBA0='1'
+					IPSKOU.KOU_ZALBA1='1'
+				else
+					IPSKOU.KOU_ZALBA1='0'
+				end_if
+			ELSE
+				IPSKOU.KOU_DATPRE =ZERO_DATE
+				ipskou.kou_prenal = ' '	!!  A 2
+				IPSKOU.KOU_ZALBA1='0'
+			END_IF
+
+			IPSKOU.KOU_GODTU  = 0
+			IPSKOU.KOU_INDPRO = '0'
+			ipskou.kou_iznos3 = acc_8	!!  N 18,2
+			IPSKOU.KOU_IZNKAM = acc_7
+			IPSKOU.KOU_BRORAC = counter_8
+			ipskou.kou_datzad = IPSKOQ.KOQ_DATZAD	!!  Datetime
+			ipskou.kou_datupl = IPSKOQ.KOQ_DATUPL 	!!  Datetime
+			ipskou.kou_dattuz = IPSKOQ.KOQ_DATTUZ	!!  Datetime
+			ipskou.kou_statuz = ' '	!!  A 1
+			ipskou.kou_oznaka = ' '	!!  A 1
+			ipskou.kou_koment = ' '	!!  A 40
+			IPSKOU.KOU_KONTO0 = $konto0
+			IPSKOU.KOU_KONKAM = $konkam
+			If kom_status in ('2')
+				IPSKOU.KOU_INDSTA = '0'
+				IPSKOU.KOU_INDOPO = '0'
+			Else
+				IPSKOU.KOU_INDSTA = '1'
+				IPSKOU.KOU_INDOPO = '1'
+			End_if
+			IPSKOU.KOU_INDTUZ = '0'
+			IPSKOU.KOU_IZNTUZ = $STATUZ
+			ipskou.kou_indjou = ' '	!!  A 1	
+		
+			!PAUSE $IZNOS
+			If $C in ('1';'2';'3';'4';'5';'9')
+				IF $C='1'
+					Write ipskou
+					add 1 to counter_3
+					$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+					poruka1.DISPLAY($text1)
+				ELSE
+					IF RECORD IPSKOUR FOUND
+						IF $C='2'
+							IF IPSKOUR.KOU_VRSNAL='OP'
+							Write ipskou
+							add 1 to counter_3
+							$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+							poruka1.DISPLAY($text1)
+							END_IF
+						ELSE
+							IF $C='3'
+								IF IPSKOUR.KOU_VRSNAL='OT'
+								Write ipskou
+								add 1 to counter_3
+								$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+								poruka1.DISPLAY($text1)
+								END_IF
+							ELSE
+								IF $C='4'
+									IF IPSKOUR.KOU_VRSNAL='OI'
+									Write ipskou
+									add 1 to counter_3
+									$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+									poruka1.DISPLAY($text1)
+									END_IF
+								else
+									IF $C='5'
+										IF IPSKOUR.KOU_VRSNAL='TU'
+										Write ipskou
+										add 1 to counter_3
+										$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+										poruka1.DISPLAY($text1)
+										END_IF
+									Else
+										IF $C='9'
+											IF IPSKOUR.KOU_VRSNAL='PT'
+											Write ipskou
+											add 1 to counter_3
+											$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+											poruka1.DISPLAY($text1)
+											END_IF
+										end_if
+									end_if
+								END_IF
+							END_IF
+						END_IF
+					END_IF
+				END_IF
+			Else
+				IF $C='6'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='TU'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='7'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno NN: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='8'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='OT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='Q'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='PT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='F'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='D'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='G'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'PT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+			End_if
+		END_IF
+!****************************************		
+			
+			END_IF
+		end_if
+		ADD  1 TO COUNTER_10
+!C++ MyMsgLoop();
+		pROGRES.SETPOS(COUNTER_10)
+	end_select
+	commit
+	init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$text,counter_1
+END_PROCEDURE
+
+PROCEDURE IZDVAJANJE_Uplate
+	init counter_10,COUNTER_1
+	select_all * from ipskom where kom_brohod= :$Brohod 	\
+			and (IPSKOM.KOM_status in \
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))  	\
+		 order by kom_sifpot
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ
+		SELECT [dbo].[func_KO_LastPayment] (:$sifpot,'',:IPSKO0.KO0_ARHBRO,:$konto0,:$konkam,'','') Into  :$dattemp
+		If $dattemp < $DATdug Or $dattemp = Zero_date
+!$ARHIVICA               N       1        U
+!$AK2_KONTO              A       6
+!$AK2_OZNAKA             A       1
+!$AK2_IZNDIN             N       18,2     U
+!$AK2_DATDOK             D       8
+!$AK2_DATNAL             D       8
+!$AK2_DATDPO             D       8
+!$AK2_DUGDIN             N       18,2     U
+!$AK2_POTDIN             N       18,2     U
+!Select_Start  AK2_KONTO   Into :$AK2_KONTO , \
+!			  AK2_DATNAL  Into :$AK2_DATNAL , \
+!			  AK2_OZNAKA  Into :$AK2_OZNAKA, \
+!			  AK2_IZNDIN  Into :$AK2_IZNDIN , \
+!			  AK2_DATDOK  Into :$AK2_DATDOK, \
+!			  AK2_DATDPO  Into :$AK2_DATDPO, \
+!		      AK2_TABELA  Into :$AK2_TABELA, \
+!		      AK2_DUGDIN  Into :$AK2_DUGDIN, \
+!		      AK2_POTDIN  Into :$AK2_POTDIN \
+!		From [dbo].[func_KO_AnalitickaKartica] ( :$sifpot ,'',:$arhivica) \
+!			Where ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) Order by AK2_DATNAL
+!End_select
+			Select_All ak5_akonto,ak5_datnal,ak5_konto,			 							\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and					    \
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to  $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if  ak5_datnal <= $DATNAL
+								if ak5_konto = $konkam
+									add ak5_izndin to acc_7
+								end_if
+								add ak5_izndin to acc_2
+								if ak5_datdpo <= $DATNAL
+									add ak5_izndin to acc_3
+								end_if
+							end_if
+						else
+						 if  ak5_datnal <= $DATNAL
+							if ak5_konto = $konkam
+								add -ak5_izndin to acc_7
+							end_if
+							add ak5_izndin to acc_4
+						end_if
+						end_if
+					
+!						if ak5_oznaka = 'D' & ak5_vrsnal = $vrsnalq & \
+!							counter_8 < $BR_RAC & ak5_izndin  > 0 & ak5_datdpo <= $datdug
+!							add 1 to counter_8
+!							add ak5_izndin to acc_8
+!						end_if	
+					End_if		
+			end_select
+			
+			$iznos = acc_3 - acc_4
+			acc_6 = acc_2 - acc_4
+!	  if ($iznos => acc_8 & acc_8 => 0) or  $BR_RAC = 0
+	  IF $IZNOS >= ACC_10 & $IZNOS <= ACC_11
+		   INIT_RECORD IPSKOU
+		    add 1 to $stavka
+			select max(kou_datdok) into :$datop from ipskour where kou_sifpot=:$sifvla
+			read ipskour where kou_sifpot=:$sifvla and kou_datdok=:$datop
+		
+		!*****************************************
+			ipskou.kou_sifra1 = $sifra1 	!!  A 2
+			ipskou.kou_sifra2 = $sifra2 	!!  A 2
+			ipskou.kou_vrsnal = $vrsnal 	!!  A 2
+			ipskou.kou_brotra = $BROTRA	!!  N 5
+			ipskou.kou_godina = $GODINAB	!!  N 4
+			ipskou.kou_stavka = $stavka 	!!  N 5
+			ipskou.kou_brodok = IPSKOQ.KOQ_BRODOK	!!  A 9
+			ipskou.kou_datdok = IPSKOQ.KOQ_DATDOK 	!!  Datetime
+			ipskou.kou_sifpot = IPSKOM.KOM_SIFPOT 	!!  A 8
+			ipskou.kou_brojiv = ' '	!!  A 12
+			If $TUCKO = '1'
+				ipskou.kou_iznos1 = $iznos + $STATUZ	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	+ $STATUZ !!  N 18,2
+			Else
+				ipskou.kou_iznos1 = $iznos	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			End_if
+		!	ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			if record ipskour found
+				IPSKOU.KOU_DATPRE =IPSKOUR.KOU_DATDOK
+				ipskou.kou_prenal = IPSKOUR.KOU_VRSNAL	!!  A 2
+				if IPSKOUR.KOU_ZALBA0='1'
+					IPSKOU.KOU_ZALBA1='1'
+				else
+					IPSKOU.KOU_ZALBA1='0'
+				end_if
+			ELSE
+				IPSKOU.KOU_DATPRE =ZERO_DATE
+				ipskou.kou_prenal = ' '	!!  A 2
+				IPSKOU.KOU_ZALBA1='0'
+			END_IF
+
+			IPSKOU.KOU_GODTU  = 0
+			IPSKOU.KOU_INDPRO = '0'
+			ipskou.kou_iznos3 = acc_8	!!  N 18,2
+			IPSKOU.KOU_IZNKAM = acc_7
+			IPSKOU.KOU_BRORAC = counter_8
+			ipskou.kou_datzad = IPSKOQ.KOQ_DATZAD	!!  Datetime
+			ipskou.kou_datupl = $dattemp  	!!  Datetime
+			ipskou.kou_dattuz = $dattemp 	!!  Datetime
+			ipskou.kou_statuz = ' '	!!  A 1
+			ipskou.kou_oznaka = ' '	!!  A 1
+			ipskou.kou_koment = ' '	!!  A 40
+			IPSKOU.KOU_KONTO0 = $konto0
+			IPSKOU.KOU_KONKAM = $konkam
+			If kom_status in ('2')
+				IPSKOU.KOU_INDSTA = '0'
+				IPSKOU.KOU_INDOPO = '0'
+			Else
+				IPSKOU.KOU_INDSTA = '1'
+				IPSKOU.KOU_INDOPO = '1'
+			End_if
+			IPSKOU.KOU_INDTUZ = '0'
+			IPSKOU.KOU_IZNTUZ = $STATUZ
+			ipskou.kou_indjou = ' '	!!  A 1	
+!			IPSKOU.KOU_INDIK0
+!			IPSKOU.KOU_INDIK1
+!			IPSKOU.KOU_INDIK2
+
+			If $dattemp = Zero_date
+				IPSKOU.KOU_INDIK3 = 99999
+			Else
+				IPSKOU.KOU_INDIK3 = DIFF_DAYS($dattemp,today)
+			End_IF
+		
+			!PAUSE $IZNOS
+			If $C in ('1';'2';'3';'4';'5';'9')
+				IF $C='1'
+					Write ipskou
+					add 1 to counter_3
+					$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+					poruka1.DISPLAY($text1)
+				ELSE
+					IF RECORD IPSKOUR FOUND
+						IF $C='2'
+							IF IPSKOUR.KOU_VRSNAL='OP'
+							Write ipskou
+							add 1 to counter_3
+							$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+							poruka1.DISPLAY($text1)
+							END_IF
+						ELSE
+							IF $C='3'
+								IF IPSKOUR.KOU_VRSNAL='OT'
+								Write ipskou
+								add 1 to counter_3
+								$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+								poruka1.DISPLAY($text1)
+								END_IF
+							ELSE
+								IF $C='4'
+									IF IPSKOUR.KOU_VRSNAL='OI'
+									Write ipskou
+									add 1 to counter_3
+									$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+									poruka1.DISPLAY($text1)
+									END_IF
+								else
+									IF $C='5'
+										IF IPSKOUR.KOU_VRSNAL='TU'
+										Write ipskou
+										add 1 to counter_3
+										$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+										poruka1.DISPLAY($text1)
+										END_IF
+									Else
+										IF $C='9'
+											IF IPSKOUR.KOU_VRSNAL='PT'
+											Write ipskou
+											add 1 to counter_3
+											$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+											poruka1.DISPLAY($text1)
+											END_IF
+										end_if
+									end_if
+								END_IF
+							END_IF
+						END_IF
+					END_IF
+				END_IF
+			Else
+				IF $C='6'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='TU'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='7'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno NN: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='8'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='OT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='Q'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='PT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='F'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='D'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='G'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'PT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+			End_if
+		END_IF
+!****************************************		
+			
+!		END_IF
+		end_if
+		End_IF
+		ADD  1 TO COUNTER_10
+!C++ MyMsgLoop();
+		pROGRES.SETPOS(COUNTER_10)
+	end_select
+	commit
+	init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$text,counter_1
+END_PROCEDURE
+
+
+PROCEDURE IZDVAJANJE_ZON
+	init counter_10,COUNTER_1
+	select_all * from ipskom where kom_brohod IN (Select IPSKOH.KOH_BROHOD From 			\
+			IPSKOH Where IPSKOH.KOH_ZONREJ =  :$ZONREJ) 									\
+			and (IPSKOM.KOM_status in 														\
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),					\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))  				\
+			And (IPSKOM.KOM_PRIDUG = '1' or :IPSKO0.KO0_ABC012 <> 1)						\
+		 order by kom_sifpot
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ
+			Select_All ak5_akonto,ak5_datnal,ak5_konto,			 							\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and					    \
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if  ak5_datnal <= $DATdug
+								if ak5_konto = $konkam
+									add ak5_izndin to acc_7
+								end_if
+								add ak5_izndin to acc_2
+								if ak5_datdpo <= $datdug
+									add ak5_izndin to acc_3
+								end_if
+							end_if
+						else
+						 if  ak5_datnal <= $DATpot
+							if ak5_konto = $konkam
+								add -ak5_izndin to acc_7
+							end_if
+							add ak5_izndin to acc_4
+						end_if
+						end_if
+					
+						if ak5_oznaka = 'D' & ak5_vrsnal = $vrsnalq & \
+							counter_8 < $BR_RAC & ak5_izndin  > 0 & ak5_datdpo <= $datdug
+							add 1 to counter_8
+							add ak5_izndin to acc_8
+						end_if	
+					End_if		
+			end_select
+			
+			$iznos = acc_3 - acc_4
+			acc_6 = acc_2 - acc_4
+	  if ($iznos => acc_8 & acc_8 => 0) or  $BR_RAC = 0
+	  IF $IZNOS >= ACC_10 & $IZNOS <= ACC_11
+		   INIT_RECORD IPSKOU
+		    add 1 to $stavka
+			select max(kou_datdok) into :$datop from ipskour where kou_sifpot=:$sifvla
+			read ipskour where kou_sifpot=:$sifvla and kou_datdok=:$datop
+		
+		!*****************************************
+			ipskou.kou_sifra1 = $sifra1 	!!  A 2
+			ipskou.kou_sifra2 = $sifra2 	!!  A 2
+			ipskou.kou_vrsnal = $vrsnal 	!!  A 2
+			ipskou.kou_brotra = $BROTRA	!!  N 5
+			ipskou.kou_godina = $GODINAB	!!  N 4
+			ipskou.kou_stavka = $stavka 	!!  N 5
+			ipskou.kou_brodok = IPSKOQ.KOQ_BRODOK	!!  A 9
+			ipskou.kou_datdok = IPSKOQ.KOQ_DATDOK 	!!  Datetime
+			ipskou.kou_sifpot = IPSKOM.KOM_SIFPOT 	!!  A 8
+			ipskou.kou_brojiv = ' '	!!  A 12
+			If $TUCKO = '1'
+				ipskou.kou_iznos1 = $iznos + $STATUZ	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6+ $STATUZ	!!  N 18,2
+			Else
+				ipskou.kou_iznos1 = $iznos	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			End_if
+		!	ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			if record ipskour found
+				IPSKOU.KOU_DATPRE =IPSKOUR.KOU_DATDOK
+				ipskou.kou_prenal = IPSKOUR.KOU_VRSNAL	!!  A 2
+				if IPSKOUR.KOU_ZALBA0='1'
+					IPSKOU.KOU_ZALBA1='1'
+				else
+					IPSKOU.KOU_ZALBA1='0'
+				end_if
+			ELSE
+				IPSKOU.KOU_DATPRE =ZERO_DATE
+				ipskou.kou_prenal = ' '	!!  A 2
+				IPSKOU.KOU_ZALBA1='0'
+			END_IF
+
+			IPSKOU.KOU_GODTU  = 0
+			IPSKOU.KOU_INDPRO = '0'
+			ipskou.kou_iznos3 = acc_8	!!  N 18,2
+			IPSKOU.KOU_IZNKAM = acc_7
+			IPSKOU.KOU_BRORAC = counter_8
+			ipskou.kou_datzad = IPSKOQ.KOQ_DATZAD	!!  Datetime
+			ipskou.kou_datupl = IPSKOQ.KOQ_DATUPL 	!!  Datetime
+			ipskou.kou_dattuz = IPSKOQ.KOQ_DATTUZ	!!  Datetime
+			ipskou.kou_statuz = ' '	!!  A 1
+			ipskou.kou_oznaka = ' '	!!  A 1
+			ipskou.kou_koment = ' '	!!  A 40
+			IPSKOU.KOU_KONTO0 = $konto0
+			IPSKOU.KOU_KONKAM = $konkam
+			If kom_status in ('2')
+				IPSKOU.KOU_INDSTA = '0'
+				IPSKOU.KOU_INDOPO = '0'
+			Else
+				IPSKOU.KOU_INDSTA = '1'
+				IPSKOU.KOU_INDOPO = '1'
+			End_if
+			IPSKOU.KOU_INDTUZ = '0'
+			IPSKOU.KOU_IZNTUZ = $STATUZ
+			ipskou.kou_indjou = ' '	!!  A 1	
+		
+			!PAUSE $IZNOS
+			
+			If $C in ('1';'2';'3';'4';'5';'9')
+				IF $C='1'
+					Write ipskou
+					add 1 to counter_3
+					$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+					poruka1.DISPLAY($text1)
+				ELSE
+					IF RECORD IPSKOUR FOUND
+						IF $C='2'
+							IF IPSKOUR.KOU_VRSNAL='OP'
+							Write ipskou
+							add 1 to counter_3
+							$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+							poruka1.DISPLAY($text1)
+							END_IF
+						ELSE
+							IF $C='3'
+								IF IPSKOUR.KOU_VRSNAL='OT'
+								Write ipskou
+								add 1 to counter_3
+								$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+								poruka1.DISPLAY($text1)
+								END_IF
+							ELSE
+								IF $C='4'
+									IF IPSKOUR.KOU_VRSNAL='OI'
+									Write ipskou
+									add 1 to counter_3
+									$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+									poruka1.DISPLAY($text1)
+									END_IF
+								else
+									IF $C='5'
+										IF IPSKOUR.KOU_VRSNAL='TU'
+										Write ipskou
+										add 1 to counter_3
+										$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+										poruka1.DISPLAY($text1)
+										END_IF
+									Else
+										IF $C='9'
+											IF IPSKOUR.KOU_VRSNAL='PT'
+											Write ipskou
+											add 1 to counter_3
+											$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+											poruka1.DISPLAY($text1)
+											END_IF
+										end_if
+									end_if
+								END_IF
+							END_IF
+						END_IF
+					END_IF
+				END_IF
+			Else
+				IF $C='6'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='TU'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='7'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno NN: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='8'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='OT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='Q'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='PT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='F'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='D'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='G'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'PT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+			End_if
+		END_IF
+!****************************************		
+			
+		END_IF
+		end_if
+		ADD  1 TO COUNTER_10
+!C++ MyMsgLoop();
+		pROGRES.SETPOS(COUNTER_10)
+	end_select
+	commit
+	init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$text,counter_1
+END_PROCEDURE
+
+
+PROCEDURE IZDVAJANJE8
+	init counter_10,COUNTER_1
+	select_all * from ipskom where kom_brohod= :$Brohod 	\
+			and (IPSKOM.KOM_status in \
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))  	\
+			And (IPSKOM.KOM_PRIDUG = '1' or :IPSKO0.KO0_ABC012 <> 1)			\
+		 order by kom_sifpot
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ
+			Select_All ak5_akonto,ak5_datnal,ak5_konto,			 							\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and					    \
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if  ak5_datnal <= $DATdug
+								if ak5_konto = $konkam
+									add ak5_izndin to acc_7
+								end_if
+								add ak5_izndin to acc_2
+								if ak5_datdpo <= $datdug
+									add ak5_izndin to acc_3
+								end_if
+							end_if
+						else
+						 if  ak5_datnal <= $DATpot
+							if ak5_konto = $konkam
+								add -ak5_izndin to acc_7
+							end_if
+							add ak5_izndin to acc_4
+						end_if
+						end_if
+					End_if		
+			end_select
+			
+			$iznos = acc_3 - acc_4
+			acc_6 = acc_2 - acc_4
+	  IF $statuz >= ACC_10 & $statuz <= ACC_11
+		   INIT_RECORD IPSKOU
+		    add 1 to $stavka
+			select max(kou_datdok) into :$datop from ipskour where kou_sifpot=:$sifvla
+			read ipskour where kou_sifpot=:$sifvla and kou_datdok=:$datop
+		
+		!*****************************************
+			ipskou.kou_sifra1 = $sifra1 	!!  A 2
+			ipskou.kou_sifra2 = $sifra2 	!!  A 2
+			ipskou.kou_vrsnal = $vrsnal 	!!  A 2
+			ipskou.kou_brotra = $BROTRA	!!  N 5
+			ipskou.kou_godina = $GODINAB	!!  N 4
+			ipskou.kou_stavka = $stavka 	!!  N 5
+			ipskou.kou_brodok = IPSKOQ.KOQ_BRODOK	!!  A 9
+			ipskou.kou_datdok = IPSKOQ.KOQ_DATDOK 	!!  Datetime
+			ipskou.kou_sifpot = IPSKOM.KOM_SIFPOT 	!!  A 8
+			ipskou.kou_brojiv = ' '	!!  A 12
+			If $TUCKO = '1'
+				ipskou.kou_iznos1 = $iznos + $STATUZ	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	+ $STATUZ	!!  N 18,2
+			Else
+				ipskou.kou_iznos1 = $iznos	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			End_if
+		!	ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			if record ipskour found
+				IPSKOU.KOU_DATPRE =IPSKOUR.KOU_DATDOK
+				ipskou.kou_prenal = IPSKOUR.KOU_VRSNAL	!!  A 2
+				if IPSKOUR.KOU_ZALBA0='1'
+					IPSKOU.KOU_ZALBA1='1'
+				else
+					IPSKOU.KOU_ZALBA1='0'
+				end_if
+			ELSE
+				IPSKOU.KOU_DATPRE =ZERO_DATE
+				ipskou.kou_prenal = ' '	!!  A 2
+				IPSKOU.KOU_ZALBA1='0'
+			END_IF
+
+			IPSKOU.KOU_GODTU  = 0
+			IPSKOU.KOU_INDPRO = '0'
+			ipskou.kou_iznos3 =  $iznos	!!  N 18,2
+			IPSKOU.KOU_IZNKAM = acc_7
+			IPSKOU.KOU_BRORAC = counter_8
+			ipskou.kou_datzad = IPSKOQ.KOQ_DATZAD	!!  Datetime
+			ipskou.kou_datupl = IPSKOQ.KOQ_DATUPL 	!!  Datetime
+			ipskou.kou_dattuz = IPSKOQ.KOQ_DATTUZ	!!  Datetime
+			ipskou.kou_statuz = ' '	!!  A 1
+			ipskou.kou_oznaka = ' '	!!  A 1
+			ipskou.kou_koment = ' '	!!  A 40
+			IPSKOU.KOU_KONTO0 = $konto0
+			IPSKOU.KOU_KONKAM = $konkam
+			If kom_status in ('2')
+				IPSKOU.KOU_INDSTA = '0'
+				IPSKOU.KOU_INDOPO = '0'
+			Else
+				IPSKOU.KOU_INDSTA = '1'
+				IPSKOU.KOU_INDOPO = '1'
+			End_if
+			IPSKOU.KOU_INDTUZ = '0'
+			IPSKOU.KOU_IZNTUZ = $STATUZ
+			ipskou.kou_indjou = ' '	!!  A 1	
+		
+			!PAUSE $IZNOS
+			If $C in ('1';'2';'3';'4';'5';'9')
+				IF $C='1'
+					Write ipskou
+					add 1 to counter_3
+					$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+					poruka1.DISPLAY($text1)
+				ELSE
+					IF RECORD IPSKOUR FOUND
+						IF $C='2'
+							IF IPSKOUR.KOU_VRSNAL='OP'
+							Write ipskou
+							add 1 to counter_3
+							$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+							poruka1.DISPLAY($text1)
+							END_IF
+						ELSE
+							IF $C='3'
+								IF IPSKOUR.KOU_VRSNAL='OT'
+								Write ipskou
+								add 1 to counter_3
+								$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+								poruka1.DISPLAY($text1)
+								END_IF
+							ELSE
+								IF $C='4'
+									IF IPSKOUR.KOU_VRSNAL='OI'
+									Write ipskou
+									add 1 to counter_3
+									$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+									poruka1.DISPLAY($text1)
+									END_IF
+								else
+									IF $C='5'
+										IF IPSKOUR.KOU_VRSNAL='TU'
+										Write ipskou
+										add 1 to counter_3
+										$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+										poruka1.DISPLAY($text1)
+										END_IF
+									Else
+										IF $C='9'
+											IF IPSKOUR.KOU_VRSNAL='PT'
+											Write ipskou
+											add 1 to counter_3
+											$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+											poruka1.DISPLAY($text1)
+											END_IF
+										end_if
+									end_if
+								END_IF
+							END_IF
+						END_IF
+					END_IF
+				END_IF
+			Else
+				IF $C='6'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='TU'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='7'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno NN: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='8'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='OT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='Q'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='PT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='F'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='D'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='G'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'PT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+
+		!	End_if
+		END_IF
+!****************************************		
+			
+			END_IF
+		end_if
+		ADD  1 TO COUNTER_10
+!C++ MyMsgLoop();
+		pROGRES.SETPOS(COUNTER_10)
+	end_select
+	commit
+	init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$text,counter_1
+END_PROCEDURE
+
+
+PROCEDURE BRISANJE
+	ExecSQL delete ipskoq                                                   \
+			Where IPSKOq.KOq_SIFRA1=:$sifra1 and IPSKOq.KOq_SIFRA2=:$sifra2 \
+			and IPSKOq.KOq_VRSNAL=:$vrsnal and IPSKOq.KOq_BROTRA=:$brotra   \
+			and IPSKOq.KOq_GODINA=:$godinab
+
+	ExecSQL delete ipskou                                                   \
+			Where IPSKOU.KOU_SIFRA1=:$sifra1 and IPSKOU.KOU_SIFRA2=:$sifra2 \
+			and IPSKOU.KOU_VRSNAL=:$vrsnal and IPSKOU.KOU_BROTRA=:$brotra\
+			and IPSKOU.KOU_GODINA=:$godinab
+		if $isRep = 1
+		ExecSQL delete ipskon                                                   \
+			Where IPSKOn.KOn_SIFRA1=:$sifra1 and IPSKOn.KOn_SIFRA2=:$sifra2 \
+			and IPSKOn.KOn_VRSNAL=:$vrsnal and IPSKOn.KOn_BROTRA=:$brotra\
+			and IPSKOn.KOn_GODINA=:$godinab
+		End_IF
+	commit
+
+
+	
+END_PROCEDURE
+
+PROCEDURE IZLAZ
+	Define_local $$Sifrej a 4
+	Define_local $$Sifprj a 2
+	Define_local $$Brmems n 5
+	
+	ExecSQL delete ipskou                                                   \
+			Where IPSKOU.KOU_SIFRA1=:$sifra1 and IPSKOU.KOU_SIFRA2=:$sifra2 \
+			and IPSKOU.KOU_VRSNAL=:$vrsnal and IPSKOU.KOU_BROTRA=:$brotra   \
+			and IPSKOU.KOU_GODINA=:$godinab and IPSKOU.KOU_INDOPO='0'
+	COMMIT
+	ExecSQL update ipskoq set IPSKOQ.KOQ_OVERA='O' FROM IPSKOQ              \
+			Where  IPSKOq.KOq_SIFRA1=:$sifra1 and IPSKOq.KOq_SIFRA2=:$sifra2 \
+			       and IPSKOq.KOq_VRSNAL=:$vrsnal and IPSKOq.KOq_BROTRA=:$brotra   \
+			       and IPSKOq.KOq_GODINA=:$godinab
+	COMMIT
+	If  IPSKO0.KO0_ETAZNI >  0 and IPSKO0.KO0_INTX01 = 1
+		Select_all IPSKOU.KOU_SIFPOT from ipskou 									\
+			Where IPSKOU.KOU_SIFRA1=:$sifra1 and IPSKOU.KOU_SIFRA2=:$sifra2 		\
+				  and IPSKOU.KOU_VRSNAL=:$vrsnal and IPSKOU.KOU_BROTRA=:$brotra   	\
+				  and IPSKOU.KOU_GODINA=:$godinab
+
+			Select  IPSKOM.KOM_SIFREJ into :$$Sifrej,	\
+					IPSKOM.KOM_SIFPRJ into :$$Sifprj, 	\
+					IPSKOM.KOM_BRMEMS into :$$Brmems  	\
+					From Ipskom where IPSKOM.KOM_SIFPOT = :IPSKOU.KOU_SIFPOT
+
+					Read ipskok Key = $$Sifrej|$$Sifprj|$$Brmems
+					If Record Ipskok Found
+						IPSKOK.KOK_ETAZNI = IPSKOK.KOK_ETAZNI + 1
+						Update IPSKOK/Cond:IPSKOK.KOK_ETAZNI <= 9
+					End_if
+		End_select
+		Commit
+	End_if
+		if $isRep = 1
+			ExecSQL  Delete IPSKON \
+			FROM            dbo.IPSKON INNER JOIN \
+                         dbo.IPSKOU ON dbo.IPSKON.KON_SIFRA1 = dbo.IPSKOU.KOU_SIFRA1 AND \
+						 dbo.IPSKON.KON_SIFRA2 = dbo.IPSKOU.KOU_SIFRA2 AND \
+						 dbo.IPSKON.KON_VRSNAL = dbo.IPSKOU.KOU_VRSNAL AND  \
+                         dbo.IPSKON.KON_GODINA = dbo.IPSKOU.KOU_GODINA AND \
+						 dbo.IPSKON.KON_BROTRA = dbo.IPSKOU.KOU_BROTRA AND \
+						 dbo.IPSKON.KON_STAVKA = dbo.IPSKOU.KOU_STAVKA \
+						Where IPSKOU.KOU_SIFRA1=:$sifra1 and IPSKOU.KOU_SIFRA2=:$sifra2 \
+						and IPSKOU.KOU_VRSNAL=:$vrsnal and IPSKOU.KOU_BROTRA=:$brotra   \
+						and IPSKOU.KOU_GODINA=:$godinab and IPSKOU.KOU_INDOPO='0'
+				commit
+		End_IF
+	
+END_PROCEDURE
+
+PROCEDURE MESEC
+	$text1  = 'Januar' /cond:koq_mesec = 1
+	$text1  = 'Februar' /cond:koq_mesec = 2
+	$text1  = 'Mart' /cond:koq_mesec = 3
+	$text1  = 'April' /cond:koq_mesec = 4
+	$text1  = 'Maj' /cond:koq_mesec = 5
+	$text1  = 'Jun' /cond:koq_mesec = 6
+	$text1  = 'Jul' /cond:koq_mesec = 7
+	$text1  = 'August' /cond:koq_mesec = 8
+	$text1  = 'Septembar' /cond:koq_mesec = 9
+	$text1  = 'Oktobar' /cond:koq_mesec = 10
+	$text1  = 'Novembar' /cond:koq_mesec = 11
+	$text1  = 'Decembar' /cond:koq_mesec = 12
+	mesec.display($text1)
+
+END_PROCEDURE
+
+PROCEDURE IZDVAJANJE2
+init acc_2,acc_5,$STATUZ
+$sifpot = IPSKOU.KOU_SIFPOT
+!pause $konto0
+Select_All ak5_akonto,ak5_datnal,ak5_konto,			 										\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam) and						\
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if ak5_datdpo <= $datupl
+								add ak5_izndin to acc_2
+							end_if
+						else
+							add -ak5_izndin to acc_2
+							if AK5_DATNAL <= $datupl &  \
+							 	AK5_DATNAL >= KOQ_DATDOK
+								add ak5_izndin to acc_5	
+							end_if
+						end_if
+					End_if
+end_select
+END_PROCEDURE
+
+PROCEDURE EXCEL1
+	init $estat
+$estat = excel.Open() !!create new, empty document
+if $estat <> 0
+Pause "Excel error: " | $estat
+else
+init counter_1
+add 1 to counter_1
+$estat = excel.Setcell(counter_1,1,"Vrsta naloga")
+$estat = excel.Setcell(counter_1,2,"Broj opomene")
+$estat = excel.Setcell(counter_1,3,"Datum")
+$estat = excel.Setcell(counter_1,4,"Šifra naloga")
+$estat = excel.Setcell(counter_1,5,"HODOGRAM")
+$estat = excel.Setcell(counter_1,6,"Mesec")
+$estat = excel.Setcell(counter_1,7,"Broj izdvojenih opomena")
+$estat = excel.Setcell(counter_1,8,"Dug OPOMENE")
+$estat = excel.Setcell(counter_1,9,"Uplata")
+$estat = excel.Setcell(counter_1,10,"Trenutno stanje")
+$estat = excel.Setcell(counter_1,11,"Procenat naplate")
+read_all EXCIPSKOq
+add 1 to counter_1
+	$estat = excel.Setcell(counter_1,1,LIST("OPOMENE",EXCIPSKOQ.KOQ_VRSNAL, 25 ))
+	$estat = excel.Setcell(counter_1,2,EXCIPSKOQ.KOQ_brotra)
+	$estat = excel.Setcell(counter_1,3,EXCIPSKOQ.KOQ_DATDOK)
+	$estat = excel.Setcell(counter_1,4,EXCIPSKOQ.KOQ_brodok)
+	$estat = excel.Setcell(counter_1,5,EXCIPSKOQ.KOQ_BROHOD)
+	perform mesec
+	$estat = excel.Setcell(counter_1,6,initcap($text1))
+	$estat = excel.Setcell(counter_1,7,edit(EXCIPSKOQ.KOQ_IZNOS6,"zzzzzz9"))
+	$estat = excel.Setcell(counter_1,8,EXCIPSKOQ.KOQ_IZNOS1)
+	$estat = excel.Setcell(counter_1,9,EXCIPSKOQ.KOQ_IZNOS4)
+	$estat = excel.Setcell(counter_1,10,EXCIPSKOQ.KOQ_IZNOS5)
+	$estat = excel.Setcell(counter_1,11,EXCIPSKOQ.KOQ_PROCEN)
+end_read
+$putanja = alltrim($putanja)|"\OPOMENE_zb.xls"
+$estat = excel.Run("save_exit", $putanja)
+end_if
+
+END_PROCEDURE
+
+PROCEDURE EXCEL0
+
+
+
+$estat = excel.Open() !!create new, empty document
+if $estat <> 0
+Pause "Excel error: " | $estat
+else
+init counter_1
+add 1 to counter_1
+$estat = excel.Setcell(counter_1,1,"Šifra")
+$estat = excel.Setcell(counter_1,2,"Ime i prezime")
+$estat = excel.Setcell(counter_1,3,"Dospeo dug")
+$estat = excel.Setcell(counter_1,4,"Ukupan dug")
+$estat = excel.Setcell(counter_1,5,$text2)
+$estat = excel.Setcell(counter_1,6,"Kamata")
+$estat = excel.Setcell(counter_1,7,"UPLATA")
+$estat = excel.Setcell(counter_1,8,"Ostalo za uplatu")
+$estat = excel.Setcell(counter_1,9,"Stanje na dan")
+$estat = excel.Setcell(counter_1,10,"Procenat naplate")
+read_all EXCIPSKOU
+add 1 to counter_1
+read ipsgs3 key = $sifra1|$sifra2|'01'|EXCIPSKOU.KOU_SIFPOT
+	$text =IPSGS3.GS3_NAZIV0|IPSGS3.GS3_NAZIV1
+	$estat = excel.Setcell(counter_1,1,EXCIPSKOU.KOU_SIFPOT)
+	$estat = excel.Setcell(counter_1,2,initcap($text))
+	$estat = excel.Setcell(counter_1,3,EXCIPSKOU.KOU_IZNOS1)
+	$estat = excel.Setcell(counter_1,4,EXCIPSKOU.KOU_IZNOS2)
+	$estat = excel.Setcell(counter_1,5,EXCIPSKOU.KOU_IZNOS3)
+	$estat = excel.Setcell(counter_1,6,EXCIPSKOU.KOU_IZNKAM)
+	$estat = excel.Setcell(counter_1,7,EXCIPSKOU.KOU_IZNOS4)
+	$estat = excel.Setcell(counter_1,8,EXCIPSKOU.KOU_IZNOS5)
+	$estat = excel.Setcell(counter_1,9,EXCIPSKOU.KOU_IZNOS6)
+	$estat = excel.Setcell(counter_1,10,EXCIPSKOU.KOU_PROCEN)
+end_read
+$putanja = alltrim($putanja)|"\OPOMENE_P.xls"
+$estat = excel.Run("save_exit", $putanja)
+
+end_if
+END_PROCEDURE
+procedure Smanji
+	Define_local $$Sifrej a 4
+	Define_local $$Sifprj a 2
+	Define_local $$Brmems n 5
+
+	Select_all IPSKOU.KOU_SIFPOT from ipskou \
+			Where IPSKOU.KOU_SIFRA1=:$sifra1 and IPSKOU.KOU_SIFRA2=:$sifra2 	\
+				  and IPSKOU.KOU_VRSNAL=:$vrsnal and IPSKOU.KOU_BROTRA=:$brotra   \
+				  and IPSKOU.KOU_GODINA=:$godinab
+
+			Select  IPSKOM.KOM_SIFREJ into :$$Sifrej,	\
+					IPSKOM.KOM_SIFPRJ into :$$Sifprj, 	\
+					IPSKOM.KOM_BRMEMS into :$$Brmems  	\
+					From Ipskom where IPSKOM.KOM_SIFPOT = :IPSKOU.KOU_SIFPOT
+
+					Read ipskok Key = $$Sifrej|$$Sifprj|$$Brmems
+					If Record Ipskok Found
+						IPSKOK.KOK_ETAZNI = IPSKOK.KOK_ETAZNI - 1
+						Update IPSKOK/Cond:IPSKOK.KOK_ETAZNI >= 0
+					End_if
+		End_select
+End_procedure
+procedure brotraNN
+!---------------
+!  	+----------------------------------------------------+
+!  	!    Broj transakcije iz IPS001 zavisno od paketa    !
+!  	+----------------------------------------------------+
+!   	Table = IPS001
+	if Year(Today) > Year($gradat)
+		$ozngod = '1'
+	else
+		$ozngod = '0'
+	end_if
+
+   	Read IPS001 Key = $sifra1|$sifra2|$paket|"**"|"*!*!"|"OO"|$ozngod
+   	ps1_datnal = DateTime (Today,Systime)
+   	if Record IPS001 not_Found
+   	    ps1_sifra1 = $sifra1
+   	    ps1_sifra2 = $sifra2
+   	    ps1_paket  = $paket
+   	    ps1_sifra4 = "**"
+   	    ps1_sifra5 = "*!*!"
+   	    ps1_vrsnal = "OO"
+   	    ps1_ozngod = $ozngod
+   	    ps1_bronal = 1
+   	    Write IPS001
+   	else
+   	    add 1 to ps1_bronal
+   	    Update IPS001
+   	end_if
+	$brotra = ps1_bronal
+	Commit
+end_procedure
+Procedure UpisUgovora
+	Perform brotraNN
+	ipskoi.koi_sifra1 = $sifra1	!!  A 2
+	ipskoi.koi_sifra2 = $sifra2	!!  A 2
+	ipskoi.koi_vrsnal = 'OO'	!!  A 2
+	ipskoi.koi_godina = Year(Today)	!!  N 9
+	ipskoi.koi_brotra = $brotra	!!  N 9
+	ipskoi.koi_bronal = 'OO'|Edit($brotra,'99999')	!!  A 20
+	ipskoi.koi_sifrej = IPSKOM.KOM_SIFREJ	!!  A 4
+	ipskoi.koi_sifprj = IPSKOM.KOM_SIFPRJ	!!  A 2
+	ipskoi.koi_brmems = IPSKOM.KOM_BRMEMS	!!  N 9
+	ipskoi.koi_brohod = IPSKOM.KOM_BROHOD	!!  A 6
+	ipskoi.koi_sifpot = IPSKOM.KOM_SIFPOT	!!  A 8
+	ipskoi.koi_sifvla = IPSKOM.KOM_SIFVLA	!!  A 8
+	ipskoi.koi_datnal = DateTime (Today,Systime) 	!!  Datetime
+	ipskoi.koi_datum0 = DateTime (Today,Systime)	!!  Datetime
+	ipskoi.koi_datum1 = DateTime (Today,Systime)	!!  Datetime
+	ipskoi.koi_iznos1 = 0	!!  N 18,2
+	ipskoi.koi_iznos2 = 0	!!  N 18,2
+	ipskoi.koi_text1 = 	' '!!  A V500
+	ipskoi.koi_text2 = 	' '!!  A V500
+	ipskoi.koi_indjou = ' '	!!  A 1
+	Write IPSKOI
+Commit
+end_procedure
+Procedure OtvoreneStavke
+	Define_local $$konto0 a 6
+	Define_local $$konkam a 6
+	Define_local $$iznupl	n	18,2
+	Define_local $$iznsto	n 18,2
+	Define_local $$iznupl2	n	18,2
+	Define_local $$iznstotmp	n 18,2
+	Define_local $$uplata	n 18,2
+	Define_local $$ukupno	n 18,2
+	Define_local $$ostalo	n 18,2
+	Define_local $$x	n 18,2
+	Define_local $$iznzat	n 18,2
+	Define_local $$brozat	n 9
+	Define_local $$neddug	n 18,2
+	Define_Local $$Duguje n 18,2
+	Define_Local $$datdok d 8
+	Define_Local $$datdpo d 8
+	Define_Local $$Brorac a 8
+	Define_Local $$stavka n 8
+	init $$iznupl,$$iznupl2,$$uplata,$$stavka,$$ukupno,$$ostalo,$$iznzat,$$brozat,$$x
+	Select_all * From IPSKOU Where IPSKOU.KOU_SIFRA1 = :IPSKOQ.KOQ_SIFRA1 And \
+							       IPSKOU.KOU_SIFRA2 = :IPSKOQ.KOQ_SIFRA2 And \
+							       IPSKOU.KOU_VRSNAL = :IPSKOQ.KOQ_VRSNAL And \
+								   IPSKOU.KOU_GODINA = :IPSKOQ.KOQ_GODINA And \
+								   IPSKOU.KOU_BROTRA = :IPSKOQ.KOQ_BROTRA Order by \
+								   IPSKOU.KOU_STAVKA
+		init $$Duguje
+		Select Sum(IPSAK5.AK5_IZNDIN) Into :$$iznupl From IPSAK5 Where IPSAK5.AK5_SIFRA1 = :IPSKOQ.KOQ_SIFRA1 And \
+														IPSAK5.AK5_SIFRA2 = :IPSKOQ.KOQ_SIFRA2 And \
+														IPSAK5.AK5_KONTO In (:IPSKOU.KOU_KONTO0, :IPSKOU.KOU_KONKAM) And \
+										                IPSAK5.AK5_AKONTO = :IPSKOU.KOU_SIFPOT And \
+														IPSAK5.AK5_DATNAL <= :IPSKOQ.KOQ_DATUPL And \
+														IPSAK5.AK5_OZNAKA = 'P'
+
+		Select Sum(IPSAK2.AK2_IZNDIN) Into :$$iznupl2 From IPSAK2 Where IPSAK2.AK2_SIFRA1 = :IPSKOQ.KOQ_SIFRA1 And \
+														IPSAK2.AK2_SIFRA2 = :IPSKOQ.KOQ_SIFRA2 And \
+														IPSAK2.AK2_KONTO In (:IPSKOU.KOU_KONTO0, :IPSKOU.KOU_KONKAM) And \
+										                IPSAK2.AK2_AKONTO = :IPSKOU.KOU_SIFPOT And \
+														IPSAK2.AK2_DATNAL <= :IPSKOQ.KOQ_DATUPL And \
+														IPSAK2.AK2_OZNAKA = 'P'
+			$$uplata = $$iznupl + $$iznupl2
+			Init $$iznstotmp,$$iznsto,$$iznzat,$$neddug,$$brozat
+	!		pause 0
+			Select_All AK5_BRORAC,AK5_DATDOK,AK5_DATDPO, 									\
+					Sum(AK5_IZNDIN) Into :$$iznstotmp										\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:IPSKOU.KOU_KONTO0, :IPSKOU.KOU_KONKAM)  and					\
+				ak5_akonto=:IPSKOU.KOU_SIFPOT												\
+				And IPSAK5.AK5_OZNAKA = 'D' 												\
+				Group by AK5_BRORAC,AK5_DATDOK,AK5_DATDPO									\
+				Having Sum(AK5_IZNDIN) < 0													\
+				Union  All 																	\
+				Select 	AK2_BRORAC,AK2_DATDOK,AK2_DATDPO, 									\
+					Sum(AK2_IZNDIN) 														\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:IPSKOU.KOU_KONTO0, :IPSKOU.KOU_KONKAM)  and					\
+				ak2_akonto = :IPSKOU.KOU_SIFPOT												\
+				And IPSAK2.AK2_OZNAKA = 'D' 												\
+				Group by AK2_BRORAC,AK2_DATDOK,AK2_DATDPO									\
+			    Having Sum(AK2_IZNDIN) < 0
+				if IPSAK5.AK5_DATDPO <= IPSKOQ.KOQ_DATZAD
+					$$iznsto = $$iznsto  + $$iznstotmp
+				Else
+					$$neddug = $$neddug + $$iznstotmp
+				End_if
+			!	Pause IPSKOU.KOU_SIFPOT|$$iznstotmp
+			End_select
+				ipskon0.kon0_sifra1 = IPSKOU.KOU_SIFRA1	!!  A 2
+				ipskon0.kon0_sifra2 = IPSKOU.KOU_SIFRA2	!!  A 2
+				ipskon0.kon0_vrsnal = IPSKOU.KOU_VRSNAL	!!  A 2
+				ipskon0.kon0_godina = IPSKOU.KOU_GODINA	!!  N 9
+				ipskon0.kon0_brotra = IPSKOU.KOU_BROTRA	!!  N 9
+				ipskon0.kon0_stavka = IPSKOU.KOU_STAVKA	!!  N 9
+				ipskon0.kon0_brodok = IPSKOU.KOU_BRODOK	!!  A 9
+				ipskon0.kon0_datdok = IPSKOU.KOU_DATDOK	!!  Datetime
+				ipskon0.kon0_sifpot = IPSKOU.KOU_SIFPOT	!!  A 8
+				ipskon0.kon0_naziv1 = 'Izvod otvorenih računa'	!!  A V80
+				ipskon0.kon0_duguje = 0	!!  N 18,2
+				ipskon0.kon0_potraz = 0 	!!  N 18,2
+				ipskon0.kon0_saldo  = 0	!!  N 18,2
+				ipskon0.kon0_iznos1 = 0	!!  N 18,2
+				ipskon0.kon0_iznos2 = 0 	!!  N 18,2
+				ipskon0.kon0_indjou = ' '	!!  A 1
+				ipskon0.kon0_brora2 = ' '	!!  A 20
+				ipskon0.kon0_konto   = ' '	!!  A 6
+				ipskon0.kon0_iznrac3 = 0	!!  N 18,2
+				IPSKON0.KON0_INDIK1 = 0
+				IPSKON0.KON0_INDIK2 = 0
+				ipskon0.kon0_datnal  = 	IPSKOQ.KOQ_DATZAD	
+				$$x = $$uplata
+				$$uplata  = $$uplata  + (-$$iznsto)
+				$$ostalo = $$uplata
+			$$Stavka = 1
+			Select_All AK5_BRORAC,AK5_DATDOK,AK5_DATDPO, 									\
+					Sum(AK5_IZNDIN) Into :$$duguje											\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:IPSKOU.KOU_KONTO0, :IPSKOU.KOU_KONKAM)  and					\
+				ak5_akonto=:IPSKOU.KOU_SIFPOT												\
+				And IPSAK5.AK5_OZNAKA = 'D' 												\
+				Group by AK5_BRORAC,AK5_DATDOK,AK5_DATDPO									\
+				Having Sum(AK5_IZNDIN) > 0													\ !!Donesi pozitivne racune
+				Union  All 																	\
+				Select 	AK2_BRORAC,AK2_DATDOK,AK2_DATDPO, 									\
+					Sum(AK2_IZNDIN) 														\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:IPSKOU.KOU_KONTO0, :IPSKOU.KOU_KONKAM)  and					\
+				ak2_akonto = :IPSKOU.KOU_SIFPOT												\
+				And IPSAK2.AK2_OZNAKA = 'D' 												\
+				Group by AK2_BRORAC,AK2_DATDOK,AK2_DATDPO									\
+				Having Sum(AK2_IZNDIN) > 0													\ !!Donesi pozitivne racune
+				Order By 3
+				if IPSAK5.AK5_DATDPO <= IPSKOQ.KOQ_DATZAD
+					if $$ostalo > 0
+						if $$ostalo < $$duguje
+							!!Racun je delimicno zatvoren
+							Add 1 To $$Stavka
+							ipskon0.kon0_redbro  = $$Stavka	!!  N 9
+							ipskon0.kon0_brorac  = IPSAK5.AK5_BRORAC	!!  A 8
+							ipskon0.kon0_dadspo  = IPSAK5.AK5_DATDPO	!!  Datetime
+							ipskon0.kon0_datdox  = IPSAK5.AK5_DATDOK	!!  Datetime
+							ipskon0.kon0_iznrac1 = $$duguje - $$ostalo 	!!  N 18,2
+							ipskon0.kon0_iznrac2 = $$duguje 	!!  N 18,2
+							IPSKON0.KON0_STATUS = 2
+							Write ipskon0
+							Add ($$duguje - ipskon0.kon0_iznrac1) To $$Iznzat
+						Else
+							Add 1 To $$brozat
+							Add $$duguje To $$Iznzat
+						End_if
+					Else
+						Add 1 To $$Stavka
+						!!Nema ostalo ceo racun nije ztvoren
+						ipskon0.kon0_redbro = $$Stavka	!!  N 9
+						ipskon0.kon0_brorac  = IPSAK5.AK5_BRORAC	!!  A 8
+						ipskon0.kon0_dadspo  = IPSAK5.AK5_DATDPO	!!  Datetime
+						ipskon0.kon0_datdox  = IPSAK5.AK5_DATDOK	!!  Datetime
+						ipskon0.kon0_iznrac1 = $$duguje	!!  N 18,2
+						ipskon0.kon0_iznrac2 = $$duguje	!!  N 18,2
+						IPSKON0.KON0_STATUS = 3
+						Write ipskon0
+					End_if
+					$$ostalo = $$ostalo - $$Duguje
+				Else
+					$$neddug = $$neddug + $$duguje
+				End_if
+			End_select
+				ipskon0.kon0_redbro = 1
+				ipskon0.kon0_potraz = $$uplata 	!!  N 18,2
+				ipskon0.kon0_saldo   = $$neddug 	!!  N 18,2
+				ipskon0.kon0_iznos1 = -$$iznsto 	!!  N 18,2
+				ipskon0.kon0_iznos2 = $$x 	!!  N 18,2
+				ipskon0.kon0_brora2 = Alltrim(Edit($$brozat,'ZZZ9'))	!!  A 20
+				ipskon0.kon0_konto   = ' '	!!  A 6
+				ipskon0.kon0_iznrac3 = $$iznzat	!!  N 18,2
+				ipskon0.kon0_brorac  = 'Donos'	!!  A 8
+				ipskon0.kon0_dadspo  = IPSKOU.KOU_DATDOK	!!  Datetime
+				ipskon0.kon0_datdox  = IPSKOU.KOU_DATDOK	!!  Datetime
+				ipskon0.kon0_iznrac1 = 0	!!  N 18,2
+				ipskon0.kon0_iznrac2 = 0!!  N 18,2
+				IPSKON0.KON0_INDIK1 =  ' '
+				IPSKON0.KON0_INDIK2 = 0
+				IPSKON0.KON0_STATUS = 1
+				Write IPSKON0			
+	End_Select
+
+	ExecSQL update IPSKOQ set IPSKOQ.KOQ_STAIOS =  1 FROM 	IPSKOQ	    \
+			Where 	IPSKOq.KOq_SIFRA1=:$sifra1 and 						\
+				  	IPSKOq.KOq_SIFRA2=:$sifra2 							\
+					and IPSKOq.KOq_VRSNAL= :$vrsnal and 				\
+						IPSKOq.KOq_BROTRA= :$brotra  					\
+					and IPSKOq.KOq_GODINA=: $godinab
+	Commit
+End_Procedure
+
+Procedure Izdvajanje98
+	Define_local $$konto0 a 6
+	Define_local $$konkam a 6
+	Define_local $$iznupl	n	18,2
+	Define_local $$iznsto	n 18,2
+	Define_local $$iznupl2	n	18,2
+	Define_local $$iznstotmp	n 18,2
+	Define_local $$uplata	n 18,2
+	Define_local $$ukupno	n 18,2
+	Define_local $$ostalo	n 18,2
+	Define_local $$x	n 18,2
+	Define_local $$iznzat	n 18,2
+	Define_local $$brozat	n 9
+	Define_local $$neddug	n 18,2
+	Define_Local $$Duguje n 18,2
+	Define_Local $$datdok d 8
+	Define_Local $$datdpo d 8
+	Define_Local $$Brorac a 8
+	Define_Local $$stavka n 8
+	init $$iznupl,$$iznupl2,$$uplata,$$stavka,$$ukupno,$$ostalo,$$iznzat,$$brozat,$$x
+	init counter_10,COUNTER_1
+	select_all * from ipskom where kom_brohod= :$Brohod 	\
+			and (KOM_status = :$izbor or :$izbor = ' ')  	\
+		 order by kom_sifpot
+
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ
+
+		init $$Duguje
+		Select Sum(IPSAK5.AK5_IZNDIN) Into :$$iznupl From IPSAK5 Where IPSAK5.AK5_SIFRA1 = :$sifra1 And \
+														IPSAK5.AK5_SIFRA2 = :$sifra2 And \
+														IPSAK5.AK5_KONTO In (:$konto0,:$konkam,:$kontuz,:$kontak)  And \
+										                IPSAK5.AK5_AKONTO = :$SIFPOT And \
+														IPSAK5.AK5_DATNAL <= :IPSKOQ.KOQ_DATUPL And \
+														IPSAK5.AK5_OZNAKA = 'P'
+
+		Select Sum(IPSAK2.AK2_IZNDIN) Into :$$iznupl2 From IPSAK2 Where IPSAK2.AK2_SIFRA1 = :$sifra1 And \
+														IPSAK2.AK2_SIFRA2 = :$SIFRA2 And \
+														IPSAK2.AK2_KONTO In (:$konto0,:$konkam,:$kontuz,:$kontak)  And \
+										                IPSAK2.AK2_AKONTO = :$SIFPOT And \
+														IPSAK2.AK2_DATNAL <= :IPSKOQ.KOQ_DATUPL And \
+														IPSAK2.AK2_OZNAKA = 'P'
+			$$uplata = $$iznupl + $$iznupl2
+			Init $$iznstotmp,$$iznsto,$$iznzat,$$neddug,$$brozat
+	!		pause 0
+			Select_All AK5_BRORAC,AK5_DATDOK,AK5_DATDPO, 									\
+					Sum(AK5_IZNDIN) Into :$$iznstotmp										\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak)   and					\
+				ak5_akonto=:$SIFPOT												\
+				And IPSAK5.AK5_OZNAKA = 'D' 												\
+				Group by AK5_BRORAC,AK5_DATDOK,AK5_DATDPO									\
+				Having Sum(AK5_IZNDIN) < 0													\
+				Union  All 																	\
+				Select 	AK2_BRORAC,AK2_DATDOK,AK2_DATDPO, 									\
+					Sum(AK2_IZNDIN) 														\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak)   and					\
+				ak2_akonto = :$SIFPOT												\
+				And IPSAK2.AK2_OZNAKA = 'D' 												\
+				Group by AK2_BRORAC,AK2_DATDOK,AK2_DATDPO									\
+			    Having Sum(AK2_IZNDIN) < 0
+				if IPSAK5.AK5_DATDPO <= IPSKOQ.KOQ_DATZAD
+					$$iznsto = $$iznsto  + $$iznstotmp
+				Else
+					$$neddug = $$neddug + $$iznstotmp
+				End_if
+			!	Pause IPSKOU.KOU_SIFPOT|$$iznstotmp
+			End_select
+				ipskon0.kon0_sifra1 = IPSKOU.KOU_SIFRA1	!!  A 2
+				ipskon0.kon0_sifra2 = IPSKOU.KOU_SIFRA2	!!  A 2
+				ipskon0.kon0_vrsnal = IPSKOU.KOU_VRSNAL	!!  A 2
+				ipskon0.kon0_godina = IPSKOU.KOU_GODINA	!!  N 9
+				ipskon0.kon0_brotra = IPSKOU.KOU_BROTRA	!!  N 9
+				ipskon0.kon0_stavka = IPSKOU.KOU_STAVKA	!!  N 9
+				ipskon0.kon0_brodok = IPSKOU.KOU_BRODOK	!!  A 9
+				ipskon0.kon0_datdok = IPSKOU.KOU_DATDOK	!!  Datetime
+				ipskon0.kon0_sifpot = IPSKOU.KOU_SIFPOT	!!  A 8
+				ipskon0.kon0_naziv1 = 'Izvod otvorenih računa'	!!  A V80
+				ipskon0.kon0_duguje = 0	!!  N 18,2
+				ipskon0.kon0_potraz = 0 	!!  N 18,2
+				ipskon0.kon0_saldo  = 0	!!  N 18,2
+				ipskon0.kon0_iznos1 = 0	!!  N 18,2
+				ipskon0.kon0_iznos2 = 0 	!!  N 18,2
+				ipskon0.kon0_indjou = ' '	!!  A 1
+				ipskon0.kon0_brora2 = ' '	!!  A 20
+				ipskon0.kon0_konto   = ' '	!!  A 6
+				ipskon0.kon0_iznrac3 = 0	!!  N 18,2
+				IPSKON0.KON0_INDIK1 = 0
+				IPSKON0.KON0_INDIK2 = 0
+				ipskon0.kon0_datnal  = 	IPSKOQ.KOQ_DATZAD	
+				$$x = $$uplata
+				$$uplata  = $$uplata  + (-$$iznsto)
+				$$ostalo = $$uplata
+			$$Stavka = 1
+			Select_All AK5_BRORAC,AK5_DATDOK,AK5_DATDPO, 									\
+					Sum(AK5_IZNDIN) Into :$$duguje											\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) )  and					\
+				ak5_akonto=:$SIFPOT												\
+				And IPSAK5.AK5_OZNAKA = 'D' 												\
+				Group by AK5_BRORAC,AK5_DATDOK,AK5_DATDPO									\
+				Having Sum(AK5_IZNDIN) > 0													\ !!Donesi pozitivne racune
+				Union  All 																	\
+				Select 	AK2_BRORAC,AK2_DATDOK,AK2_DATDPO, 									\
+					Sum(AK2_IZNDIN) 														\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak)   and					\
+				ak2_akonto = :$SIFPOT												\
+				And IPSAK2.AK2_OZNAKA = 'D' 												\
+				Group by AK2_BRORAC,AK2_DATDOK,AK2_DATDPO									\
+				Having Sum(AK2_IZNDIN) > 0													\ !!Donesi pozitivne racune
+				Order By 3
+				if IPSAK5.AK5_DATDPO <= IPSKOQ.KOQ_DATZAD
+					if $$ostalo > 0
+						if $$ostalo < $$duguje
+							!!Racun je delimicno zatvoren
+							Add 1 To $$Stavka
+							ipskon0.kon0_redbro  = $$Stavka	!!  N 9
+							ipskon0.kon0_brorac  = IPSAK5.AK5_BRORAC	!!  A 8
+							ipskon0.kon0_dadspo  = IPSAK5.AK5_DATDPO	!!  Datetime
+							ipskon0.kon0_datdox  = IPSAK5.AK5_DATDOK	!!  Datetime
+							ipskon0.kon0_iznrac1 = $$duguje - $$ostalo 	!!  N 18,2
+							ipskon0.kon0_iznrac2 = $$duguje 	!!  N 18,2
+							IPSKON0.KON0_STATUS = 2
+							Write ipskon0
+							Add ($$duguje - ipskon0.kon0_iznrac1) To $$Iznzat
+						Else
+							Add 1 To $$brozat
+							Add $$duguje To $$Iznzat
+						End_if
+					Else
+						Add 1 To $$Stavka
+						!!Nema ostalo ceo racun nije ztvoren
+						ipskon0.kon0_redbro = $$Stavka	!!  N 9
+						ipskon0.kon0_brorac  = IPSAK5.AK5_BRORAC	!!  A 8
+						ipskon0.kon0_dadspo  = IPSAK5.AK5_DATDPO	!!  Datetime
+						ipskon0.kon0_datdox  = IPSAK5.AK5_DATDOK	!!  Datetime
+						ipskon0.kon0_iznrac1 = $$duguje	!!  N 18,2
+						ipskon0.kon0_iznrac2 = $$duguje	!!  N 18,2
+						IPSKON0.KON0_STATUS = 3
+						Write ipskon0
+					End_if
+					$$ostalo = $$ostalo - $$Duguje
+				Else
+					$$neddug = $$neddug + $$duguje
+				End_if
+				
+			End_select
+				ipskon0.kon0_redbro = 1
+				ipskon0.kon0_potraz = $$uplata 	!!  N 18,2
+				ipskon0.kon0_saldo   = $$neddug 	!!  N 18,2
+				ipskon0.kon0_iznos1 = -$$iznsto 	!!  N 18,2
+				ipskon0.kon0_iznos2 = $$x 	!!  N 18,2
+				ipskon0.kon0_brora2 = Alltrim(Edit($$brozat,'ZZZ9'))	!!  A 20
+				ipskon0.kon0_konto   = ' '	!!  A 6
+				ipskon0.kon0_iznrac3 = $$iznzat	!!  N 18,2
+				ipskon0.kon0_brorac  = 'Donos'	!!  A 8
+				ipskon0.kon0_dadspo  = IPSKOU.KOU_DATDOK	!!  Datetime
+				ipskon0.kon0_datdox  = IPSKOU.KOU_DATDOK	!!  Datetime
+				ipskon0.kon0_iznrac1 = 0	!!  N 18,2
+				ipskon0.kon0_iznrac2 = 0!!  N 18,2
+				IPSKON0.KON0_INDIK1 =  ' '
+				IPSKON0.KON0_INDIK2 = 0
+				IPSKON0.KON0_STATUS = 1
+				Write IPSKON0
+		End_if			
+	End_Select
+
+	ExecSQL update IPSKOQ set IPSKOQ.KOQ_STAIOS =  1 FROM 	IPSKOQ	    \
+			Where 	IPSKOq.KOq_SIFRA1=:$sifra1 and 						\
+				  	IPSKOq.KOq_SIFRA2=:$sifra2 							\
+					and IPSKOq.KOq_VRSNAL= :$vrsnal and 				\
+						IPSKOq.KOq_BROTRA= :$brotra  					\
+					and IPSKOq.KOq_GODINA=: $godinab
+	Commit
+End_Procedure
+Procedure Word2
+
+define_local $$puttmp a 120
+define_local $$putdoc a 120
+define_local $$tuz_doc a 80
+define_local $$tuz_tmp a 80
+define_local $$brotuz a 14
+define_local $$preime a 120
+define_local $$matbro a 13
+define_local $$doc    a 150
+define_local $$sifpot    a 8
+define_local $$br     a 4
+define_local $$datum  a 25
+
+define_local $$komanda a 12
+Define_local $$nula	n	18,2
+Define_local $$n	n	9
+Define_local $$j	n	9
+$$tuz_doc = Trnlog('pois_worddoc')
+$$tuz_tmp = Trnlog('pois_wordtmp')
+
+
+$$puttmp = Alltrim($$TUZ_TMP)|'\IKO555l1.dot'
+$wstat = Word.Open($$puttmp)
+
+
+if $wstat = 0
+	$wstat = Word.Setbookmark("hodogram",IPSKOQ.KOQ_BROHOD ,1250)
+	$wstat = Word.Setbookmark("godina", IPSKOQ.KOQ_GODINA)
+	$wstat = Word.Setbookmark("brotra",IPSKOQ.KOQ_BROTRA )
+	$wstat = Word.Setbookmark("brodok",IPSKOQ.KOQ_BRODOK,1250 )
+	$wstat = Word.Setbookmark("datdok", IPSKOQ.KOQ_DATDOK)
+	$wstat = Word.Setbookmark("iznos1", IPSKOQ.KOQ_IZNOS1)
+	$wstat = Word.Setbookmark("iznos2", IPSKOQ.KOQ_IZNOS2)
+    $$datum = Edit(IPSKOQ.KOQ_DATZAD,'dd.mm.yyyy')
+	$wstat = Word.Setbookmark("datzad", $$datum )
+	$$datum = Edit(IPSKOQ.KOQ_DATUPL,'dd.mm.yyyy')
+	$wstat = Word.Setbookmark("datupl",$$datum )
+	!pause $wstat  	
+	!  if $wstat= 0
+
+	$$n = 1
+	$wstat= Word.Opentable("#1",0,0)
+	select_all * from ipskou where kou_sifra1=:$sifra1 and \
+			kou_sifra2=:$sifra2 and kou_vrsnal=:$vrsnal and kou_godina=:$godinab   and\
+			kou_brotra=:$brotra and IPSKOU.KOU_INDOPO='1'  order by kou_stavka
+		 add 1 to $$n
+		$$j = $$n - 1
+		$wstat = Word.Insertrow($$n)
+        $wstat= Word.Setcell($$n,1,$$j)
+        $wstat = Word.Setcell($$n,2,IPSKOU.KOU_SIFPOT,1250)	
+		read ipsgs3 key = $sifra1|$sifra2|'01'|KOu_SIFPOT
+		$$preime =IPSGS3.GS3_NAZIV0|IPSGS3.GS3_NAZIV1
+		$$preime = initcap($$preime )
+		$wstat = Word.Setcell($$n,3,$$preime ,1250)	
+		$wstat = Word.Setcell($$n,4,gs3_adresa ,1250)
+		 $$matbro = Edit(IPSKOU.KOU_IZNOS1,'zzz.zzz.zz9,99')
+		$wstat = Word.Setcell($$n,5,IPSKOU.KOU_IZNOS1)
+		$wstat = Word.Setcell($$n,6,IPSKOU.KOU_IZNOS2)
+		$wstat = Word.Setcell($$n,7,IPSKOU.KOU_IZNTUZ)
+     !   $stat = Word.Setcell($$n,3,IPSKOH.KOH_NAZHOD,1250)
+
+		End_Select
+		$wstat= Word.Closetable()
+		$wstat = Word.Run()
+
+  !  end_if
+	!Pause $sta
+
+
+else
+	Pause "Error openning input file"
+end_if
+End_procedure
+
+
+
+
+
+PROCEDURE IZDVAJANJE_DUG_N_DANA
+	init counter_10,COUNTER_1
+   $DATpot = Today
+!PAUSE $ZONREJ|'-'|$TIPHOD
+	select_all * from ipskom where (kom_brohod IN (Select IPSKOH.KOH_BROHOD From 			\
+			IPSKOH Where IPSKOH.KOH_ZONREJ =  :$ZONREJ										\
+			) or kom_brohod IN (Select IPSKOH.KOH_BROHOD From 								\
+			IPSKOH Where IPSKOH.KOH_TIPHOD =  :$TIPHOD)) 									\
+			and (IPSKOM.KOM_status in 														\
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),					\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))  				\
+			And (IPSKOM.KOM_PRIDUG = '1' or :IPSKO0.KO0_ABC012 <> 1)			\
+		 order by kom_sifpot
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ,$iznos
+			Select_All ak5_akonto,ak5_datnal,ak5_konto,			 							\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and					    \
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if  ak5_datnal <= $DATdug
+								if ak5_konto = $konkam
+									add ak5_izndin to acc_7
+								end_if
+								add ak5_izndin to acc_2
+								if ak5_datdpo <= $datdug
+									add ak5_izndin to acc_3
+								end_if
+							end_if
+						else
+						 if  ak5_datnal <= $DATpot
+							if ak5_konto = $konkam
+								add -ak5_izndin to acc_7
+							end_if
+							add ak5_izndin to acc_4
+						end_if
+						end_if
+					End_if		
+			end_select
+			
+			$iznos = acc_3 - acc_4
+			acc_6 = acc_2 - acc_4
+		$oldDug = 0
+		Select  [dbo].[f_GK_GetOldObligationByDay](:$sifra1,:$sifra2,:$sifpot  , \
+			:$konto0,:$konkam ,:$DATdug, :$NumDay ) Into :$oldDug
+
+		IF $oldDug >= ACC_10 & $oldDug <= ACC_11
+		   INIT_RECORD IPSKOU
+		    add 1 to $stavka
+			select max(kou_datdok) into :$datop from ipskour where kou_sifpot=:$sifvla
+			read ipskour where kou_sifpot=:$sifvla and kou_datdok=:$datop
+		
+		!*****************************************
+			ipskou.kou_sifra1 = $sifra1 	!!  A 2
+			ipskou.kou_sifra2 = $sifra2 	!!  A 2
+			ipskou.kou_vrsnal = $vrsnal 	!!  A 2
+			ipskou.kou_brotra = $BROTRA	!!  N 5
+			ipskou.kou_godina = $GODINAB	!!  N 4
+			ipskou.kou_stavka = $stavka 	!!  N 5
+			ipskou.kou_brodok = IPSKOQ.KOQ_BRODOK	!!  A 9
+			ipskou.kou_datdok = IPSKOQ.KOQ_DATDOK 	!!  Datetime
+			ipskou.kou_sifpot = IPSKOM.KOM_SIFPOT 	!!  A 8
+			ipskou.kou_brojiv = ' '	!!  A 12
+			If $TUCKO = '1'
+				ipskou.kou_iznos1 = $iznos + $STATUZ	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6+ $STATUZ	!!  N 18,2
+			Else
+				ipskou.kou_iznos1 = $iznos	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			End_if
+		!	ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			if record ipskour found
+				IPSKOU.KOU_DATPRE =IPSKOUR.KOU_DATDOK
+				ipskou.kou_prenal = IPSKOUR.KOU_VRSNAL	!!  A 2
+				if IPSKOUR.KOU_ZALBA0='1'
+					IPSKOU.KOU_ZALBA1='1'
+				else
+					IPSKOU.KOU_ZALBA1='0'
+				end_if
+			ELSE
+				IPSKOU.KOU_DATPRE =ZERO_DATE
+				ipskou.kou_prenal = ' '	!!  A 2
+				IPSKOU.KOU_ZALBA1='0'
+			END_IF
+
+			IPSKOU.KOU_GODTU  = 0
+			IPSKOU.KOU_INDPRO = '0'
+			ipskou.kou_iznos3 = $oldDug  	!!  N 18,2
+			IPSKOU.KOU_IZNKAM = acc_7
+			IPSKOU.KOU_BRORAC = counter_8
+			ipskou.kou_datzad = IPSKOQ.KOQ_DATZAD	!!  Datetime
+			ipskou.kou_datupl = IPSKOQ.KOQ_DATUPL 	!!  Datetime
+			ipskou.kou_dattuz = SUB_DAYS(IPSKOQ.KOQ_DATZAD,$NumDay)
+
+			ipskou.kou_statuz = ' '	!!  A 1
+			ipskou.kou_oznaka = ' '	!!  A 1
+			ipskou.kou_koment = ' '	!!  A 40
+			IPSKOU.KOU_KONTO0 = $konto0
+			IPSKOU.KOU_KONKAM = $konkam
+			If kom_status in ('2')
+				IPSKOU.KOU_INDSTA = '0'
+				IPSKOU.KOU_INDOPO = '0'
+			Else
+				IPSKOU.KOU_INDSTA = '1'
+				IPSKOU.KOU_INDOPO = '1'
+			End_if
+			IPSKOU.KOU_INDTUZ = '0'
+			IPSKOU.KOU_IZNTUZ = $STATUZ
+			ipskou.kou_indjou = ' '	!!  A 1	
+		
+			!PAUSE $IZNOS
+			
+			If $C in ('1';'2';'3';'4';'5';'9')
+				IF $C='1'
+					Write ipskou
+					add 1 to counter_3
+					$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+					poruka1.DISPLAY($text1)
+				ELSE
+					IF RECORD IPSKOUR FOUND
+						IF $C='2'
+							IF IPSKOUR.KOU_VRSNAL='OP'
+							Write ipskou
+							add 1 to counter_3
+							$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+							poruka1.DISPLAY($text1)
+							END_IF
+						ELSE
+							IF $C='3'
+								IF IPSKOUR.KOU_VRSNAL='OT'
+								Write ipskou
+								add 1 to counter_3
+								$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+								poruka1.DISPLAY($text1)
+								END_IF
+							ELSE
+								IF $C='4'
+									IF IPSKOUR.KOU_VRSNAL='OI'
+									Write ipskou
+									add 1 to counter_3
+									$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+									poruka1.DISPLAY($text1)
+									END_IF
+								else
+									IF $C='5'
+										IF IPSKOUR.KOU_VRSNAL='TU'
+										Write ipskou
+										add 1 to counter_3
+										$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+										poruka1.DISPLAY($text1)
+										END_IF
+									Else
+										IF $C='9'
+											IF IPSKOUR.KOU_VRSNAL='PT'
+											Write ipskou
+											add 1 to counter_3
+											$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+											poruka1.DISPLAY($text1)
+											END_IF
+										end_if
+									end_if
+								END_IF
+							END_IF
+						END_IF
+					END_IF
+				END_IF
+			Else
+				IF $C='6'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='TU'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='7'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='8'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='OT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='Q'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='PT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='F'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='D'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='G'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'PT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+			End_if
+		END_IF
+!****************************************		
+			
+		END_IF
+		ADD  1 TO COUNTER_10
+!C++ MyMsgLoop();
+		pROGRES.SETPOS(COUNTER_10)
+	end_select
+	commit
+	init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$text,counter_1
+END_PROCEDURE
+PROCEDURE IZDVAJANJE_DUG_N_DANA02
+	init counter_10,COUNTER_1
+    $DATpot = Today
+	select_all * from ipskom where kom_brohod = :$BROHOD 									\
+			and (IPSKOM.KOM_status in 														\
+			(:$V_STAT(1),:$V_STAT(2),:$V_STAT(3),:$V_STAT(4),:$V_STAT(5),					\
+			:$V_STAT(6),:$V_STAT(7),:$V_STAT(8),:$V_STAT(9),:$V_STAT(10)))  				\
+			And (IPSKOM.KOM_PRIDUG = '1' or :IPSKO0.KO0_ABC012 <> 1)			\
+		 order by kom_sifpot
+		if $sifpot <> kom_sifpot
+			$sifpot = kom_sifpot
+			$sifvla = kom_sifpot
+			perform CITCENA2
+			init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$STATUZ,$iznos
+			Select_All ak5_akonto,ak5_datnal,ak5_konto,			 							\
+			    ak5_oznaka,ak5_datdok,ak5_datdpo,ak5_izndin,ak5_sifopi,ak5_vrsnal 			\
+				From IPSAK5 Where                                      					 	\
+				ak5_sifra1 = :$sifra1  and ak5_sifra2  = :$sifra2  and 					 	\
+			    ak5_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and						\
+				ak5_akonto=:$sifpot 														\
+				Union  All 																	\
+				Select ak2_akonto,ak2_datnal,ak2_konto,										\
+					   ak2_oznaka,ak2_datdok,ak2_datdpo,ak2_izndin,ak2_sifopi,ak2_vrsnal 	\
+				From IPSAK2 Where                                      						\
+			    ak2_sifra1 = :$sifra1  and ak2_sifra2  = :$sifra2  and 						\
+			    ak2_konto in (:$konto0,:$konkam,:$kontuz,:$kontak) and					    \
+				ak2_akonto = :$sifpot														\
+				Order By 1,2 desc
+					If ak5_konto in ($kontuz ; $kontak)
+						if ak5_oznaka = 'D'
+							add  ak5_izndin to $STATUZ	
+						Else
+							add -ak5_izndin to  $STATUZ
+						End_if
+						
+					Else
+						if ak5_oznaka = 'D'
+							if  ak5_datnal <= $DATdug
+								if ak5_konto = $konkam
+									add ak5_izndin to acc_7
+								end_if
+								add ak5_izndin to acc_2
+								if ak5_datdpo <= $datdug
+									add ak5_izndin to acc_3
+								end_if
+							end_if
+						else
+						 if  ak5_datnal <= $DATpot
+							if ak5_konto = $konkam
+								add -ak5_izndin to acc_7
+							end_if
+							add ak5_izndin to acc_4
+						end_if
+						end_if
+					End_if		
+			end_select
+			
+			$iznos = acc_3 - acc_4
+			acc_6 = acc_2 - acc_4
+		$oldDug = 0
+		Select  [dbo].[f_GK_GetOldObligationByDay](:$sifra1,:$sifra2,:$sifpot  , \
+			:$konto0,:$konkam ,:$DATdug, :$NumDay ) Into :$oldDug
+
+		IF $oldDug >= ACC_10 & $oldDug <= ACC_11
+		   INIT_RECORD IPSKOU
+		    add 1 to $stavka
+			select max(kou_datdok) into :$datop from ipskour where kou_sifpot=:$sifvla
+			read ipskour where kou_sifpot=:$sifvla and kou_datdok=:$datop
+		
+		!*****************************************
+			ipskou.kou_sifra1 = $sifra1 	!!  A 2
+			ipskou.kou_sifra2 = $sifra2 	!!  A 2
+			ipskou.kou_vrsnal = $vrsnal 	!!  A 2
+			ipskou.kou_brotra = $BROTRA	!!  N 5
+			ipskou.kou_godina = $GODINAB	!!  N 4
+			ipskou.kou_stavka = $stavka 	!!  N 5
+			ipskou.kou_brodok = IPSKOQ.KOQ_BRODOK	!!  A 9
+			ipskou.kou_datdok = IPSKOQ.KOQ_DATDOK 	!!  Datetime
+			ipskou.kou_sifpot = IPSKOM.KOM_SIFPOT 	!!  A 8
+			ipskou.kou_brojiv = ' '	!!  A 12
+			If $TUCKO = '1'
+				ipskou.kou_iznos1 = $iznos + $STATUZ	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6+ $STATUZ	!!  N 18,2
+			Else
+				ipskou.kou_iznos1 = $iznos	!!  N 18,2
+				ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			End_if
+		!	ipskou.kou_iznos2 = acc_6	!!  N 18,2
+			if record ipskour found
+				IPSKOU.KOU_DATPRE =IPSKOUR.KOU_DATDOK
+				ipskou.kou_prenal = IPSKOUR.KOU_VRSNAL	!!  A 2
+				if IPSKOUR.KOU_ZALBA0='1'
+					IPSKOU.KOU_ZALBA1='1'
+				else
+					IPSKOU.KOU_ZALBA1='0'
+				end_if
+			ELSE
+				IPSKOU.KOU_DATPRE =ZERO_DATE
+				ipskou.kou_prenal = ' '	!!  A 2
+				IPSKOU.KOU_ZALBA1='0'
+			END_IF
+
+			IPSKOU.KOU_GODTU  = 0
+			IPSKOU.KOU_INDPRO = '0'
+			ipskou.kou_iznos3 = $oldDug  	!!  N 18,2
+			IPSKOU.KOU_IZNKAM = acc_7
+			IPSKOU.KOU_BRORAC = counter_8
+			ipskou.kou_datzad = IPSKOQ.KOQ_DATZAD	!!  Datetime
+			ipskou.kou_datupl = IPSKOQ.KOQ_DATUPL 	!!  Datetime
+			ipskou.kou_dattuz = SUB_DAYS(IPSKOQ.KOQ_DATZAD,$NumDay)
+
+			ipskou.kou_statuz = ' '	!!  A 1
+			ipskou.kou_oznaka = ' '	!!  A 1
+			ipskou.kou_koment = ' '	!!  A 40
+			IPSKOU.KOU_KONTO0 = $konto0
+			IPSKOU.KOU_KONKAM = $konkam
+			If kom_status in ('2')
+				IPSKOU.KOU_INDSTA = '0'
+				IPSKOU.KOU_INDOPO = '0'
+			Else
+				IPSKOU.KOU_INDSTA = '1'
+				IPSKOU.KOU_INDOPO = '1'
+			End_if
+			IPSKOU.KOU_INDTUZ = '0'
+			IPSKOU.KOU_IZNTUZ = $STATUZ
+			ipskou.kou_indjou = ' '	!!  A 1	
+		
+			!PAUSE $IZNOS
+			
+			If $C in ('1';'2';'3';'4';'5';'9')
+				IF $C='1'
+					Write ipskou
+					add 1 to counter_3
+					$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+					poruka1.DISPLAY($text1)
+				ELSE
+					IF RECORD IPSKOUR FOUND
+						IF $C='2'
+							IF IPSKOUR.KOU_VRSNAL='OP'
+							Write ipskou
+							add 1 to counter_3
+							$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+							poruka1.DISPLAY($text1)
+							END_IF
+						ELSE
+							IF $C='3'
+								IF IPSKOUR.KOU_VRSNAL='OT'
+								Write ipskou
+								add 1 to counter_3
+								$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+								poruka1.DISPLAY($text1)
+								END_IF
+							ELSE
+								IF $C='4'
+									IF IPSKOUR.KOU_VRSNAL='OI'
+									Write ipskou
+									add 1 to counter_3
+									$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+									poruka1.DISPLAY($text1)
+									END_IF
+								else
+									IF $C='5'
+										IF IPSKOUR.KOU_VRSNAL='TU'
+										Write ipskou
+										add 1 to counter_3
+										$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+										poruka1.DISPLAY($text1)
+										END_IF
+									Else
+										IF $C='9'
+											IF IPSKOUR.KOU_VRSNAL='PT'
+											Write ipskou
+											add 1 to counter_3
+											$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+											poruka1.DISPLAY($text1)
+											END_IF
+										end_if
+									end_if
+								END_IF
+							END_IF
+						END_IF
+					END_IF
+				END_IF
+			Else
+				IF $C='6'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='TU'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='7'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='8'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='OT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='Q'
+					read ipskoug where kou_sifpot=:$sifvla and kou_vrsnal='PT'
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"/",edit(counter_10,"zzzzz9"))
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='F'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OP' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='D'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'OT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+				IF $C='G'
+					$DATD = SUB_YEARS ($DATNAL,1)
+					Select * from ipskoug where kou_sifpot=:$sifvla and kou_vrsnal = 'PT' and \
+							KOU_DATDOK > :$DATD
+						if record ipskoug not_found
+						Write ipskou
+						add 1 to counter_3
+						$text1=compress("Izvojeno: ",edit(counter_3,"zzzzz9"),"...")
+						poruka1.DISPLAY($text1)
+					end_if
+				end_if
+			End_if
+		END_IF
+!****************************************		
+			
+		END_IF
+		ADD  1 TO COUNTER_10
+!C++ MyMsgLoop();
+		pROGRES.SETPOS(COUNTER_10)
+	end_select
+	commit
+	init acc_2,acc_3,acc_4,acc_5,acc_6,acc_7,acc_8,counter_8,$text,counter_1
+END_PROCEDURE

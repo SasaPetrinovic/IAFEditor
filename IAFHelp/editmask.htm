@@ -1,0 +1,1057 @@
+<html><head>
+   <title>Edit mask</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content=""></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#000000">Edit mask</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit mask is a string of characters that determines visual representation of a field on an 
+external device (screen, printer, print file).</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">For destination fields, edit string has control function as well: defines number of digits in a 
+numeric field, allowed characters in an alpha field, etc.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Edit mask for source fields</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Alpha field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Editing characters in edit mask for an alpha field are: X, 9, N, U, L. Each editing character is 
+just placeholder for one character from input field. All editing characters have the same 
+meaning: character placeholder. An edit mask can contain and other characters. These 
+characters we consider as </span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">formatting characters</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"> and they will be moved directly to the output 
+buffer.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Examples:</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Field value</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit mask</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Result</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABCDE</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">XXXXX</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABCDE</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABcde</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">99XXX</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABcde</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABCDE</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">XXX</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABC (output length = 3)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABCDE</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">XX/XXX</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">AB/CDE</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABcde</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">UUUUU</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ABcde (not uppercase, the U is just 
+    placeholder)</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Date field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Editing characters for a date field are: D, M, Y, W, R and Z. All other characters in the mask 
+are formatting characters.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit pattern</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;Meaning</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DD</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of days, two digits (01, 02, ..., 31)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ZD</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of days, two digits, suppress leading zero (1, 2, ..., 31)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">MM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of months, two digits (01, 02, ..., 12)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ZM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of months, two digits, suppress leading zero (1, 2, ..., 12)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="31"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">MMMMMM</span></font></div>
+    </td>
+    <td valign="top"  height="31"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display month name. Number of Ms determines month name length (JAN, 
+    JANUARY, ...)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">RRRR</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display month in Roman numerals (I, II, III, ..., XII)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">WWWWW</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Name of day. Number of Ws determines day name length.</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">YY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display two-digits year (00, 01, ..., 99)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">YYYY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display four-digits year (1999, 2000, ...)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">L</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Displays long date format, based on selected locale (look in Regional and 
+    language options, Regional options tab).</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Examples:</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Field value</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit mask</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Result</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DD/MM/YYYY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">01/03/2007</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">MM/DD/YYYY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">03/01/2007</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">YYYY/MM/DD</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007/03/01</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ZD/ZM/YYYY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">1/3/2007</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ZD MMMMMMMMMM YYYY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">1 MARCH 2007</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">ZD-RRRR-YYYY</span></font></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">1-III-2007</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DD/MM/YYYY, WWWWWWWW</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">01/03/2007, THURSDAY</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">L</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Thursday, March 01, 2007 (English 
+    US)</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Time field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Editing characters for a time field are: H, M, S with meridian indicator AM or PM. All other 
+characters in the mask are formatting characters.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit pattern</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;Meaning</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">HH</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of hours, two digits (00, 01, 02, ..., 23)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">MM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of minutes, two digits (00, 01, 02, ..., 59)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">SS</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display&nbsp; number of seconds, two digits (00, 01, 02, ..., 59)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">AM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display AM or PM</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">PM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Display AM or PM</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Examples:</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Field value</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit mask</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Result</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15:25</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">HH:MM:SS</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15:25</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15:25</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">HH:MM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15:25</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">HH:MM AM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15 AM</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15:25</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">HH:MM PM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">10:15 AM</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Datetime field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">For this field type we can simply combine masks for date and time field.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Examples:</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Field value</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit mask</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Result</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2007-03-01 10:15:25</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DD/MM/YYYY HH:MM:SS</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">01/03/2007 10:15:25</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Numeric field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Numeric edit mask is a COBOL-like one, defined by characters:</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="606"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Editing character</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Meaning</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">9</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">digit placeholder</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Z</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">digit placeholder, space for leading zeroes</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">, (comma)</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">decimal point</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">. (dot)</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">separator for thousands</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">+</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">+ if field value &gt;= 0, - if field value &lt; 0</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">-</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">space if field value &gt;= 0, - if field value &lt; 0</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">$</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">digit placeholder, $ sign for last leading zero</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">*</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">digit placeholder, * for leading zeroes (filling character)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">CR, DB</span></font></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">R</span></font></div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">conversion to Roman numerals</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">%[type][thousands]</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">type = d (signed decimal),</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u (unsigned decimal),</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x (hexadecimal)</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">thousands = t (store thousands sep.)</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = SPACE (no thousands)</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Possible combinations:</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%d</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%u</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%x</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%dt</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%ut</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">See examples below</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td>
+    <td valign="top"  height="16"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">default editing</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">signed decimal</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">unsigned decimal</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">hexadecimal</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">signed decimal + thousands separator</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">unsigned decimal + thousands separator</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Decimal point and separator for thousands can be changed in </span></font><a href="changesetupparameters.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>Change 
+setup parameters</u></span></font></a><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"> 
+dialog.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">In the following examples, we suppose that decimal point is COMMA, and thousands 
+separator is DOT.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Examples:</span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="624"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Field value</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Edit mask</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Result</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Note</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZ9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,45</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZ9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,45</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0,45</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZZ,ZZ</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">,45</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZZ,ZZ</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">blank when zero</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">123</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">999999</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">000123</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZ9</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">???&nbsp; </span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">error, overflow</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">---.---.--9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">floating leading minus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">---.---.--9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">floating leading minus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-ZZZ.ZZZ.ZZ9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">fixed leading minus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZ9,99-</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1.234,56-</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">trailing minus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZ9,99-</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">trailing minus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">+++.+++.++9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">+1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">floating leading plus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">+++.+++.++9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">floating leading plus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">+ZZZ.ZZZ.ZZ9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">fixed leading plus</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">****.***.**9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">***.**1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">filling character = *</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$$$$.$$$.$$9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">floating leading $</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$ZZZ.ZZZ.ZZ9,99</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">fixed leading $</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234,56</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">ZZZ.ZZZ.ZZ9,99DB</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1.234,56DB</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">123</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">R</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">CXXIII</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">%d</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">%u</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">%dt</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1.234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">%ut</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1.234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">1234</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">%x</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">4D2</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr></table><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Edit mask for destination fields</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Alpha field</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Number of characters in the edit mask determines maximum number of input characters. To 
+override this option, see </span></font><a href="destinationfieldproperties.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>Destination field properties</u></span></font></a><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> </span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">(Ignore edit mask</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> attribute).</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Editing characters for the alpha field are: X, 9, N, U, L.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Editing character</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Meaning</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">X</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">any character allowed at this position</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">9</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">only digits allowed at this position</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">digits or space</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">U</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">make uppercase conversion</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">L</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">make lowercase conversion</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Date field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Editing characters for the date field are: D, M, Y. All other characters in the mask are 
+formatting characters.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit pattern</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;Meaning</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DD</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Number of days, two digits (01, 02, ..., 31)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">MM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Number of months, two digits (01, 02, ..., 12)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">YY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Two-digits year (00, 01, ..., 99)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">YYYY</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Four-digits year (1999, 2000, ...)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Time field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Editing characters for the time field are: H, M, S. All other characters in the mask are 
+formatting characters.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Edit pattern</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;Meaning</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">HH</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Number of hours, two digits (00, 01, 02, ..., 23)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">MM</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Number of minutes, two digits (00, 01, 02, ..., 59)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">SS</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Number of seconds, two digits (00, 01, 02, ..., 59)</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Numeric field</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Numeric edit mask for destination field is the same as edit mask for source fields.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

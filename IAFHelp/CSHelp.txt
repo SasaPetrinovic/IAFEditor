@@ -1,0 +1,127 @@
+
+.topic 0
+When multiple objects are selected, one of the objects is dominant. Dominant object is selected object with hatched border. Other objects have solid line border.
+
+.topic 99999
+Code pages:
+
+	437		US 7-bit ASCII character set
+	1250		Windows Latin 2 (Central Europe)
+	1251		Windows Cyrillic
+	1252		Windows Latin 1 (ANSI)
+	1253		Windows Greek
+	1254		Windows Latin 5 (Turkish)
+	1255		Windows Hebrew
+	28591		ISO Latin 1
+	28592		ISO Latin 2
+	28593		ISO Latin 3
+	28594		ISO Latin 4
+	28595		ISO Latin 5
+	1200		Unicode
+
+.topic 1980
+Collation names
+
+	Collation name has the format
+
+	Language[_CI] where _CI means case-insensitive.
+
+	Examples:
+		English			: English alphabet, case-sensitive
+		English_CI		: English alphabet, case-insensitive
+		Serbian_Cyrillic
+		Serbian_Cyrillic_CI
+		Serbian_Latin
+		Serbian_Latin_CI
+
+	Languages:
+		Afrikaans
+		Albanian
+		Arabic
+		Armenian
+		Azeri_Cyrillic
+		Azeri_Latin
+		Basque
+		Belarusian
+		Bulgarian
+		Catalan
+		Chinese
+		Croatian
+		Czech
+		Danish
+		Divehi
+		Dutch
+		English
+		Estonian
+		Faeroese
+		Farsi
+		Finnish
+		French
+		Galician
+		Georgian
+		German
+		Greek
+		Gujarat
+		Hebrew
+		Hindi
+		Hungarian
+		Icelandic
+		Indonesian
+		Italian
+		Japanese
+		Kannada
+		Kazakh
+		Konkani
+		Korean
+		Kyrgyz
+		Latvian
+		Lithuanian
+		Macedonian
+		Malay
+		Marathi
+		Mongolian
+		Norwegian
+		Polish
+		Portuguese
+		Punjab_Gurmuhki
+		Romanian
+		Russian
+		Sanskrit
+		Serbian_Cyrillic
+		Serbian_Latin
+		Slovak
+		Slovenian
+		Spanish
+		Swahili
+		Swedish
+		Syriac
+		Tamil
+		Tatar
+		Telugu
+		Thai
+		Turkish
+		Ukrainian
+		Urdu
+		Uzbek_Latin
+		Uzbek_Cyrillic
+		Vietnamese
+
+
+.topic 200
+
+The Z-Order defines the position (depth, layer) of the object when many passive objects overlaps each other. The object with Z-Order = 0 is on the top and overlaps all other objects.
+Value of -1 denotes one layer bellow top objects, -2 denotes next lower layer, etc.
+
+The passive objects are:
+
+	Text
+	Line
+	Rectangle
+	3D Panel
+	Ellipse
+	Image
+	Frame
+
+
+
+

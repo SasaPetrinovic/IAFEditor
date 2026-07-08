@@ -1,0 +1,49 @@
+<html><head>
+   <title>Logical Name Table Maintenance</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content=""></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#000000">Logical Name Table Maintenance</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"><span style=" font-size:12pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Logical names table establishes connection between logical name and physical path of a file.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">To avoid absolute file references, like c:\data\file1.txt, we use logical names like datdir:file1.txt 
+where <b>datdir</b> is a logical name. At run-time, a program reads logical names table (this is 
+Logntt00.iaf file at default directory) and creates absolute file name.By simple changing just 
+one line in logical name table, you can redirect your file at any folder.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Record format of Logntt00.iaf file is:</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>DEFINE</b> </span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>logical_name</b></span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"> </span></font><font face="Arial"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000080">physical_folder</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">where is</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 0px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 0px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">mandatory keyword</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 0px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">logical_name</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 0px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">your logical name</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 0px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">physical_folder</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 0px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">absolute path. If the path contains blanks, physical_folder must be 
+    surrounded by quotation marks. There are two special folders:</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>.</b> (dot) denotes current folder.</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>..\dir</b> denotes a folder parallel to current folder.</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Logntt00.iaf is an ordinary ANSI text file and can be created/modified by any text editor. Also, 
+this file can be created by a program, or via Iaf dialog.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Examples:</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE datdir&nbsp;&nbsp;&nbsp;c:\mydata</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE prtdir&nbsp;&nbsp;&nbsp;c:\myreports</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE prgdat&nbsp;&quot;c:\program files\myappl&quot;</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE myfile&nbsp;&nbsp;c:\mydata\file1.txt</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE wrkdir&nbsp; .</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">DEFINE imgdir&nbsp; ..\images</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">File names, see </span></font><a href="filedefinition.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>File definition dialog</u></span></font></a><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"> (physical file name), can be:</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">datdir:file1.dat</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">prtdir:report1.prt</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">prgdat:prog1.exe</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">myfile</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">wrkdat:file.tmp</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>See also</b> </span></font><a href="trnlog.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>TRNLOG</u></span></font></a></div>
+
+</body></html>

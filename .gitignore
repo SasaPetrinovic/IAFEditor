@@ -1,0 +1,9 @@
+.agents/
+.codex/
+
+**/node_modules/
+**/*.vsix
+**/*.blocks.html
+
+*.tmp
+*.log

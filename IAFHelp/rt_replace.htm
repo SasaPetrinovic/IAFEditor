@@ -1,0 +1,71 @@
+<html><head>
+   <title>RT_REPLACE</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="RT_REPLACE"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  color="#010101"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#010101">RT_REPLACE</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">This function is used to compose a SQL statement at run-time.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Format</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>RT_REPLACE(alpha_variable)</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Return Value Type</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;None.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Parameters</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#010101">&middot;</span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp; &nbsp;&nbsp;alpha_variable</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - value of this variable will be inserted into a SQL statement at run-time. The value replaces RT_REPLACE(alpha_variable).</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Examples</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br></b></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  bgcolor="#f0f0f0"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">1/</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">Execsql Insert</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> into tbl values ('abc', </span></font><font face="Courier New"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#ff0000">rt_replace</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">($a80))</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">If $a80 contains text <b>'value xyz'</b>, the above statement at run-time will be</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert into tbl values ('abc', '</span></font><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">value xyz</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">')</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">The same result can be reached by using parameter:</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">Execsql Insert</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> into tbl values ('abc', :$a80)</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">but there are situations where parameters cannot be used.</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br>
+    </b></span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">Notes:</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">If $a80 contains text <b>value xyz</b>, the run-time statement will be</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert into tbl values ('abc', value xyz) !!invalid</span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">If $a80 contains text <b>&quot;value xyz&quot;</b>, the run-time statement will be</span></font></div>
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br>
+    </span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert into tbl values ('abc', &quot;value xyz&quot;) !!invalid</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br>
+    </b></span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2/</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">Execsql Insert</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"> into tbl (col1, col2)</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select </span></font><font face="Courier New"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#ff0000">rt_replace</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">($a80), fld2 from tbl2</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In above example, we can not use parameter, because SQL parser does not allow 
+    parameter in select_list. At run-time, this statement will be</span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b><br>
+    </b></span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert into tbl (col1, col2)</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select '</span></font><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">value 
+    xyz</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">', fld2 from tbl2</span></font></div>
+    </td></tr></table><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

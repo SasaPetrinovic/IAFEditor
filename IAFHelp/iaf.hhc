@@ -1,0 +1,655 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="ExWindow Styles" value="0x800225">
+<param name="Window Styles" value="0x800225">
+</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction to IAF">	<PARAM name="Local" value="introduction.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Getting Started">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductiongettingstarted.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="User's Guide">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Main Program">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductionmp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Create New Data Dictionary">	<PARAM name="Local" value="createnewdatadictionary.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open Data Dictionary">	<PARAM name="Local" value="opendatadictionary.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="International support">	<PARAM name="Local" value="internationalsupport.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Set Password Protection">	<PARAM name="Local" value="setpasswordprotection.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Disable Password Protection">	<PARAM name="Local" value="disablepasswordprotection.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Change Password">	<PARAM name="Local" value="changepassword.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Create New Application">	<PARAM name="Local" value="createnewapplication.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open Application">	<PARAM name="Local" value="openapplication.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Remove Application">	<PARAM name="Local" value="removeapplication.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Change Setup Parameters">	<PARAM name="Local" value="changesetupparameters.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Logical Name Table Maintenance">	<PARAM name="Local" value="logicalnametablemaintenance.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Symbol Table Maintenance">	<PARAM name="Local" value="symboltablemaintenance.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Utilities">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Search Data Dictionary">	<PARAM name="Local" value="searchdatadictionary.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Find Program">	<PARAM name="Local" value="findprogram.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Export Programs">	<PARAM name="Local" value="exportprograms.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Import Programs">	<PARAM name="Local" value="importprograms.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Export Data From RDB Table">	<PARAM name="Local" value="exportdatafromrdbtable.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Import Data Into RDB Table">	<PARAM name="Local" value="importdataintordbtable.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Export Data From File">	<PARAM name="Local" value="exportdatafromfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Import Data into File">	<PARAM name="Local" value="importdataintofile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Data Dictionary Utility">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductiondd.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Fields Menu">	<PARAM name="Local" value="fieldsmenu.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ISAM files">	<PARAM name="Local" value="isamfiles.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RDB tables">	<PARAM name="Local" value="rdbtables.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Strings">	<PARAM name="Local" value="strings.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Applications">	<PARAM name="Local" value="applications.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Data Dictionary">	<PARAM name="Local" value="datadictionary.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Select datasource">	<PARAM name="Local" value="selectdatasource.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Copy data definitions">	<PARAM name="Local" value="copydatadefinitions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Create SQL script from record definition">	<PARAM name="Local" value="createsqlscriptfromrecorddefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Create SQL script from datasource">	<PARAM name="Local" value="createsqlscriptfromdatasource.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Create record definition from datasource">	<PARAM name="Local" value="createrecorddefinitionfromdatasource.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Global Fields">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Define">	<PARAM name="Local" value="defineglobalfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Show">	<PARAM name="Local" value="showglobalfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Modify">	<PARAM name="Local" value="modifyglobalfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Delete">	<PARAM name="Local" value="deleteglobalfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="ISAM records">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Records manipulation">	<PARAM name="Local" value="recordsmanipulation.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Record definition">	<PARAM name="Local" value="recorddefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Show Records ">	<PARAM name="Local" value="ddshowrecords.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="File Manipulation">	<PARAM name="Local" value="filemanipulation.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="File definition">	<PARAM name="Local" value="filedefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Show Files">	<PARAM name="Local" value="ddshowfiles.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="RDB Tables">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Load table definitions from ODBC datasource into the DD">	<PARAM name="Local" value="loadtabledefinitions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Synchronize table definitions">	<PARAM name="Local" value="synchronizetabledefinitions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Tables Manipulation">	<PARAM name="Local" value="tablesmanipulation.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Table modification">	<PARAM name="Local" value="tablemodification.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Interactive Program Generator">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductioniap.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Program name">	<PARAM name="Local" value="intprogramname.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Copy program">	<PARAM name="Local" value="copyprogram.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Datasource dialog">	<PARAM name="Local" value="datasourcedialog.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="New program name dialog">	<PARAM name="Local" value="programnamedialog.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Local fields definition">	<PARAM name="Local" value="localfieldsdefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Add local field">	<PARAM name="Local" value="addlocalfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Local procedures">	<PARAM name="Local" value="localprocedures.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Global procedures">	<PARAM name="Local" value="globalprocedures.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Program protection">	<PARAM name="Local" value="programprotection.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Starting actions">	<PARAM name="Local" value="startingactions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Ending actions">	<PARAM name="Local" value="endingactions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Strings definition">	<PARAM name="Local" value="stringsdefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Modifystring">	<PARAM name="Local" value="modifystring.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Define global procedures / functions">	<PARAM name="Local" value="defineglobalprocedures.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Define lookup dialog">	<PARAM name="Local" value="definelookupdialog.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Show object list">	<PARAM name="Local" value="showobjectlist.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Search global procedures / functions">	<PARAM name="Local" value="searchglobalproceduresfunctions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Autocomplete">	<PARAM name="Local" value="autocomplete.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Form Painter">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Program properties">	<PARAM name="Local" value="programproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="3D Panel properties">	<PARAM name="Local" value="3dpanelproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Bitmapbutton properties">	<PARAM name="Local" value="bitmapbuttonproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Button properties">	<PARAM name="Local" value="buttonproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Checkbox properties">	<PARAM name="Local" value="checkboxproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Combobox properties">	<PARAM name="Local" value="comboboxproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Dataselector properties">	<PARAM name="Local" value="dataselectorproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Destination field properties">	<PARAM name="Local" value="destinationfieldproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Ellipse properties">	<PARAM name="Local" value="ellipseproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Frame properties">	<PARAM name="Local" value="frameproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Graph properties">	<PARAM name="Local" value="graphproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Image properties">	<PARAM name="Local" value="imageproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Line properties">	<PARAM name="Local" value="lineproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Lineset properties">	<PARAM name="Local" value="linesetproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Progressbar properties">	<PARAM name="Local" value="progressbarproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Radiobutton properties">	<PARAM name="Local" value="radiobuttonproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Rectangle properties">	<PARAM name="Local" value="rectangleproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Source_field properties">	<PARAM name="Local" value="sourcefieldproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="PDF417 barcode">	<PARAM name="Local" value="pdf417-barcode.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="QR-barcode">	<PARAM name="Local" value="qr-barcode.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Spin properties">	<PARAM name="Local" value="spinproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Subform properties">	<PARAM name="Local" value="subformproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Table properties">	<PARAM name="Local" value="tableproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Column heading properties">	<PARAM name="Local" value="columnheadingproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Table gradient colors">	<PARAM name="Local" value="tablegradientcolors.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Text properties">	<PARAM name="Local" value="textproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Timer properties">	<PARAM name="Local" value="timerproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Tree properties">	<PARAM name="Local" value="treeproperties.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="General">	<PARAM name="Local" value="fpgeneral.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Toolbar">	<PARAM name="Local" value="toolbarsp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Toolbox">	<PARAM name="Local" value="toolboxsp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="File">	<PARAM name="Local" value="filesp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Edit">	<PARAM name="Local" value="editsp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Align/Size">	<PARAM name="Local" value="alignsizesp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="View">	<PARAM name="Local" value="viewsp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Default">	<PARAM name="Local" value="defaultsp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Options">	<PARAM name="Local" value="options.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Objects">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Text (label)">	<PARAM name="Local" value="textlabel.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Source Field">	<PARAM name="Local" value="sourcefield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Destination field">	<PARAM name="Local" value="destinationfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Line">	<PARAM name="Local" value="line.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Rectangle">	<PARAM name="Local" value="rectangle.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Ellipse">	<PARAM name="Local" value="ellipse.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="3D Panel">	<PARAM name="Local" value="3dpanel.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Button">	<PARAM name="Local" value="button.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Bitmap Button">	<PARAM name="Local" value="bitmapbutton.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Image">	<PARAM name="Local" value="image.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Combo Box">	<PARAM name="Local" value="combobox.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Group box">	<PARAM name="Local" value="groupbox.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Radio button">	<PARAM name="Local" value="radiobutton.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Check Box">	<PARAM name="Local" value="checkbox.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Subform">	<PARAM name="Local" value="subform.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Table (grid)">	<PARAM name="Local" value="tablegrid.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Spin">	<PARAM name="Local" value="spin.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Progress bar">	<PARAM name="Local" value="progressbar.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Tree">	<PARAM name="Local" value="tree.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Graph">	<PARAM name="Local" value="graph.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Data Selector">	<PARAM name="Local" value="dataselector.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Timer">	<PARAM name="Local" value="timerobject.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Tab control">	<PARAM name="Local" value="tabcontrol.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Group of objects">	<PARAM name="Local" value="groups.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Show">	<PARAM name="Local" value="showinter.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Define">	<PARAM name="Local" value="defineinter.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Subforms">	<PARAM name="Local" value="subformssp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Function key handlers">	<PARAM name="Local" value="functionkeyhandlers.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Context menu definition">	<PARAM name="Local" value="contextmenudefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Context menu item handlers">	<PARAM name="Local" value="contextmenuitemhandlers.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Report And Batch Generator">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductionrbg.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Program name">	<PARAM name="Local" value="reportprogramname.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Program type">	<PARAM name="Local" value="programtype.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Report painter">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Absolute positions">	<PARAM name="Local" value="absolutepositions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Recapitulation record definition">	<PARAM name="Local" value="recapitulationrecorddefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Break fields definition">	<PARAM name="Local" value="breakfieldsdefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Hyperlink">	<PARAM name="Local" value="hyperlink.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Multiple columns">	<PARAM name="Local" value="multiplecolumns.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Suppress lineset">	<PARAM name="Local" value="suppresslineset.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Suppress horizontal region">	<PARAM name="Local" value="suppresshorizontalregion.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Mailing label format">	<PARAM name="Local" value="mailinglabelformat.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Report parameters">	<PARAM name="Local" value="reportparameters.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Bookmarks">	<PARAM name="Local" value="bookmarks.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Watermarks">	<PARAM name="Local" value="watermarks.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="View definition">	<PARAM name="Local" value="viewdefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Additional view actions">	<PARAM name="Local" value="additionalviewactions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+</UL>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Reference Manual">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Editor rules">	<PARAM name="Local" value="editorrules.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Directives (pseudo-commands)">	<PARAM name="Local" value="directives.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Value Expression">	<PARAM name="Local" value="valueexpression.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Conditional Expression">	<PARAM name="Local" value="conditionalexpression.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Internal Fields">	<PARAM name="Local" value="internalfields.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Constants">	<PARAM name="Local" value="constants.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Assignment operator">	<PARAM name="Local" value="assignmentoperator.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Mathematical operators">	<PARAM name="Local" value="mathematicaloperators.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="String operators">	<PARAM name="Local" value="stringoperators.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Comparison operators">	<PARAM name="Local" value="comparisonoperators.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Logical operators">	<PARAM name="Local" value="logicaloperators.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Edit mask">	<PARAM name="Local" value="editmask.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Statements">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Statements">	<PARAM name="Local" value="statements.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD">	<PARAM name="Local" value="add.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BREAK">	<PARAM name="Local" value="break.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BREAK_FIELD">	<PARAM name="Local" value="breakfield.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CALL_PROGRAM">	<PARAM name="Local" value="callprogram.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CALL_STOREDPROCEDURE">	<PARAM name="Local" value="callstoredprocedure.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CALL_WINDOW">	<PARAM name="Local" value="callwindow.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHAIN">	<PARAM name="Local" value="chain.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHECK">	<PARAM name="Local" value="check.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHECK_RECORD">	<PARAM name="Local" value="checkrecordchecknorecord.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CLOSE">	<PARAM name="Local" value="close.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMMIT">	<PARAM name="Local" value="commit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DEFINE_LOCAL">	<PARAM name="Local" value="definelocal.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DEFINE_RECAP_RECORD">	<PARAM name="Local" value="definerecaprecord.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DELETE_RECORD">	<PARAM name="Local" value="deleterecord.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DESTINATION">	<PARAM name="Local" value="destination.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Lookup dialog">	<PARAM name="Local" value="lookupdialog.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DETAIL_CALC">	<PARAM name="Local" value="detailcalc.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DISPLAY_WINDOW_FIELDS">	<PARAM name="Local" value="displaywindowfields.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DO_WHILE">	<PARAM name="Local" value="dowhile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="END_">	<PARAM name="Local" value="end.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ERRMSG">	<PARAM name="Local" value="errmsg.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ERRWARMSG">	<PARAM name="Local" value="errwarmsg.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="EXECSQL">	<PARAM name="Local" value="execsql.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="EXECUTE">	<PARAM name="Local" value="execute.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="EXIT">	<PARAM name="Local" value="exit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="FINISH_WINDOW">	<PARAM name="Local" value="finishwindow.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="FUNCTION">	<PARAM name="Local" value="function.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="IF">	<PARAM name="Local" value="if.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INIT">	<PARAM name="Local" value="statementinit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INIT_RECORD">	<PARAM name="Local" value="initrecord.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INIT_WINDOW_FIELDS">	<PARAM name="Local" value="init_window_fields.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MAIL">	<PARAM name="Local" value="mail.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="NEXT">	<PARAM name="Local" value="next.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ON_EVENT_PROCEDURE">	<PARAM name="Local" value="on_event_procedure.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="OPEN">	<PARAM name="Local" value="open.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="PAUSE">	<PARAM name="Local" value="pause.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="PERFORM">	<PARAM name="Local" value="perform.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="PROCEDURE">	<PARAM name="Local" value="procedure.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="READ">	<PARAM name="Local" value="read.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="READ_ALL">	<PARAM name="Local" value="readall.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="READ_EXTERNAL">	<PARAM name="Local" value="readexternal.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="READ_LE">	<PARAM name="Local" value="readle.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="READ_NEXT">	<PARAM name="Local" value="readnext.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RESET">	<PARAM name="Local" value="reset.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="REWIND">	<PARAM name="Local" value="rewind.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ROLLBACK">	<PARAM name="Local" value="rollback.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SELECT">	<PARAM name="Local" value="select.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SELECT_ALL">	<PARAM name="Local" value="selectall.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SELECT_START">	<PARAM name="Local" value="selectstart.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SKIP">	<PARAM name="Local" value="skip.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SORT_ARRAY">	<PARAM name="Local" value="sort_array.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SORT_FILE">	<PARAM name="Local" value="sort_file.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SOURCE">	<PARAM name="Local" value="source.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="START">	<PARAM name="Local" value="start.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STOP_RUN">	<PARAM name="Local" value="stoprun.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TABLE">	<PARAM name="Local" value="table.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TOTAL_CALC">	<PARAM name="Local" value="totalcalc.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="UPDATE">	<PARAM name="Local" value="update.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WAIT">	<PARAM name="Local" value="wait.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WARMSG">	<PARAM name="Local" value="warmsg.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WHENEVER">	<PARAM name="Local" value="whenever.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WINDOW">	<PARAM name="Local" value="window.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WRITE">	<PARAM name="Local" value="write.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WRITE_AUDIT">	<PARAM name="Local" value="writeaudit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WRITE_EXTERNAL">	<PARAM name="Local" value="writeexternal.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Functions">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Aggregate Functions">	<PARAM name="Local" value="aggregatefunctions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Date Functions">	<PARAM name="Local" value="datefunctions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Numeric Functions">	<PARAM name="Local" value="numericfunctions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="String Functions">	<PARAM name="Local" value="stringfunctions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Time Functions">	<PARAM name="Local" value="timefunctions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ABS">	<PARAM name="Local" value="abs.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_DAYS">	<PARAM name="Local" value="adddays.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_HOURS">	<PARAM name="Local" value="addhours.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_MINUTES">	<PARAM name="Local" value="addminutes.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_MONTHS">	<PARAM name="Local" value="addmonths.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_SECONDS">	<PARAM name="Local" value="addseconds.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_WEEKS">	<PARAM name="Local" value="addweeks.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ADD_YEARS">	<PARAM name="Local" value="addyears.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ALLOCSTRING">	<PARAM name="Local" value="allocstring.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ALLTRIM">	<PARAM name="Local" value="alltrim.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ALPHA">	<PARAM name="Local" value="alpha.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ANNUITY">	<PARAM name="Local" value="annuity.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ASC">	<PARAM name="Local" value="asc.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="AVG">	<PARAM name="Local" value="avg.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BASE64_DECODE">	<PARAM name="Local" value="base64_decode.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BASE64_ENCODE">	<PARAM name="Local" value="base64_encode.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BEGINM">	<PARAM name="Local" value="beginm.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BEGINQ">	<PARAM name="Local" value="beginq.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BEGINW">	<PARAM name="Local" value="beginw.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="BEGINY">	<PARAM name="Local" value="beginy.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CEIL">	<PARAM name="Local" value="ceil.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CELL">	<PARAM name="Local" value="cell.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHAR_OF">	<PARAM name="Local" value="charof.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHECK_DIGIT">	<PARAM name="Local" value="checkdigit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHR">	<PARAM name="Local" value="chr.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CHRW">	<PARAM name="Local" value="chrw.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMPARE_COLLATE">	<PARAM name="Local" value="compare_collate.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMPARE_RECORDS">	<PARAM name="Local" value="compare_records.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMPRESS">	<PARAM name="Local" value="compress.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMPRESS_CSV">	<PARAM name="Local" value="compress_csv.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMPRESS_SEP">	<PARAM name="Local" value="compresssep.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COMPRESS_TRIM">	<PARAM name="Local" value="compresstrim.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CONCAT">	<PARAM name="Local" value="concat.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CONVERT">	<PARAM name="Local" value="convert.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CONVERT_DMY_YMD">	<PARAM name="Local" value="convertdmyymd.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CONVERT_MDY_YDM">	<PARAM name="Local" value="convertmdyydm.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CONVERT_LIT_YMD">	<PARAM name="Local" value="convertlitymd.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CONVERT_YMD_MDY">	<PARAM name="Local" value="convertymdmdy.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CORR">	<PARAM name="Local" value="corr.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="COUNT">	<PARAM name="Local" value="count.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CURRENT">	<PARAM name="Local" value="current.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DATE">	<PARAM name="Local" value="date.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DATETIME">	<PARAM name="Local" value="datetime.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DAY">	<PARAM name="Local" value="day.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DAY_OF_WEEK">	<PARAM name="Local" value="dayofweek.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DAY_OF_YEAR">	<PARAM name="Local" value="dayofyear.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DAYS_IN_MONTH">	<PARAM name="Local" value="daysinmonth.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DB_DATASOURCES">	<PARAM name="Local" value="db_datasources.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DB_EXPORT">	<PARAM name="Local" value="db_export.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DB_IMPORT">	<PARAM name="Local" value="db_import.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DB_TABLES">	<PARAM name="Local" value="db_tables.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DEFAULT_VALUE">	<PARAM name="Local" value="default_value.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIFF_DATE">	<PARAM name="Local" value="diffdate.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIFF_DAYS">	<PARAM name="Local" value="diffdays.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIFF_DT">	<PARAM name="Local" value="diffdt.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIFF_MONTHS">	<PARAM name="Local" value="diffmonths.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIFF_TIME">	<PARAM name="Local" value="difftime.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIFF_WEEKS">	<PARAM name="Local" value="diffweeks.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DIGIT_OF">	<PARAM name="Local" value="digitof.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Download">	<PARAM name="Local" value="download.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="EDIT">	<PARAM name="Local" value="edit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="EDIT_CURRENCY">	<PARAM name="Local" value="edit_currency.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ENDM">	<PARAM name="Local" value="endm.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ENDQ">	<PARAM name="Local" value="endq.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ENDW">	<PARAM name="Local" value="endw.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ENDY">	<PARAM name="Local" value="endy.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ENVVAR">	<PARAM name="Local" value="envvar.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="FILE_IO">	<PARAM name="Local" value="fileio.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="FILE_STATUS">	<PARAM name="Local" value="file_status.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="GETPRINTERNAME">	<PARAM name="Local" value="getprintername.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="GETSCRIPT">	<PARAM name="Local" value="getscript.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="GZIP_COMPRESS">	<PARAM name="Local" value="gzip_compress.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="GZIP_DECOMPRESS">	<PARAM name="Local" value="gzip_decompress.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="HASH">	<PARAM name="Local" value="hash.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="HOUR">	<PARAM name="Local" value="hour.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="IDIVIDE">	<PARAM name="Local" value="idivide.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INDEX">	<PARAM name="Local" value="index.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INDEXGE">	<PARAM name="Local" value="indexge.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INDEXLE">	<PARAM name="Local" value="indexle.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INITCAP">	<PARAM name="Local" value="initcap.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INITCAP_NLS">	<PARAM name="Local" value="initcapnls.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INPUTBOX">	<PARAM name="Local" value="inputbox.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="INTEREST">	<PARAM name="Local" value="interest.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="JSON_ARRAY">	<PARAM name="Local" value="json_array.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="JSON_GET_FIELD">	<PARAM name="Local" value="json_get_field.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LEFT">	<PARAM name="Local" value="left.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LETTERS">	<PARAM name="Local" value="letters.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LIST">	<PARAM name="Local" value="list.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LOAD_FILE">	<PARAM name="Local" value="loadfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LOWER">	<PARAM name="Local" value="lower.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LOWER_NLS">	<PARAM name="Local" value="lowernls.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LPAD">	<PARAM name="Local" value="lpad.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="LTRIM">	<PARAM name="Local" value="ltrim.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MAKEDATE">	<PARAM name="Local" value="makedate.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MAKETIME">	<PARAM name="Local" value="maketime.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MAX">	<PARAM name="Local" value="max.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MESSAGEBOX">	<PARAM name="Local" value="messagebox.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MID">	<PARAM name="Local" value="mid.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MIN">	<PARAM name="Local" value="min.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MINUTE">	<PARAM name="Local" value="minute.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MOD">	<PARAM name="Local" value="mod.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="MONTH">	<PARAM name="Local" value="month.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="NEWGUID">	<PARAM name="Local" value="newguid.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="NEXT_WORKING_DAY">	<PARAM name="Local" value="nextworkingday.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="NUM">	<PARAM name="Local" value="num.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="NUMBER_OF_ELEMENTS">	<PARAM name="Local" value="number_of_elements.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="NUMRECORDS">	<PARAM name="Local" value="numrecords.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="PREVIOUS">	<PARAM name="Local" value="previous.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="QUARTER">	<PARAM name="Local" value="quarter.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="REPLACE">	<PARAM name="Local" value="replace.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RGB">	<PARAM name="Local" value="rgb.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RIGHT">	<PARAM name="Local" value="right.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ROUND">	<PARAM name="Local" value="round.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RPAD">	<PARAM name="Local" value="rpad.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RTRIM">	<PARAM name="Local" value="rtrim.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RT_REPLACE">	<PARAM name="Local" value="rt_replace.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SAVE_FILE">	<PARAM name="Local" value="savefile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SECOND">	<PARAM name="Local" value="second.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SHIFT_ARRAY">	<PARAM name="Local" value="shift_array.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SQRT">	<PARAM name="Local" value="sqrt.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SPLIT">	<PARAM name="Local" value="split.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SPLIT_CSV">	<PARAM name="Local" value="split_csv.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STORED_FUNCTION">	<PARAM name="Local" value="storedfunction.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STRING">	<PARAM name="Local" value="string.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STRING_EDIT">	<PARAM name="Local" value="string_edit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STR_FILL">	<PARAM name="Local" value="str_fill.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STR_INDEX">	<PARAM name="Local" value="strindex.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="STR_LENGTH">	<PARAM name="Local" value="strlength.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_DAYS">	<PARAM name="Local" value="subdays.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_HOURS">	<PARAM name="Local" value="subhours.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_MINUTES">	<PARAM name="Local" value="subminutes.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_MONTHS">	<PARAM name="Local" value="submonths.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_SECONDS">	<PARAM name="Local" value="subseconds.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_WEEKS">	<PARAM name="Local" value="subweeks.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUB_YEARS">	<PARAM name="Local" value="subyears.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUBSTR_INDEX">	<PARAM name="Local" value="substr_index.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUM">	<PARAM name="Local" value="sum.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SUMOBJ">	<PARAM name="Local" value="sumobj.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="SYMBOL">	<PARAM name="Local" value="symbol.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TIME">	<PARAM name="Local" value="time.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TOTAL">	<PARAM name="Local" value="total.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TRANSLITER">	<PARAM name="Local" value="transliter.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TRNLOG">	<PARAM name="Local" value="trnlog.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="TRUNC">	<PARAM name="Local" value="trunc.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="UPLOAD">	<PARAM name="Local" value="upload.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="UPPER">	<PARAM name="Local" value="upper.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="UPPER_NLS">	<PARAM name="Local" value="uppernls.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="VALUE">	<PARAM name="Local" value="value.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Value_date">	<PARAM name="Local" value="value_date.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="WEEK_OF_YEAR">	<PARAM name="Local" value="weekofyear.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="XML">	<PARAM name="Local" value="xml.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="XML_ADD_FIELD">	<PARAM name="Local" value="xml_add_field.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="XML_ADD_TEXT">	<PARAM name="Local" value="xml_add_text.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="XML_DATASET_FIELD">	<PARAM name="Local" value="xml_dataset_field.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="XML_GET_FIELD">	<PARAM name="Local" value="xml_get_field.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="YEAR">	<PARAM name="Local" value="year.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="YEAR2">	<PARAM name="Local" value="year2.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="YEAR_MONTH">	<PARAM name="Local" value="yearmonth.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Methods">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Methods">	<PARAM name="Local" value="methods.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="List methods by object">	<PARAM name="Local" value="listmethodsbyobject.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Addline">	<PARAM name="Local" value="addline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Autofit">	<PARAM name="Local" value="autofit.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Deleteallitems">	<PARAM name="Local" value="deleteallitems.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Deleteitem">	<PARAM name="Local" value="deleteitem.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Display">	<PARAM name="Local" value="display.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Displaycomplex">	<PARAM name="Local" value="displaycomplex.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Displayimage">	<PARAM name="Local" value="displayimage.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Displaylabel">	<PARAM name="Local" value="displaylabel.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Enablelinedeleting">	<PARAM name="Local" value="enablelinedeleting.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Enablenewlines">	<PARAM name="Local" value="enablenewlines.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Enablelinedragging">	<PARAM name="Local" value="enablelinedragging.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Expand">	<PARAM name="Local" value="expand.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Freezecolumns">	<PARAM name="Local" value="freezecolumns.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Freezelines">	<PARAM name="Local" value="freezelines.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getcell">	<PARAM name="Local" value="getcell.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getcolor">	<PARAM name="Local" value="getcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getidentity">	<PARAM name="Local" value="getidentity.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getline">	<PARAM name="Local" value="getline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getnextselected">	<PARAM name="Local" value="getnextselected.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getnumbercols">	<PARAM name="Local" value="getnumbercols_grid.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getnumberrows">	<PARAM name="Local" value="getnumbergridrows.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getposition">	<PARAM name="Local" value="getposition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getselectedcount">	<PARAM name="Local" value="getselectedcount.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Gettopline">	<PARAM name="Local" value="gettopline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Gettreedata">	<PARAM name="Local" value="gettreedata.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Hidecolumn">	<PARAM name="Local" value="hidecolumn.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Init">	<PARAM name="Local" value="init.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Insertitem">	<PARAM name="Local" value="insertitem.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Insertitembykey">	<PARAM name="Local" value="insertitembykey.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="InsertItemEx">	<PARAM name="Local" value="insertitemex.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Insertiteminlinecombo">	<PARAM name="Local" value="insertiteminlinecombo.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Isenabled">	<PARAM name="Local" value="isenabled.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="IsLineModified">	<PARAM name="Local" value="islinemodified.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="IsLineModifiedExclude">	<PARAM name="Local" value="islinemodifiedexclude.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Isvisible">	<PARAM name="Local" value="isvisible.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Joincells">	<PARAM name="Local" value="joincells.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Limittext">	<PARAM name="Local" value="limittext.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Modifyitem">	<PARAM name="Local" value="modifyitem.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Objvalue">	<PARAM name="Local" value="objvalue.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Removeline">	<PARAM name="Local" value="removeline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Selectitem">	<PARAM name="Local" value="selectitem.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setalignment">	<PARAM name="Local" value="setalignment.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setbackcolor">	<PARAM name="Local" value="setbackcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setblinking">	<PARAM name="Local" value="setblinking.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setbookmarktext">	<PARAM name="Local" value="setbookmarktext.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setbordercolor">	<PARAM name="Local" value="setbordercolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcellfocus">	<PARAM name="Local" value="setcellfocus.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcodepage">	<PARAM name="Local" value="setcodepage.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcurrentline">	<PARAM name="Local" value="setcurrentline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcolumnwidth">	<PARAM name="Local" value="setcolumnwidth.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcurrentpage">	<PARAM name="Local" value="setcurrentpage.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setenable">	<PARAM name="Local" value="setenable.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setfocus">	<PARAM name="Local" value="setfocus.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setfont">	<PARAM name="Local" value="setfont.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setindent">	<PARAM name="Local" value="setindent.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setlineheight">	<PARAM name="Local" value="setlineheight.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setnumbercolumns">	<PARAM name="Local" value="setnumbercolumns.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setnumberlines">	<PARAM name="Local" value="setnumberlines.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setparttextcolor">	<PARAM name="Local" value="setparttextcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setposition">	<PARAM name="Local" value="setposition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setreadonly">	<PARAM name="Local" value="setreadonly.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setreadonlyline">	<PARAM name="Local" value="setreadonlyline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Settextcolor">	<PARAM name="Local" value="settextcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setsection">	<PARAM name="Local" value="setsection.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setvisible">	<PARAM name="Local" value="setvisible.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setrange">	<PARAM name="Local" value="setrange.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setpos">	<PARAM name="Local" value="setpos.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Settimerinterval">	<PARAM name="Local" value="settimerinterval.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Settopline">	<PARAM name="Local" value="settopline.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Sorttable">	<PARAM name="Local" value="sorttable.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Start">	<PARAM name="Local" value="startmethod.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Stop">	<PARAM name="Local" value="stopmethod.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Sumcol">	<PARAM name="Local" value="sumcol.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Sumcolif">	<PARAM name="Local" value="sumcolif.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Unhidecolumn">	<PARAM name="Local" value="unhidecolumn.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Using Excel">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="excelintro.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Close">	<PARAM name="Local" value="excelclose.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ExportXML">	<PARAM name="Local" value="exportxml.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getbackcolor">	<PARAM name="Local" value="getbackcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getcell">	<PARAM name="Local" value="excelgetcell.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getnumbercols">	<PARAM name="Local" value="getnumbercols.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getnumberrows">	<PARAM name="Local" value="getnumberrows.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getnumbersheets">	<PARAM name="Local" value="getnumbersheets.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getsheetname">	<PARAM name="Local" value="excelgetsheetname.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Joincells">	<PARAM name="Local" value="exceljoincells.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Loadexternal">	<PARAM name="Local" value="loadexternal.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open">	<PARAM name="Local" value="excelopen.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Pagesetup">	<PARAM name="Local" value="pagesetup.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Run">	<PARAM name="Local" value="excelrun.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Runmacro">	<PARAM name="Local" value="runmacroexcel.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setalignment">	<PARAM name="Local" value="excelsetalignment.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setbackcolor">	<PARAM name="Local" value="excelsetbackcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setbordercolor">	<PARAM name="Local" value="excelsetbordercolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcell">	<PARAM name="Local" value="excelsetcell.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcellfont">	<PARAM name="Local" value="setcellfont.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcolumnwidth">	<PARAM name="Local" value="excelsetcolumnwidth.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setsheet">	<PARAM name="Local" value="excelsetsheet.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setsheetname">	<PARAM name="Local" value="setsheetname.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Settextcolor">	<PARAM name="Local" value="excelsettextcolor.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 1">	<PARAM name="Local" value="excelexample1.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 2">	<PARAM name="Local" value="excelexample2.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 3">	<PARAM name="Local" value="excelexample3.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Using FTP">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductionftp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Close">	<PARAM name="Local" value="closeftp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="CreateDirectory">	<PARAM name="Local" value="createdirectory.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Delete">	<PARAM name="Local" value="delete.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="DeleteDirectory">	<PARAM name="Local" value="deletedirectory.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Dir">	<PARAM name="Local" value="dirftp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Downloadfile">	<PARAM name="Local" value="downloadfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Getcurrentdirectory">	<PARAM name="Local" value="getcurrentdirectory.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open">	<PARAM name="Local" value="openftp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Rename">	<PARAM name="Local" value="renameftp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcurrentdirectory">	<PARAM name="Local" value="setcurrentdirectory.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Uploadfile">	<PARAM name="Local" value="uploadfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example1">	<PARAM name="Local" value="example1ftp.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Using Word">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="wordintroduction.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Append">	<PARAM name="Local" value="append.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Close">	<PARAM name="Local" value="wordclose.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Closetable">	<PARAM name="Local" value="closetable.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="ExportPDF">	<PARAM name="Local" value="exportpdf.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Insertrow">	<PARAM name="Local" value="insertrow.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Mergeclose">	<PARAM name="Local" value="mergeclose.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Mergedata">	<PARAM name="Local" value="mergedata.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Mergeopen">	<PARAM name="Local" value="mergeopen.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Mergewrite">	<PARAM name="Local" value="mergewrite.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open">	<PARAM name="Local" value="wordopen.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Opentable">	<PARAM name="Local" value="opentable.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Repeatheader">	<PARAM name="Local" value="repeatheader.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Run">	<PARAM name="Local" value="wordrun.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Runmacro">	<PARAM name="Local" value="runmacro.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setbookmark">	<PARAM name="Local" value="setbookmark.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcell">	<PARAM name="Local" value="wordsetcell.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setcodepage">	<PARAM name="Local" value="wordsetcodepage.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 1">	<PARAM name="Local" value="wordexample1.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 2">	<PARAM name="Local" value="wordexample2.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 3">	<PARAM name="Local" value="wordexample3.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Using XML">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductionxml.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Close">	<PARAM name="Local" value="closexml.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open">	<PARAM name="Local" value="openxml.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setprefix">	<PARAM name="Local" value="setprefix.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Setxmldecpoint">	<PARAM name="Local" value="setxmldecpoint.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Writetext">	<PARAM name="Local" value="writetext.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Writenode">	<PARAM name="Local" value="writenode.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Writeendnode">	<PARAM name="Local" value="writeendnode.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Writeelement">	<PARAM name="Local" value="writeelement.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Using XML - example">	<PARAM name="Local" value="usingxmlexample.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Working with text files">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="files_introduction.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Close">	<PARAM name="Local" value="closefile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open">	<PARAM name="Local" value="openfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Read">	<PARAM name="Local" value="readfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Reset">	<PARAM name="Local" value="resetfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Rewind">	<PARAM name="Local" value="rewindfile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Write">	<PARAM name="Local" value="writefile.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Direct printing">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="lp_introduction.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Close">	<PARAM name="Local" value="lp_close.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Open">	<PARAM name="Local" value="lp_open.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Write">	<PARAM name="Local" value="lp_write.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Using multiple datasources">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Introduction">	<PARAM name="Local" value="introductionmulti.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 1">	<PARAM name="Local" value="example1multi.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Example 2">	<PARAM name="Local" value="example2multi.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Objects with sequence number equal zero">	<PARAM name="Local" value="objectswithsequencenumberequalzero.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Barcode printing">	<PARAM name="Local" value="barcodeprinting.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<param name="Name" value="Additional explanations">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Code pages">	<PARAM name="Local" value="codepages.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Predefined colors">	<PARAM name="Local" value="predefinedcolors.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="RGB color values">	<PARAM name="Local" value="rgbcolorvalues.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Select statement">	<PARAM name="Local" value="selectstatement.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Symbols">	<PARAM name="Local" value="symbols.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Tooltip text definition">	<PARAM name="Local" value="tooltiptextdefinition.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Run-time symbols">	<PARAM name="Local" value="runtimesymbols.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Command line parameters">	<PARAM name="Local" value="commandlineparameters.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Subform processing">	<PARAM name="Local" value="subformprocessing.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+<LI>	<OBJECT type="text/sitemap">	<PARAM name="Name" value="Click actions">	<PARAM name="Local" value="clickactions.htm">	<PARAM name="ImageNumber" value="0">	</OBJECT>
+</UL>
+</UL>
+
+</BODY></HTML>

@@ -1,0 +1,12 @@
+! Sample IAF file for local VS Code extension testing.
+!#region Demo
+IF Record IPSKOP Found
+    EXECSQL update IPSKOP set kop_proc = :$proc where kop_id = :$id
+ELSE
+    ERRMSG "Record not found"
+END_IF
+
+DO_WHILE $i <= $k
+    ADD 1 TO $i
+END_DO
+!#endregion

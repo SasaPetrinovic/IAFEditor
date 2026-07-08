@@ -1,0 +1,34 @@
+<html><head>
+   <title>DISPLAY_WINDOW_FIELDS</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="DISPLAY_WINDOW_FIELDS"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#000000">DISPLAY_WINDOW_FIELDS</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  color="#010101"><span style=" font-size:12pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">This statement displays fields in the subform (fields have to be filled, usually with SELECT or 
+READ statement).</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Format</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DISPLAY_WINDOW_FIELDS</b></span></font></div><div align="left"><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b><br></b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Note</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">What the DISPLAY_WINDOW_FIELDS does is:</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- Sets the subform to display mode (stores 1 to IAF_DISPLAYMODE).</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- Moves from one active object to another, by sequence, executing all the statements. When 
+comes to DESTINATION statement, value from the field buffer displays on the screen and 
+continues.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">- After the last object in sequence is processed, stores 0 to IAF_DISPLAYMODE and sets the 
+focus to the first active object following the object containing the 
+DISPLAY_WINDOW_FIELDS statement.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Example</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  bgcolor="#f0f0f0"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">Destination</span></font><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"> = $seg1</span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">Select</span></font><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"> * from tbl1 Where kseg = :$seg1</span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">If</span></font><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"> record tbl1 found</span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">display_window_fields</span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Courier New"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#0000ff">End_if</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td></tr></table><div align="left"><font face="Arial"  color="#010101"><span style=" font-size:12pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>See also</b> Implicit record reading (Default reading)</span></font></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

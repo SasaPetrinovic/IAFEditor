@@ -1,0 +1,63 @@
+<html><head>
+   <title>Suppress horizontal region</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="Suppress horizontal region"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  color="#010101"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#010101">Suppress horizontal region</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"><span style=" font-size:12pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">Horizontal region is a region within one lineset.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">One horizontal region <b><u>cannot be extended</u></b> across multiple linesets.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">Maximum number of regions in one report is 10.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">For each region you define region position and a condition which specifies when this region is 
+to be suppressed.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">In <b>Region</b> column you have to enter start and the end of the region in pixels, in the form</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><b>starting_pixel-ending_pixel</b></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">Example:</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">101-120&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Horizontal region between 101. (including) and 120. (including) pixels.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 
+minus character is required.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">In <b>Condition</b> column, you have to enter the suppress condition. The maximal number of 
+characters is 70.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">Example:</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">acc_1 = 0 and acc_2 = 0</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">The above condition need to be read like this: when acc_1 has value 0 and acc_2 has value 
+0, the region from 101. up to 120. pixels will not be printed.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">What if the condition has more than 70 characters?</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">In that case, a local variable can be defined, let's say $suppreg, who can have two values: 1 
+or 0. In a field, who belongs to that lineset, the value of the variable need to be calculated.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">Then, in <b>Condition</b> column you can write</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">$suppreg = 1&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">$suppreg = 0&nbsp;&nbsp;&nbsp;&nbsp;depending on how the value is calculated.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">When the region does not print, whole report moves up, so that white emptiness cannot be 
+seen on the paper.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000">Using menu command 'Show/ Suppress horizontal regions' you can see graphically regions 
+on the report.</span></font></div><div align="left"><font face="Arial CE"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000000"><br></span></font></div><div align="left"><font face="Arial CE"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000080"><b>Example</b></span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  height="26"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">Region</span></font></div>
+    </td>
+    <td valign="top"  height="26"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">Condition</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">101-120</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">acc_1 = 0</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">121-140</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">acc_1 &lt;&gt; 0</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr></table><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101"><br></span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101"><br></span></font></div><div align="left"><font face="Arial CE"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000080"><b>How to remove a condition?</b></span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101"><br></span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">Blank either Region or Condition column, then click OK.</span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101"><br></span></font></div><div align="left"><font face="Arial CE"  color="#000080"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#000080"><b>Important</b></span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101"><br></span></font></div><div align="left"><font face="Arial CE"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial CE; color:#010101">If a field partly lies in the region, for example region is between 101. and 120. and the field is 
+between 115. and 130. pixels, unclear (confusing) report will be generated at run-time.</span></font></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

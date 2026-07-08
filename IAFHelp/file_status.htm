@@ -1,0 +1,70 @@
+<html><head>
+   <title>FILE_STATUS</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="File_status"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#000000">FILE_STATUS</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  color="#010101"><span style=" font-size:12pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">This function returns file status.</span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><b>Format</b></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#800000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#800000"><b>FILE_STATUS(file_name)</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Return Value Type</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alphanumeric.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possible values:</span></font></div><div align="left">&nbsp;&nbsp;</div><div style="margin-left: 13mm;"><table border="1"  width="570"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Result description</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Result output format</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Logical name does not exist</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">-1</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Other errors</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>numeric_error;textual description</b>, for example</span></font></div>
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">2;The system cannot find the file specified.</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Successful</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>0;file_size;date_created;date_modified</b>, for example</span></font></div>
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br>
+    </span></font></div>
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">0;14560;20090120101533;20090504125123;</span></font></div>
+    </td></tr></table></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b><br></b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Parameters</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"  style="margin-left:13mm; margin-right:0mm; text-indent:-6mm; margin-top:0.00mm; margin-bottom:0.00mm;"><font face="Symbol"  size="2"><span style=" font-size:10pt; font-family:Symbol; color:#000000">&middot;</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp; &nbsp;&nbsp;file_name</span></font><font face="Arial"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#808080"> - name of file to be analyzed, logical names allowed.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Note</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to check <b>folder existence</b>?</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a file name to folder string, invoke FILE_STATUS and check return value. If the 
+first character of return value is '3',&nbsp; folder does not exist.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$newstring = </span></font><font face="Arial"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#ff0000">compress_trim</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">($folder_name,&quot;\x.xxx&quot;)</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$fs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= </span></font><font face="Arial"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#ff0000">file_status</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">($newstring)</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff">if</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> $fs[1:1] = &quot;3&quot;</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff">Pause</span></font><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> &quot;Folder does not exist&quot;</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff">end_if</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>Examples</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="510"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  bgcolor="#f0f0f0"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FS = </span></font><font face="Courier New"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#ff0000">FILE_STATUS</span></font><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">(&quot;c:\temp\a.tmp&quot;)</span></font></div>
+    <div align="left"><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FS = </span></font><font face="Courier New"  color="#ff0000"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#ff0000">FILE_STATUS</span></font><font face="Courier New"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#010101">(&quot;dat_dir:a.tmp&quot;)</span></font></div>
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">where $FS is defined as alpha, 128 characters long</span></font></div>
+    <div align="left">&nbsp;</div>
+    </td></tr></table><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>See Also</b> </span></font><a href="fileio.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>File_io</u></span></font></a><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"> </span></font><a href="split.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>Split</u></span></font></a></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

@@ -1,0 +1,644 @@
+<html><head>
+   <title>Local fields definition</title>
+   <meta name="generator"  content="HelpMaker.net">
+   <meta name="keywords"  content="Local fields definition"></head>
+<body bgcolor="#FFFFFF">
+<table width="100%"  border="0"  cellspacing="0"  cellpadding="2"  bgcolor="#FFFFFF">
+  <tr>
+    <td align="left">
+      <div align="left"><font face="Arial"  color="#010101"  size="4"><span style=" font-size:14pt; font-family:Arial; color:#010101">Local fields definition</span></font></div>
+
+    </td>
+    <td align="right">
+      <font face="Arial"  size="2">
+        &nbsp;&nbsp;
+      </font>
+    </td>
+  </tr></table>
+<hr><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Local fields are variables defined in a program and can be used in that program only. These 
+variables can be seen from any part of the program (field calculations, subform calculations, 
+local procedures, global procedures, ...). Local fields are usually used as work variables, to 
+save temporary&nbsp; results, etc. Maximum number of local fields in one program is <b>500</b>. </span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Each editor line defines one local field. The line format is:</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>local_field_name&nbsp;&nbsp; field_type&nbsp;&nbsp; size&nbsp;&nbsp; [data_type]&nbsp; [occurence]&nbsp;&nbsp; [!!comment]</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>local_field_name</b> = </span></font><font face="Arial"  color="#010101"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#010101">local field name is maximum 60 characters long, the first character must 
+be a dollar sign ($).</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>field_type</b> = field type mnemonic.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">field_type mnemonic</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">field type</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">A</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">alpha ANSI: 1 character occupies 1 byte, max length 32767</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">numeric</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">D</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">date</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">T</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">time</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">W</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">alpha, UTF-16: 1 character occupies 2 bytes, max length 32767</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">DT</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">datetime</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">S</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">memo ANSI</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">SW</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">memo unicode utf-16</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">memo: variable length alpha field.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>size</b> = field length. For numeric fields this parameter is in the form <b>tot_digits[,dec_digits].</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>data_type</b> = applies to numeric fields only.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table border="1"  width="553"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">data_type mnemonic</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">data type</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">U</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">unpacked numeric (default)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">P</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">BCD packed numeric (obsolete)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">W</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">integer, 2 bytes (word)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">L</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">integer, 4 bytes (longword)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Q</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">integer, 8 bytes (quadword)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">D</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #010101 1px;">
+    <div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">double floating, 8 bytes</span></font></div>
+    </td></tr></table><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>occurence&nbsp;</b> - number of array elements, if we want to define an array. Max value 65535.</span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><b>===========================================================</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Line format:</span></font></div><div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><b>local_field_name&nbsp; field_type&nbsp; size&nbsp; [data_type] [occurence]&nbsp;[!!comment]</b></span></font></div><div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><b>===========================================================</b></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000">Examples:</span></font></div><div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><br></span></font></div><div align="left">&nbsp;&nbsp;</div><table bordercolor="#000000"  width="900"  style="border-collapse: collapse; border: none">
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!Name</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">Type</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">Size</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">Datatype</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">Occur</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">Comment</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$A10</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">A</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">10</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!alpha field 10 characters</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$A80</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">A</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">80</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!alpha field 80 characters</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$A80ARR</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">A</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">80</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">100</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!array of 100 elements</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$NUM1</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">1</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, 1 digit, unpacked</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$NUM5</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">5</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, 5 digits, unpacked</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$NUM5U</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">5,2</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, int. part=3 digits, 2 decimals, unpacked</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$NUM5P</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">5,2</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">P</span></font></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  height="15"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, int. part=3 digits, 2 decimals, packed</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$NUM5P</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">5,2</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">P</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">10</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, int. part=3 digits, 2 decimals, packed, array</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$INT</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">9</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">L</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, 9 digits, 4-bytes integer (longword)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$INTBIG</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">18</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">Q</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!numeric, 18 digits, 8-bytes integer (quadword)</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$DBL</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">N</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">11,2</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">D</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!double floating</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#808080">!Date fields</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$DT6</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">D</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">6</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!date, 6 digits</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$DT8</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">D</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">8</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!date, 8 digits</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$TIM6</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">T</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">6</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!time, 6 digits</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$W10</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">W</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">10</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!alpha unicode, 10 characters</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$DT</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">DT</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!datetime</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!</span></font><font face="Courier New"  color="#808080"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#808080"> Memos</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$MEMO</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">S</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!memo ANSI</span></font></div>
+    </td></tr>
+    <tr>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">$MEMOW</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">SW</span></font></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><span style="font-size: 10pt;">&nbsp;</span></div>
+    </td>
+    <td valign="top"  style="border: solid #000000 0px;">
+    <div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000">!!memo unicode utf-16</span></font></div>
+    </td></tr></table><div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><br></span></font></div><div align="left"><font face="Courier New"  size="2"><span style=" font-size:10pt; font-family:Courier New; color:#000000"><br></span></font></div><div align="left"><font face="Arial"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#000000"><b>See also</b> </span></font><a href="definelocal.htm"><font face="Arial"  color="#0000ff"  size="2"><span style=" font-size:10pt; font-family:Arial; color:#0000ff"><u>DEFINE_LOCAL</u></span></font></a></div><div align="left">&nbsp;&nbsp;</div>
+
+</body></html>

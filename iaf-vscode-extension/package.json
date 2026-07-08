@@ -1,0 +1,98 @@
+{
+  "name": "iaf-language-support",
+  "displayName": "IAF Language Support",
+  "description": "Local Visual Studio Code support for the IAF language.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:iaf",
+    "onCommand:iaf.openHelp",
+    "onCommand:iaf.validateBlocks",
+    "onCommand:iaf.showBlockTree",
+    "onCommand:iaf.addEndComments",
+    "onCommand:iaf.exportHtml",
+    "onView:iafBlockTree"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "iaf",
+        "aliases": [
+          "IAF",
+          "iaf"
+        ],
+        "extensions": [
+          ".iaf",
+          ".iaftxt",
+          ".iafcode"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "iaf",
+        "scopeName": "source.iaf",
+        "path": "./syntaxes/iaf.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "iaf",
+        "path": "./snippets/iaf.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "iaf.openHelp",
+        "title": "IAF: Open Help For Word"
+      },
+      {
+        "command": "iaf.validateBlocks",
+        "title": "IAF: Validate Blocks"
+      },
+      {
+        "command": "iaf.showBlockTree",
+        "title": "IAF: Show Block Tree"
+      },
+      {
+        "command": "iaf.addEndComments",
+        "title": "IAF: Add END Comments"
+      },
+      {
+        "command": "iaf.exportHtml",
+        "title": "IAF: Export HTML"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "iafBlockTree",
+          "name": "IAF Blocks",
+          "when": "editorLangId == iaf"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "IAF",
+      "properties": {
+        "iaf.helpPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the IAFHelp folder. If empty, the extension searches the current workspace."
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2"
+  }
+}
