@@ -1,9 +1,24 @@
 {
   "name": "iaf-language-support",
-  "displayName": "IAF Language Support",
-  "description": "Local Visual Studio Code support for the IAF language.",
-  "version": "0.0.1",
-  "publisher": "local",
+  "displayName": "IAF Editor Toolkit",
+  "description": "Language support, diagnostics, navigation, and local documentation integration for IAF.",
+  "version": "0.1.0",
+  "publisher": "AleksandarPetrinovic",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SasaPetrinovic/IAFEditor.git"
+  },
+  "homepage": "https://github.com/SasaPetrinovic/IAFEditor#readme",
+  "bugs": {
+    "url": "https://github.com/SasaPetrinovic/IAFEditor/issues"
+  },
+  "keywords": [
+    "IAF",
+    "language support",
+    "syntax highlighting",
+    "SQL"
+  ],
   "icon": "iaf.ico",
   "engines": {
     "vscode": "^1.90.0"
@@ -17,6 +32,7 @@
     "onCommand:iaf.openHelp",
     "onCommand:iaf.searchHelp",
     "onCommand:iaf.openHelpContents",
+    "onCommand:iaf.selectHelpFolder",
     "onCommand:iaf.validateBlocks",
     "onCommand:iaf.showBlockTree",
     "onCommand:iaf.addEndComments",
@@ -68,6 +84,10 @@
       {
         "command": "iaf.openHelpContents",
         "title": "IAF: Open Help Contents"
+      },
+      {
+        "command": "iaf.selectHelpFolder",
+        "title": "IAF: Select Help Folder"
       },
       {
         "command": "iaf.validateBlocks",
@@ -127,7 +147,7 @@
         "iaf.helpPath": {
           "type": "string",
           "default": "",
-          "description": "Path to the IAFHelp folder. If empty, the extension searches the current workspace."
+          "description": "Path to the IAFHelp folder from your local IAF installation. If empty, the extension searches the current workspace."
         }
       }
     }

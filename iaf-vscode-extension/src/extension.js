@@ -25,10 +25,10 @@ const fallbackKeywords = [
 ];
 
 const contextualKeywords = new Set([
-  "AND", "AS", "BY", "CASE", "CREATE", "DROP", "ELSE", "END", "FROM", "GROUP",
+  "ALL", "AND", "AS", "BY", "CASE", "CREATE", "DROP", "ELSE", "END", "FROM", "GROUP",
   "HAVING", "IN", "INNER", "INSERT", "INTO", "JOIN", "LEFT", "LIKE", "NOT", "OR",
   "ORDER", "OUTER", "RIGHT", "SELECT", "SET", "THEN", "TO", "VALUES", "WHEN",
-  "WHERE"
+  "WHERE", "UNION"
 ]);
 
 let diagnostics;
@@ -73,6 +73,7 @@ function activate(context) {
   context.subscriptions.push(vscode.commands.registerCommand("iaf.openHelp", () => openHelpForWord()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.searchHelp", () => searchHelp()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.openHelpContents", () => openHelpContents()));
+  context.subscriptions.push(vscode.commands.registerCommand("iaf.selectHelpFolder", () => selectHelpFolder()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.showBlockTree", () => showBlockTree()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.addEndComments", () => addEndComments()));
   context.subscriptions.push(vscode.commands.registerCommand("iaf.exportHtml", () => exportHtml()));
@@ -271,17 +272,20 @@ function updateDiagnostics(document) {
 
   const problems = [];
   const stack = [];
+  let continuedFromPreviousLine = false;
 
   for (let lineNumber = 0; lineNumber < document.lineCount; lineNumber++) {
     const line = document.lineAt(lineNumber);
     const code = stripComment(line.text).trim();
     const keyword = firstKeyword(code);
+    const continuesOnNextLine = code === "\\" || code.endsWith("\\");
 
     if (!keyword) {
+      continuedFromPreviousLine = continuesOnNextLine;
       continue;
     }
 
-    if (shouldWarnUnknownKeyword(code, keyword)) {
+    if (!continuedFromPreviousLine && shouldWarnUnknownKeyword(code, keyword)) {
       const suggestions = closestHelpNames(keyword, 3);
       const suffix = suggestions.length ? ` Did you mean ${suggestions.join(", ")}?` : "";
       problems.push(makeDiagnostic(
@@ -290,6 +294,8 @@ function updateDiagnostics(document) {
         vscode.DiagnosticSeverity.Warning
       ));
     }
+
+    continuedFromPreviousLine = continuesOnNextLine;
 
     if (blockPairs.has(keyword)) {
       stack.push({ keyword, lineNumber, text: code });
@@ -1020,7 +1026,7 @@ function showHelpQuickPick(items, initialQuery) {
 async function openHelpEntry(entry) {
   const helpFolder = await resolveHelpFolder();
   if (!helpFolder) {
-    vscode.window.showWarningMessage("Set iaf.helpPath or open a workspace containing the IAFHelp folder.");
+    await offerToSelectHelpFolder();
     return;
   }
 
@@ -1036,7 +1042,7 @@ async function openHelpEntry(entry) {
 async function openHelpContents() {
   const helpFolder = await resolveHelpFolder();
   if (!helpFolder) {
-    vscode.window.showWarningMessage("Set iaf.helpPath or open a workspace containing the IAFHelp folder.");
+    await offerToSelectHelpFolder();
     return;
   }
 
@@ -1342,6 +1348,44 @@ async function resolveHelpFolder() {
   }
 
   return undefined;
+}
+
+async function offerToSelectHelpFolder() {
+  const choice = await vscode.window.showWarningMessage(
+    "IAF Help folder is not configured.",
+    "Select Help Folder"
+  );
+  if (choice === "Select Help Folder") {
+    await selectHelpFolder();
+  }
+}
+
+async function selectHelpFolder() {
+  const selected = await vscode.window.showOpenDialog({
+    canSelectFiles: false,
+    canSelectFolders: true,
+    canSelectMany: false,
+    openLabel: "Select IAFHelp folder",
+    title: "Select the IAFHelp folder from your IAF installation"
+  });
+
+  if (!selected || !selected.length) {
+    return;
+  }
+
+  const folder = selected[0].fsPath;
+  const htmlFiles = fs.readdirSync(folder).filter((file) => /\.html?$/i.test(file));
+  if (!htmlFiles.length) {
+    vscode.window.showErrorMessage("The selected folder does not contain IAF HTML help files.");
+    return;
+  }
+
+  await vscode.workspace.getConfiguration("iaf").update(
+    "helpPath",
+    folder,
+    vscode.ConfigurationTarget.Global
+  );
+  vscode.window.showInformationMessage("IAF Help folder saved.");
 }
 
 module.exports = {

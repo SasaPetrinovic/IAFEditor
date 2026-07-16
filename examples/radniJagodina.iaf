@@ -1,0 +1,392 @@
+if Record IPSKOP Found
+	kop_sifrad = gsk_sifkor
+	KOP_URURAC='1'
+	if $kol<>kop_kolfak ! $kol1<>kop_koluma ! $kol2 <> ipskop.kop_stanje ! \
+		$kolcla <> ipskop.kop_brocla
+		KOP_INDJOU=' '
+	END_IF  !! if $kol<>kop_kolfak ! $kol1<>kop_koluma ! $kol2 <> ipskop.kop_stanje ! \
+	Update IPSKOP
+	Commit
+	Select Count(*) into :$tre from ipskop \
+	where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and ipskop.kop_ururac <> '0'
+	If $UKUP > 0
+		tren.Display($tre)
+		$pro = ($tre / $UKUP ) * 100
+		pro.Display($pro)
+	End_if  !! If $UKUP > 0
+end_if  !! if Record IPSKOP Found
+if $imasta > 0
+	NoviD.SetEnable(1)
+	Print.SetEnable(1)
+	!	Brisi.SetEnable(1)
+end_if  !! if $imasta > 0
+$usao = 0
+if ipskop.kop_oznamm in ("P";"Z";"C";"R";"G";"H")
+	if $kol<>kop_kolfak ! $kol1<>kop_koluma ! $kol2 <> ipskop.kop_stanje ! \
+		$kolcla <> ipskop.kop_brocla ! $usao = 1 ! ipskop.kop_oznamm = "G"
+		$usao= 1
+		$i = current_line
+		$ozmm($i)  = ipskop.kop_oznamm
+		$pomk($i)  = ipskop.kop_kolfak /cond:kop_oznamm in ("P";"Z";"G")
+		$kolu($i)  = ipskop.kop_koluma /cond:kop_oznamm in ("G")
+		$kolnef($i)= ipskop.kop_kolnef /cond:kop_oznamm in ("G")
+		$kombi($i) = ipskop.kop_kolfak /cond:kop_oznamm in ("H")
+		$kombiN($i)= ipskop.kop_kolnef /cond:kop_oznamm in ("H")
+		$clan($i)  = ipskop.kop_brocla /cond:kop_oznamm  =  "C"
+		$proc($i)  = ipskop.kop_brocla /cond:kop_oznamm  =  "R"
+		$procSme($i)= ipskop.kop_brocla /cond:kop_oznamm =  "R"
+		if $toplana in ( '1' ; '2') !!Toplana raspodela po broju clanova gde je upisana povrsina
+			$clan($i)  = ipskop.kop_brocla /cond:kop_oznamm = "P"
+		End_if  !! if $toplana in ( '1' ; '2')
+		do_while $i <= counter_1
+			if $grupa($i) in  ("G")
+				$K = $I
+				$indfak = $indf($K)
+				$kolfag = $POMK($K)
+				$kolumg = $kolu($k)
+				$kolnfg = $kolnef($K)
+				BREAK
+			END_IF  !! if $grupa($i) in ("G")
+			ADD 1 TO $i
+		end_do  !! do_while $i <= counter_1
+		init $kolpom, $sumcla, $sumpro,$potcla,$sumauc,$dodati,$kolnefH,$ostaloZaRapodelu,$null,$procUkup,$procenat,$glavras
+		if $pomk($k) <> 0 ! ipskop.kop_oznamm = "G"
+			do_while $i > 0
+				$i = $i - 1
+				if $i = 0
+					break
+				end_if  !! if $i = 0
+				if $grupa($i) <> space
+					break
+				END_If  !! if $grupa($i) <> space
+				if $ozmm($i) in ("P";"Z")
+					$kolpom = $kolpom + $pomk($i)
+				end_if  !! if $ozmm($i) in ("P";"Z")
+				if $ozmm($i)  = "C"
+					$sumcla = $sumcla + $clan($i)
+				end_if  !! if $ozmm($i) = "C"
+				if $toplana in ('1';'2') !!Toplana raspodela po broju clanova gde je upisana povrsina
+					if $ozmm($i) in ("P")
+						$sumcla = $sumcla + $clan($i)
+					end_if  !! if $ozmm($i) in ("P")
+				End_if  !! if $toplana in ('1';'2')
+				if $ozmm($i)  = "R"
+					$sumpro = $sumpro + $proc($i)
+					$procenat = $procenat + $procSme($i)
+				end_if  !! if $ozmm($i) = "R"
+				if $ozmm($i)  = "H"
+					$DODATI  = $DODATI  + $kombi($i)
+					$kolnefH = $kolnefH + $kombiN($i)
+				end_if  !! if $ozmm($i) = "H"
+			end_do  !! do_while $i > 0
+			add 1 to $i
+			do_while $I <= $K
+				!!++++++++++++++++++++++++++++++++++Ne dobija racun+++++++++++++++++++++++++++++++++++++++++++++
+				if $indfak = 0
+					$razpot = $kolfag - $kolumg - $kolpom + $kolnfg + $DODATI + $kolnefH
+					if $sumpro > 0 and $sumpro <= 100 and $sumcla > 0
+						$procUkup = $razpot  * ($procenat   / 100)
+						$razpot = $kolfag - $kolumg - $kolpom + $kolnfg - $procUkup + $DODATI + $kolnefH
+						!Pause $razpot|' = '|$kolfag|' - '|$kolumg|' - '|$kolpom|' + '|$kolnfg|' - '|$procUkup|' + '|$DODATI|' + '|$kolnefH
+					end_if  !! if $sumpro > 0 and $sumpro <= 100 and $sumcla > 0
+					$ostaloZaRapodelu  = $razpot
+					if $sumcla > 0 and $toplana in  ('0';'2')     !!Postoje clanovi
+						$potcla = $razpot / $sumcla
+						if $raspo = '2'
+							if $potcla > 5
+								$potcla  = 5
+								$ostaloZaRapodelu = $razpot - ( $sumcla * $potcla)
+							ELSE
+								if $potcla < 0
+									$ostaloZaRapodelu   = $razpot
+								else
+									$ostaloZaRapodelu   = 0
+								end_if  !! if $potcla < 0
+							end_if  !! if $potcla > 5
+						End_if  !! if $raspo = '2'
+						$kolfak1 = $clan($i) * $potcla
+						if $kolfak1  < 0
+							$kolfak1  = 0
+						end_if  !! if $kolfak1 < 0
+						if $ozmm($i) in ("G" ; "C" )
+							if $ozmm($i) = "C"
+								Table_1.display($i,10,$kolfak1)
+								execsql update IPSKOP set ipskop.kop_kolfak = :$kolfak1 \
+								where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+								ipskop.kop_stavka = :$i
+								if  $raspo = '2' and $p_count($i) > 0 and $vekDupli($i) = 1
+									if $ostaloZaRapodelu  <> 0
+										$kolpre1 = $ostaloZaRapodelu  / $p_count($i)
+										$sumauc = $sumauc + $kolpre1
+										if abs($sumauc - $razpot) <= 0,02
+											$kolpre1 = $kolpre1 - ($sumauc - $ostaloZaRapodelu)
+											$sumauc =  $sumauc -  ($sumauc - $ostaloZaRapodelu)
+										end_if  !! if abs($sumauc - $razpot) <= 0,02
+										Table_1.display($i,11,$kolpre1)
+										if $kolpre1 < 0
+											Table_1.settextcolor($i,11,'red')
+										else
+											Table_1.settextcolor($i,11,'BLUE')
+										end_if  !! if $kolpre1 < 0
+										execsql update IPSKOP set ipskop.kop_kolpre = :$kolpre1 \
+										where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+										ipskop.kop_stavka = :$i
+									else
+										Table_1.display($i,11,$null)
+										Table_1.settextcolor($i,11,'Black')
+										execsql update IPSKOP set ipskop.kop_kolpre = 0 \
+										where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+										ipskop.kop_stavka = :$i and ipskop.kop_kolpre <> 0
+
+									end_if  !! if $ostaloZaRapodelu <> 0
+								else
+								End_IF  !! if $raspo = '2' and $p_count($i) > 0 and $vekDupli($i) = 1
+							end_if  !! if $ozmm($i) = "C"
+							if $ozmm($i) = "G"
+								!	Pause "Ima clanova "|$razpot
+								razpot1.Display($razpot)
+								Table_1.display($i,12,$kolpom)
+								Table_1.display($i,13,$sumcla)
+								If $kolnfg > 0
+									Table_1.display($i,10,(kop_kolfak + $kolnfg))
+								End_if  !! If $kolnfg > 0
+								execsql update IPSKOP set ipskop.kop_brocla =:$sumcla,kop_kolpom =:$kolpom\
+								where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+								ipskop.kop_stavka = :$i
+								if (kop_kolfak + $kolnfg + $dodati)  < ipskop.kop_kolpom
+									upozorenje.setvisible(1)
+								else
+									upozorenje.setvisible(0)
+								end_if  !! if (kop_kolfak + $kolnfg + $dodati) < ipskop.kop_kolpom
+							end_if  !! if $ozmm($i) = "G"
+						end_if  !! if $ozmm($i) in ("G" ; "C" )
+						if $ozmm($i) in ('P';'Z') and $raspo in ('2' ; '3') and $p_count($i) > 0
+							if  $ostaloZaRapodelu  <> 0 and $vekDupli($i) = 1
+								$kolpre1 = $ostaloZaRapodelu  / $p_count($i)
+								$sumauc = $sumauc + $kolpre1
+								if abs($sumauc - $razpot) <= 0,02
+									$kolpre1 = $kolpre1 - ($sumauc - $ostaloZaRapodelu)
+									$sumauc =  $sumauc -  ($sumauc - $ostaloZaRapodelu)
+								end_if  !! if abs($sumauc - $razpot) <= 0,02
+								Table_1.display($i,11,$kolpre1)
+								if $kolpre1 < 0
+									Table_1.settextcolor($i,11,'red')
+								else
+									Table_1.settextcolor($i,11,'BLUE')
+								end_if  !! if $kolpre1 < 0
+								execsql update IPSKOP set ipskop.kop_kolpre = :$kolpre1 \
+								where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+								ipskop.kop_stavka = :$i
+							else
+								Table_1.display($i,11,$null)
+								Table_1.settextcolor($i,11,'Black')
+								execsql update IPSKOP set ipskop.kop_kolpre = 0 \
+								where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+								ipskop.kop_stavka = :$i and ipskop.kop_kolpre <> 0
+							end_if  !! if $ostaloZaRapodelu <> 0 and $vekDupli($i) = 1
+
+						End_if  !! if $ozmm($i) in ('P';'Z') and $raspo = '2' and $p_count($i) > 0
+						if $ozmm($i) = "R"
+							!	Pause 'Postoje clanovi i ima procenat'
+							$kolfak1 = ($kolfag - $kolumg - $kolpom + $kolnfg + $kolnefH + $DODATI ) * $proc($i)/100
+							$sumauc = $sumauc + $kolfak1
+							if abs($sumauc - $razpot) <= 0,02
+							end_if  !! if abs($sumauc - $razpot) <= 0,02
+							Table_1.display($i,10,$kolfak1)
+							execsql update IPSKOP set ipskop.kop_kolfak =:$kolfak1 \
+							where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+							ipskop.kop_stavka = :$i
+						End_IF  !! if $ozmm($i) = "R"
+					else !!Ne postoje clanovi, raspodela po procenatima
+						if $ozmm($i) = "R"
+							$kolfak1 = $razpot * $proc($i)/100
+							$sumauc = $sumauc + $kolfak1
+							if abs($sumauc - $razpot) <= 0,02
+								$kolfak1 = $kolfak1 - ($sumauc - $razpot)
+								$sumauc =  $sumauc -  ($sumauc - $razpot)
+							end_if  !! if abs($sumauc - $razpot) <= 0,02
+							Table_1.display($i,10,$kolfak1)
+							execsql update IPSKOP set ipskop.kop_kolfak =:$kolfak1 \
+							where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+							ipskop.kop_stavka = :$i
+						else
+							If $kolpom > 0
+								$procuc = $pomk($i)/$kolpom
+							Else
+								$procuc = 0
+							End_if  !! If $kolpom > 0
+							if $toplana in ('1';'2')
+								If $kolpom > 0
+									$procuc = $clan($i) /$sumcla
+									!	pause $procuc|' = '|$clan($i)|' /'|$sumcla
+								Else
+									$procuc = 0
+								End_if  !! If $kolpom > 0
+								$kolpre1 = $razpot * $procuc
+								!pause $kolpre1|' = '|$razpot|' * '|$procuc
+								$sumauc = $sumauc + $kolpre1
+								if abs($sumauc - $razpot) <= 0,02
+									$kolpre1 = $kolpre1 - ($sumauc - $razpot)
+									$sumauc =  $sumauc -  ($sumauc - $razpot)
+								end_if  !! if abs($sumauc - $razpot) <= 0,02
+							else
+								if $p_count($i) > 0 and $raspo in ('1' ;'2')  and $vekDupli($i) = 1
+									$disply = Alltrim(Edit($kolpre1 ,'zzzzzzz9,99'))| ' = ' \
+									|Alltrim(Edit($ostaloZaRapodelu ,'zzzzzzz9,99'))| \
+									'/ '|Alltrim(Edit($p_count($i),'ZZZZZZZZ9,99'))
+
+									komiko.display($disply )
+
+									$kolpre1 = $ostaloZaRapodelu  / $p_count($i)
+									$sumauc = $sumauc + $kolpre1
+									if abs($sumauc - $razpot) <= 0,02
+										$kolpre1 = $kolpre1 - ($sumauc - $ostaloZaRapodelu)
+										$sumauc =  $sumauc -  ($sumauc - $ostaloZaRapodelu)
+									end_if  !! if abs($sumauc - $razpot) <= 0,02
+									!Pause $kolpre1
+								else
+									$kolpre1 = $razpot * $procuc
+									$sumauc = $sumauc + $kolpre1
+									if abs($sumauc - $razpot) <= 0,02
+										$kolpre1 = $kolpre1 - ($sumauc - $razpot)
+										$sumauc =  $sumauc -  ($sumauc - $razpot)
+									end_if  !! if abs($sumauc - $razpot) <= 0,02
+								End_if  !! if $p_count($i) > 0 and $raspo in ('1' ;'2') and $vekDupli($i) = 1
+							end_if  !! if $toplana in ('1';'2')
+							!						    pause " preracun 10 glavni ne dobija racun dopuna do 100%"
+							if $ozmm($i) = "P"
+								!	if $vekDupli($i) = 1
+								Table_1.display($i,11,$kolpre1)
+								if $kolpre1 < 0
+									Table_1.settextcolor($i,11,'red')
+								else
+									Table_1.settextcolor($i,11,'BLUE')
+								end_if  !! if $kolpre1 < 0
+
+								execsql update IPSKOP set ipskop.kop_kolpre = :$kolpre1 \
+								where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+								ipskop.kop_stavka = :$i
+
+							end_if  !! if $ozmm($i) = "P"
+							if $ozmm($i) = "G"
+								razpot1.Display($razpot)
+								Table_1.display($i,12,$kolpom)
+								execsql update IPSKOP set ipskop.kop_kolpom =:$kolpom \
+								where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+								ipskop.kop_stavka = :$i
+								if (ipskop.kop_kolfak + $dodati) < ipskop.kop_kolpom
+									upozorenje.setvisible(1)
+								else
+									upozorenje.setvisible(0)
+								end_if  !! if (ipskop.kop_kolfak + $dodati) < ipskop.kop_kolpom
+							end_if  !! if $ozmm($i) = "G"
+						end_if  !! if $ozmm($i) = "R"
+					end_if  !! if $sumcla > 0 and $toplana in ('0';'2')
+					!!++++++++++++++++++++++++++++++++++Dobija racun+++++++++++++++++++++++++++++++++++++++++++++
+				else
+					$razpot = $kolfag - $kolumg - $kolpom + $kolnfg + $DODATI + $kolnefH
+					if $sumcla > 0
+						$potcla = $razpot/$sumcla
+						$kolfak1 = $clan($i) * $potcla
+						if $kolfak1 <> 0
+							if $raspo = '3'
+								if $ozmm($i) = "C"
+									!pause " Gvni dobija po canu je" | ko0_intx16
+									if ko0_intx16 > 0 and $kolfak1 > ko0_intx16 * $clan($i)
+										$glavras  = $glavras + ($kolfak1 - ko0_intx16 * $clan($i))
+										$kolfak1 = ko0_intx16 * $clan($i)
+									End_if
+								end_if  !! if $ozmm($i) = "C"
+							end_if
+							Table_1.display($i,10,$kolfak1)
+							execsql update IPSKOP set ipskop.kop_kolfak = :$kolfak1 \
+							where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+							ipskop.kop_stavka = :$i
+						end_if  !! if $kolfak1 <> 0
+						if $raspo = '3'
+							if $ozmm($i) = "G" !! Jagodina Raspode na gvni koji se fakturise
+								if $glavras   >  0
+									$glavras = CEIL($glavras,-1)
+									$glavras = $glavras + $kolpom
+									!	pause "Gvni dobija po canu je" | ko0_intx16 | " a treba da dobije " | $kolfak1 | " a umanjeno je za " | $glavras
+									execsql update IPSKOP set ipskop.kop_kolfak = :$glavras \
+									where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+									ipskop.kop_stavka = :$i
+									Table_1.display($i,10,$glavras)
+								else
+									$glavras = $kolpom
+									!	pause "Gvni dobija po canu je" | ko0_intx16 | " a treba da dobije " | $kolfak1 | " a umanjeno je za " | $glavras
+									execsql update IPSKOP set ipskop.kop_kolfak = :$glavras \
+									where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+									ipskop.kop_stavka = :$i
+									Table_1.display($i,10,$glavras)
+								end_if
+							end_if  !! if $ozmm($i) = "G"
+						end_if
+					else
+						if $ozmm($i) = "R" !!Dobija racun a oznaka je po procentu
+							$kolfak1 = $razpot * $proc($i)/100
+							$sumauc = $sumauc + $kolfak1
+							if abs($sumauc - $razpot) <= 0,02
+								$kolfak1 = $kolfak1 - ($sumauc-$razpot)
+								$sumauc  = $sumauc  - ($sumauc-$razpot)
+							end_if  !! if abs($sumauc - $razpot) <= 0,02
+							Table_1.display($i,10,$kolfak1)
+							execsql update IPSKOP set ipskop.kop_kolfak =:$kolfak1 \
+							where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+							ipskop.kop_stavka = :$i
+							Commit
+						else
+							$kolfak1 = $kolpom + $sumauc
+							if $ozmm($i) = "G"  !!Gvni dobija racun a oznaka je GLAVNI
+								if $raspo = '3'
+
+									!	$kolfak1 = ($kolfag - $kolumg - $kolpom + $kolnfg + $kolnefH + $DODATI ) * $proc($i)/100
+									!	pause "Gvni dobija po canu je" | $kolfak1 | " a treba da dobije " | $kolpom | " a umanjeno je za " | $sumauc | \
+									!		"  koag = "|$kolfag|" kolumg = "|$kolumg|" kolpom = "|$kolpom| \
+									!" kolnfg = "|$kolnfg|" kolnefH = "|$kolnefH|" DODATI = "|$DODATI
+									$tempx = ($DODATI + $kolfag) !!  - $kolfak1
+									Table_1.display($i,12,$kolfak1)
+									Table_1.display($i,10, $tempx)
+									execsql update IPSKOP set ipskop.kop_kolpom = :$kolpom , ipskop.kop_kolfak =  :$tempx \
+									where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+									ipskop.kop_stavka = :$i
+								else
+									Table_1.display($i,12,$kolfak1)
+									execsql update IPSKOP set ipskop.kop_kolpom = :$kolfak1 \
+									where ipskop.kop_brohod = :$brohod and ipskop.kop_dathod = :$dathod and \
+									ipskop.kop_stavka = :$i
+								end_if
+								if ipskop.kop_kolfak < ipskop.kop_kolpom
+									upozorenje.setvisible(1)
+								else
+									upozorenje.setvisible(0)
+								end_if  !! if ipskop.kop_kolfak < ipskop.kop_kolpom
+							end_if  !! if $ozmm($i) = "G"
+						end_if  !! if $ozmm($i) = "R"
+					end_if  !! if $sumcla > 0
+					!			end_if
+				end_if  !! if $indfak = 0
+				ADD 1 TO $I
+			END_DO  !! do_while $I <= $K
+			$usao = 0
+		end_if  !! if $pomk($k) <> 0 ! ipskop.kop_oznamm = "G"
+	end_if  !! if $kol<>kop_kolfak ! $kol1<>kop_koluma ! $kol2 <> ipskop.kop_stanje ! \
+END_IF  !! if ipskop.kop_oznamm in ("P";"Z";"C";"R";"G";"H")
+if ipsko0.ko0_intx16 > 0 and ipskop.kop_oznamm = 'G' and $potcla > ipsko0.ko0_intx16  \
+	and $raspo <> '3'
+	Init $umanji
+	maca.Setblinking(500,rgb(255,0,0),rgb(255,255,255))
+	$umanji = $razpot - (ipsko0.ko0_intx16 * $sumcla)
+	maca.Display($umanji)
+	Table_1.display(CURRENT_LINE,9,$umanji)
+	$current_line = CURRENT_LINE
+	commit
+	$maca = '9'
+	ipskop.kop_koluma = $umanji
+	Check $potcla < ipsko0.ko0_intx16
+	Errmsg = "Po clanu trenutno "|$potcla|" ima clanova: "|$sumcla|" Za preracun "|\
+	$razpot|" Treba umanjiti za "|$umanji
+
+End_if  !! if ipsko0.ko0_intx16 > 0 and ipskop.kop_oznamm = 'G' and $potcla > ipsko0.ko0_intx16
+commit
