@@ -1,3 +1,5 @@
+Hvala Milijanu Đokiću
+
 A sta mislis o Visual Studio Code?
 
 VS Code mi deluje kao najbolji “neinvazivni” pravac: ne diramo IAF, nego pravimo moderan editor/preglednik oko postojećeg koda. Proveriću samo aktuelne mogućnosti VS Code ekstenzija, pa ću ti dati konkretan predlog arhitekture.
